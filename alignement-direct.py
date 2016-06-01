@@ -196,8 +196,8 @@ if __name__ == "__main__":
         else :
             #transferedVector = transferedNetwork[word] #getTransferedVector(word)
             #Base
-            candidates[word] = findCandidateTranslations(word, TARGET_TRANSFERRED_VECTORS[word], SOURCE_NETWORK, max(top_list), SIMILARITY_FUNCTION)
-        data[word] = candidates[word][0:max(top_list)]
+            candidates[word] = findCandidateTranslations(word, TARGET_TRANSFERRED_VECTORS[word], SOURCE_NETWORK, 2*max(top_list), SIMILARITY_FUNCTION)
+        data[word] = candidates[word][0:(2*max(top_list))]
         save_as_json(data, 'inv-context-cosinus-none.json') 
         #print word.encode(encoding='UTF-8',errors='strict')
         #print candidates[word][0:max(top_list)]

@@ -44,7 +44,8 @@ SIMILARITY_FUNCTION=measure.COSINE #JACCARD #
 ##METHOD=CHIAO
 ##STRATEGY_DICO="TO BE DEFINED"
 ##TOLERANCE_RATE=1 #1.5 #When there is several candidates with the same score, we accept
-NORMALIZATION="none" #TFIDF #LO #
+TFIDF="TFIDF"
+NORMALIZATION=TFIDF #LO #"none" #
 ##STRATEGY_TRANSLATE=ALL_WEIGHTED #MOST_FREQ #SAME_WEIGHT #
 # to process max. TOP*TOLERANCE_RATE candidates
 
@@ -138,6 +139,24 @@ def findCandidateScores(word, transferedVector, targetNetwork, nb, similarityFun
     # rank the results
     return candidates
 
+def sum_cooc(context_i):
+    def add(x,y): return x+y
+    return reduce(add, context_i.values(), 0)
+
+def normalizeTFIDF(vectors):
+    """ Normalize context vectors using the tf*idf measure described in Chiao """
+    max_cooc = [reduce(max, vectors[i].values(), 0) for i in vectors]
+    MAX_OCC = float(max(max_cooc))
+    cooc_i = [sum_cooc(vectors[i]) for i in vectors]
+    for i_index, i in enumerate(vectors) :
+        if  not vectors[i] : continue
+        #print i
+        #print i_index
+        #print cooc_i[i_index]
+        idf = 1 + log(MAX_OCC/cooc_i[i_index])
+        for j in vectors[i] :
+            vectors[i][j] = ( float(vectors[i][j])/MAX_OCC ) * idf
+
 if __name__ == "__main__":
     print ">LOADING Pat candidates... TODO"
     SOURCE_NETWORK = read_json(SOURCE_NETWORK_FILE_INPUT)
@@ -147,6 +166,9 @@ if __name__ == "__main__":
     #print TARGET_NETWORK
     
     print ">NORMALIZING ("+NORMALIZATION+") CONTEXT VECTORS... TODO"
+    if (NORMALIZATION == TFIDF) :
+        normalizeTFIDF(SOURCE_NETWORK)
+        normalizeTFIDF(TARGET_NETWORK)
     start_time = time.time()
 
     PIVOT_WORDS = set()

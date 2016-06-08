@@ -13,6 +13,7 @@ import codecs
 from math import sqrt, log, log10
 from collections import Counter
 from re import match
+import numpy
 
 import json
 import measure
@@ -40,15 +41,15 @@ SOURCE_NETWORK_FILE_INPUT = "IN/pat_context.json"
 # PARAMETERS
 #-------------------------------------------------------------------------
 ##MIN_WORD_LENGTH=3
-SIMILARITY_FUNCTION=measure.COSINE #JACCARD #
+SIMILARITY_FUNCTION=measure.JACCARD_SET #JACCARD #COSINE #
 ##METHOD=CHIAO
 ##STRATEGY_DICO="TO BE DEFINED"
 ##TOLERANCE_RATE=1 #1.5 #When there is several candidates with the same score, we accept
 TFIDF="TFIDF"
-NORMALIZATION=TFIDF #LO #"none" #
+NORMALIZATION="none" #TFIDF #LO #
 ##STRATEGY_TRANSLATE=ALL_WEIGHTED #MOST_FREQ #SAME_WEIGHT #
 # to process max. TOP*TOLERANCE_RATE candidates
-
+ESPILON=numpy.finfo(float).eps
 
 def save_as_json(data, outputFile, directory="OUTPUT") :
     if not os.path.exists(directory):
@@ -110,10 +111,10 @@ def findCandidateScores(word, transferedVector, targetNetwork, nb, similarityFun
     current_min = 10000 #TODO initialize with max double
     for c in targetNetwork :
         score_c = similarity(transferedVector, targetNetwork[c], similarityFunction)
-        if score_c == -float("Inf") : continue
+        if (score_c == -float("Inf")) or (score_c < ESPILON) : continue #or score_c < ESPILON
         if len(scores) < TOP :
             # add candidate
-            #print "ADDING ("+c.encode(encoding='UTF-8',errors='strict')+", "+str(score_c)+")"
+            print "ADDING ("+c.encode(encoding='UTF-8',errors='strict')+", "+str(score_c)+")"
             if score_c not in candidates :
                 scores.append(score_c)
                 candidates[score_c] = []

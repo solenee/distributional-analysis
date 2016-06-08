@@ -5,7 +5,7 @@
 # We perform the direct method using a dictionary of cognates
 # and a bilingual dictionary
 #-------------------------------
-
+from __future__ import division
 import re, sys, os #, nltk
 import types
 import time
@@ -15,7 +15,9 @@ from collections import Counter
 from re import match
 
 
+
 JACCARD="JACCARD"
+JACCARD_SET="JACCARD_SET"
 COSINE="COSINE"
 TFIDF="TFIDF"
 
@@ -57,27 +59,41 @@ def harmonicMean(x, y) :
   if (x+y) < 0.00000001 : return 0
   return float(2*x*y) / (x+y)
 
+def jaccard_set_similarity(x, y) :
+  x_set = set(x.keys())
+  y_set = set(y.keys())
+  if (len(x_set)== 0) or (len(x_set) == 0) : return 0 # not similar
+  else :
+    union = x_set | y_set
+    inter = x_set & y_set
+  return len(inter) / len(union)
+
 def similarity(x, y, choice) :
   """ Cosine similarity : sigma_XiYi/ (sqrt_sigma_Xi2 * sqrt_sigma_Yi2) """
   result = 0
-  Xi = [] # words
-  sigma_XiYi = 0
-
-  sigma_Xi2 = 0
-  for w in x : 
-    x_w = x[w]
-    sigma_Xi2 = sigma_Xi2 + x_w *x_w
-
-  sigma_Yi2 = 0
-  for w in y : 
-    y_w = y[w]
-    sigma_Yi2 = sigma_Yi2 + y_w*y_w
-    if w in x : sigma_XiYi = sigma_XiYi + x[w]*y_w
   try :
-    if choice == COSINE : result = sigma_XiYi / ( sqrt(sigma_Xi2) * sqrt(sigma_Yi2) )
-    if choice == JACCARD : result = sigma_XiYi / ( sigma_Xi2 + sigma_Yi2 - sigma_XiYi ) #CF Chiao et al.
-    else : result = 0.5 * ((sigma_XiYi / ( sqrt(sigma_Xi2) * sqrt(sigma_Yi2) )) + (sigma_XiYi / ( sigma_Xi2 + sigma_Yi2 - sigma_XiYi )))
-    #print "similarity :"+str(result)
+    if choice == JACCARD_SET :
+      result = jaccard_set_similarity(x, y)
+    else : 
+      
+      Xi = [] # words
+      sigma_XiYi = 0
+
+      sigma_Xi2 = 0
+      for w in x : 
+        x_w = x[w]
+        sigma_Xi2 = sigma_Xi2 + x_w *x_w
+
+      sigma_Yi2 = 0
+      for w in y : 
+        y_w = y[w]
+        sigma_Yi2 = sigma_Yi2 + y_w*y_w
+        if w in x : sigma_XiYi = sigma_XiYi + x[w]*y_w
+      
+        if choice == COSINE : result = sigma_XiYi / ( sqrt(sigma_Xi2) * sqrt(sigma_Yi2) )
+        if choice == JACCARD : result = sigma_XiYi / ( sigma_Xi2 + sigma_Yi2 - sigma_XiYi ) #CF Chiao et al.
+        else : result = 0.5 * ((sigma_XiYi / ( sqrt(sigma_Xi2) * sqrt(sigma_Yi2) )) + (sigma_XiYi / ( sigma_Xi2 + sigma_Yi2 - sigma_XiYi )))
+        #print "similarity :"+str(result)
   except ZeroDivisionError :
     #print 'ZeroDivisionError'
     result = -float('inf')

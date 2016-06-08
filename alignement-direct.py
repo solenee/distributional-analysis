@@ -6,6 +6,7 @@
 # and a bilingual dictionary
 #-------------------------------
 
+from __future__ import division
 import re, sys, os #, nltk
 import types
 import time
@@ -36,20 +37,25 @@ TARGET_NETWORK_FILE = "target_network.json"
 SOURCE_NETWORK_FILE = "source_network.json"
 TARGET_NETWORK_FILE_INPUT = "IN/med_context.json"
 SOURCE_NETWORK_FILE_INPUT = "IN/pat_context.json"
+CONTEXT_FREQ_FILE_INPUT = "IN/frequency_contextTerms.json"
+ENTITY_FREQ_FILE_INPUT = "IN/frequency_lexicon.json"
+
 
 #-------------------------------------------------------------------------
 # PARAMETERS
 #-------------------------------------------------------------------------
 ##MIN_WORD_LENGTH=3
-SIMILARITY_FUNCTION=measure.JACCARD_SET #JACCARD #COSINE #
+SIMILARITY_FUNCTION=measure.COSINE #JACCARD_SET #JACCARD #
 ##METHOD=CHIAO
 ##STRATEGY_DICO="TO BE DEFINED"
 ##TOLERANCE_RATE=1 #1.5 #When there is several candidates with the same score, we accept
 TFIDF="TFIDF"
-NORMALIZATION="none" #TFIDF #LO #
+PMI="PMI"
+NORMALIZATION=PMI #LO #"none" #TFIDF #
 ##STRATEGY_TRANSLATE=ALL_WEIGHTED #MOST_FREQ #SAME_WEIGHT #
 # to process max. TOP*TOLERANCE_RATE candidates
 ESPILON=numpy.finfo(float).eps
+_log2 = lambda x: log(x, 2.0)
 
 def save_as_json(data, outputFile, directory="OUTPUT") :
     if not os.path.exists(directory):
@@ -114,14 +120,14 @@ def findCandidateScores(word, transferedVector, targetNetwork, nb, similarityFun
         if (score_c == -float("Inf")) or (score_c < ESPILON) : continue #or score_c < ESPILON
         if len(scores) < TOP :
             # add candidate
-            print "ADDING ("+c.encode(encoding='UTF-8',errors='strict')+", "+str(score_c)+")"
+            #print "ADDING ("+c.encode(encoding='UTF-8',errors='strict')+", "+str(score_c)+")"
             if score_c not in candidates :
                 scores.append(score_c)
                 candidates[score_c] = []
             # score_c is already in scores and in candidates' keyset
             candidates[score_c].append(c)
             # update current_min
-            if current_min > score_c : current_min = score_c
+            if current_min > score_c : current_min = score_c 
         else :
             if score_c > current_min :
                 # replace by the candidate c
@@ -140,9 +146,11 @@ def findCandidateScores(word, transferedVector, targetNetwork, nb, similarityFun
     # rank the results
     return candidates
 
+def my_str(c) :
+    return c.encode(encoding='UTF-8',errors='strict')
 def sum_cooc(context_i):
-    def add(x,y): return x+y
     return reduce(add, context_i.values(), 0)
+def add(x,y): return x+y
 
 def normalizeTFIDF(vectors):
     """ Normalize context vectors using the tf*idf measure described in Chiao """
@@ -158,6 +166,30 @@ def normalizeTFIDF(vectors):
         for j in vectors[i] :
             vectors[i][j] = ( float(vectors[i][j])/MAX_OCC ) * idf
 
+def normalizePMI(vectors):
+    """ Normalize context vectors using the PMI measure described in Manning et al. """
+    freq_unigrams_context = read_json(CONTEXT_FREQ_FILE_INPUT)
+    #print freq_unigrams_context
+    total_contexts = reduce(add, freq_unigrams_context.values(), 0)
+    
+    freq_unigrams_entity = read_json(ENTITY_FREQ_FILE_INPUT)
+    #print freq_unigrams_entity
+    total_entities = reduce(add, freq_unigrams_entity.values(), 0)
+
+    for entity in vectors :
+        print "=============="+my_str(entity)
+        if entity not in freq_unigrams_entity  : continue
+        p_entity = freq_unigrams_entity[entity] / total_entities
+        #print "p_entity"+str(p_entity)
+        for context in vectors[entity] :
+            p_entity_context = vectors[entity][context]
+            #print "p_entity_context"+str(p_entity_context)
+            p_context = freq_unigrams_context[context] / total_contexts
+            #print "p_context"+str(p_context)
+            vectors[entity][context] = _log2(p_entity_context) - _log2(p_entity * p_context)
+            #print my_str(entity)+"__"+my_str(context)+" ="+str(vectors[entity][context])
+
+
 if __name__ == "__main__":
     print ">LOADING Pat candidates... TODO"
     SOURCE_NETWORK = read_json(SOURCE_NETWORK_FILE_INPUT)
@@ -170,6 +202,10 @@ if __name__ == "__main__":
     if (NORMALIZATION == TFIDF) :
         normalizeTFIDF(SOURCE_NETWORK)
         normalizeTFIDF(TARGET_NETWORK)
+    elif (NORMALIZATION == PMI) :
+        normalizePMI(SOURCE_NETWORK)
+        normalizePMI(TARGET_NETWORK)
+
     start_time = time.time()
 
     PIVOT_WORDS = set()

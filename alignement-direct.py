@@ -176,20 +176,68 @@ def normalizePMI(vectors):
     #print freq_unigrams_entity
     total_entities = reduce(add, freq_unigrams_entity.values(), 0)
 
+    cooc_list = [sum_cooc(vectors[i]) for i in vectors]
+    total_entities_contexts = reduce(add, cooc_list, 0)
+
     for entity in vectors :
         print "=============="+my_str(entity)
         if entity not in freq_unigrams_entity  : continue
         p_entity = freq_unigrams_entity[entity] / total_entities
         #print "p_entity"+str(p_entity)
         for context in vectors[entity] :
-            p_entity_context = vectors[entity][context]
+            p_entity_context = vectors[entity][context] / total_entities_contexts
             #print "p_entity_context"+str(p_entity_context)
             p_context = freq_unigrams_context[context] / total_contexts
             #print "p_context"+str(p_context)
             vectors[entity][context] = _log2(p_entity_context) - _log2(p_entity * p_context)
             #print my_str(entity)+"__"+my_str(context)+" ="+str(vectors[entity][context])
 
+def writeJsonGraph(data, output='graph.json') :
+    """ keygroup can be 'pat' or 'med' """
+    # nodes
+    keygroup_nodes = set()
+    nodes = []
+    source = {}
+    n_id = 0
+    target = {}
+    # links
+    links = []
+    for key_node in data.keys() :
+        if not data[key_node] : continue
+        # add node
+        if key_node not in source :
+            source[key_node] = n_id
+            nodes.append({"name":key_node, "group":"1"})
+            n_id += 1
+        source_id = source[key_node]     
+        for relation in data[key_node][0:1] :
+            cand = relation["name"]
+            if cand not in target :
+                target[cand] = n_id
+                nodes.append({"name":cand, "group":"2"})
+                n_id += 1
+            target_id = target[cand]
+            # Build edge
+            my_link = {"source":source_id,
+                       "target":target_id,
+                       "value":(relation["score"]*100)
+                       }
+            links.append(my_link)
+    graph = {}
+    graph["nodes"] = nodes
+    graph["links"] = links
+    save_as_json(graph, 'graph.json')
+    return graph
 
+def yy() :
+#if __name__ == "__main__":
+    data = read_json('OUTPUT/context-cosinus-none.json')
+    #print data
+    myGraph = writeJsonGraph(data)
+    print myGraph
+    
+    
+#def xxx():
 if __name__ == "__main__":
     print ">LOADING Pat candidates... TODO"
     SOURCE_NETWORK = read_json(SOURCE_NETWORK_FILE_INPUT)
@@ -235,6 +283,7 @@ if __name__ == "__main__":
         #print candidates[word][0:max(top_list)]
         #print "========"
         #print "========"
+        writeJsonGraph(data, 'graph.json')
     elapsed_time = time.time() - start_time
     print str(elapsed_time)
 
@@ -257,7 +306,8 @@ if __name__ == "__main__":
             #Base
             candidates[word] = findCandidateTranslations(word, TARGET_TRANSFERRED_VECTORS[word], SOURCE_NETWORK, 2*max(top_list), SIMILARITY_FUNCTION)
         data[word] = candidates[word][0:(2*max(top_list))]
-        save_as_json(data, 'inv-context-cosinus-none.json') 
+        save_as_json(data, 'inv-context-cosinus-none.json')
+        writeJsonGraph(data, 'inv-graph.json')
         #print word.encode(encoding='UTF-8',errors='strict')
         #print candidates[word][0:max(top_list)]
         #print "========"

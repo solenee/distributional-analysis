@@ -19,6 +19,7 @@ import numpy
 import json
 import measure
 from measure import similarity
+from measure import arithmeticMean, harmonicMean
 
 
 DICO = {}
@@ -73,7 +74,87 @@ def addCandidateWithScore(result, candidate, score) :
     item["score"] = score
     result.append(item)
 
+
+def getRank(candidates, word, isScore=True) :
+  rank = 0
+  s_index = 0
+  stop = False
+  scores = sorted(candidates.keys(), reverse=isScore)
+  while not stop :
+    if word in candidates[scores[s_index]] :
+      rank = rank + 1
+      stop = True
+    else : rank = rank + len(candidates[scores[s_index]])
+    s_index = s_index + 1
+    if s_index == len(scores) :
+      rank = float('inf')
+      stop = True
+  return rank
+
+def findCandidateTranslationsChiao(word, transferedVector, targetNetwork, nb, similarityFunction, f_transferTarget=None, f_filter_candidates=None) :
+    #print "==========="
+    #print word
+    #list of the nb best scores found
+    candidates = {}
+    scores = []
+    if f_filter_candidates is None :
+        #print "f_filter_candidates is None"
+        candidates = findCandidateScores(word, transferedVector, targetNetwork, nb, similarityFunction)
+        scores = sorted(candidates.keys(), reverse=True)
+    else :
+        candidatesKeys = DICO.get(word, [])
+        if len(candidatesKeys) == 0 :
+            candidatesKeys = [k for k in targetNetwork.keys() if (len(DICO_INV.get(k, []))== 0)]
+        filteredTargetNetwork = {k: v for k, v in targetNetwork.iteritems() if k in candidatesKeys}
+        candidates = findCandidateScores(word, transferedVector, filteredTargetNetwork, nb, similarityFunction)
+        scores = sorted(candidates.keys(), reverse=True)
+    res1 = [] #Concatenation of Strings from candidates, ordered by their rank; len(translations) <= TOP
+    for i in range(len(scores)) :
+        #if len(res1) >= nb*TOLERANCE_RATE : break
+        for w in candidates[scores[i]] :
+            #print w+"> "+str(s)
+            res1.append(w)
+            #if len(res1) >= nb*TOLERANCE_RATE :
+            #print "----early exit"
+            #break
+    print res1 #
+
+    d_rank = {}
+
+    for cand in res1 :
+        if not (f_filter_candidates is None) :
+            #print "f_filter_candidates is not None"
+            if cand not in targetNetwork :
+                #print str(cand)+" rejected because not in target corpus"
+                continue
+            #else : print str(cand)
+        #else : print "f_filter_candidates is not None"
+        if cand in TARGET_TRANSFERRED_VECTORS :
+            cand_transferedVector = TARGET_TRANSFERRED_VECTORS[cand]
+        else :
+            #print "transfer::"
+            raise RuntimeError("f_transferTarget is not defined in findCandidateTranslationsChiao")
+            cand_transferedVector = f_transferTarget(cand)
+            TARGET_TRANSFERRED_VECTORS[cand] = cand_transferedVector
+        cand_reverse = findCandidateScores(cand, cand_transferedVector, SOURCE_NETWORK, nb, similarityFunction)
+        cand_rank = harmonicMean(getRank(candidates, cand), getRank(cand_reverse, word))
+        if cand_rank not in d_rank : d_rank[cand_rank] = []
+        d_rank[cand_rank].append(cand)
     
+    result = []
+    ranks = sorted(d_rank.keys(), reverse=False)
+    # Give an ordered list of the translation candidates
+    for i in range(len(ranks)) :
+        if (ranks[i] == float('inf')) : continue
+        for w in d_rank[ranks[i]] :
+            #print w+"> "+str(s)
+            addCandidateWithScore(result, w, ranks[i])
+    #print "---"
+    #print result
+    return result
+
+
+
 def findCandidateTranslations(word, transferedVector, targetNetwork, nb, similarityFunction, f_filter_candidates=None) :
     #list of the nb best scores found  candidates = {}
     scores = []
@@ -192,6 +273,82 @@ def normalizePMI(vectors):
             vectors[entity][context] = _log2(p_entity_context) - _log2(p_entity * p_context)
             #print my_str(entity)+"__"+my_str(context)+" ="+str(vectors[entity][context])
 
+def writeJsonGraphMin(data1, data2, output='graph.json') :
+    """ TODO keygroup can be 'pat' or 'med' """
+    # nodes
+    keygroup_nodes = set()
+    nodes = []
+    source = {}
+    n_id = 0
+    target = {}
+    # links
+    links = []
+    for key_node in data.keys() :
+        if not data[key_node] : continue
+        # add node
+        if key_node not in source :
+            source[key_node] = n_id
+            nodes.append({"name":key_node, "group":"1"})
+            n_id += 1
+        source_id = source[key_node]     
+        for relation in data[key_node][0:1] :
+            cand = relation["name"]
+            if cand not in target :
+                target[cand] = n_id
+                nodes.append({"name":cand, "group":"2"})
+                n_id += 1
+            target_id = target[cand]
+            # Build edge
+            my_link = {"source":source_id,
+                       "target":target_id,
+                       "value":(relation["score"]*100)
+                       }
+            links.append(my_link)
+    graph = {}
+    graph["nodes"] = nodes
+    graph["links"] = links
+    save_as_json(graph, 'graph.json')
+    return graph
+
+def writeJsonGraphChiao(data, output='chiao-graph.json') :
+    """ keygroup can be 'pat' or 'med' """
+    RANK_THRESHOLD = 2
+    # nodes
+    keygroup_nodes = set()
+    nodes = []
+    source = {}
+    n_id = 0
+    target = {}
+    # links
+    links = []
+    for key_node in data.keys() :
+        if not data[key_node] : continue
+        # add node
+        if key_node not in source :
+            source[key_node] = n_id
+            nodes.append({"name":key_node, "group":"1"})
+            n_id += 1
+        source_id = source[key_node]     
+        for relation in data[key_node] :
+            if relation["score"] > RANK_THRESHOLD : break
+            cand = relation["name"]
+            if cand not in target :
+                target[cand] = n_id
+                nodes.append({"name":cand, "group":"2"})
+                n_id += 1
+            target_id = target[cand]
+            # Build edge
+            my_link = {"source":source_id,
+                       "target":target_id,
+                       "value":( (1/relation["score"]) * 100)
+                       }
+            links.append(my_link)
+    graph = {}
+    graph["nodes"] = nodes
+    graph["links"] = links
+    save_as_json(graph, output)
+    return graph
+
 def writeJsonGraph(data, output='graph.json') :
     """ keygroup can be 'pat' or 'med' """
     # nodes
@@ -226,7 +383,7 @@ def writeJsonGraph(data, output='graph.json') :
     graph = {}
     graph["nodes"] = nodes
     graph["links"] = links
-    save_as_json(graph, 'graph.json')
+    save_as_json(graph, output)
     return graph
 
 def yy() :
@@ -267,23 +424,23 @@ if __name__ == "__main__":
     testset = SOURCE_NETWORK.keys()
 
     data = {}
-    for word in testset :
-        print ">>Candidates for '"+ word.encode(encoding='UTF-8',errors='strict')+"'"
-        if word not in SOURCE_NETWORK :
-            print word+" not in source corpus"
-            unknownSourceWords.add(word)
-            candidates[word] = []
-        else :
-            #transferedVector = transferedNetwork[word] #getTransferedVector(word)
-            #Base
-            candidates[word] = findCandidateTranslations(word, SOURCE_TRANSFERRED_VECTORS[word], TARGET_NETWORK, max(top_list), SIMILARITY_FUNCTION)
-        data[word] = candidates[word][0:max(top_list)]
-        save_as_json(data, 'context-cosinus-none.json') 
-        #print word.encode(encoding='UTF-8',errors='strict')
-        #print candidates[word][0:max(top_list)]
-        #print "========"
-        #print "========"
-        writeJsonGraph(data, 'graph.json')
+##    for word in testset :
+##        print ">> DIRECT Candidates for '"+ word.encode(encoding='UTF-8',errors='strict')+"'"
+##        if word not in SOURCE_NETWORK :
+##            print word+" not in source corpus"
+##            unknownSourceWords.add(word)
+##            candidates[word] = []
+##        else :
+##            #transferedVector = transferedNetwork[word] #getTransferedVector(word)
+##            #Base
+##            candidates[word] = findCandidateTranslations(word, SOURCE_TRANSFERRED_VECTORS[word], TARGET_NETWORK, max(top_list), SIMILARITY_FUNCTION)
+##        data[word] = candidates[word][0:max(top_list)]
+##        save_as_json(data, 'context-cosinus-none.json') 
+##        #print word.encode(encoding='UTF-8',errors='strict')
+##        #print candidates[word][0:max(top_list)]
+##        #print "========"
+##        #print "========"
+##    writeJsonGraph(data, 'graph.json')
     elapsed_time = time.time() - start_time
     print str(elapsed_time)
 
@@ -295,22 +452,46 @@ if __name__ == "__main__":
     testset = TARGET_NETWORK.keys()
 
     data = {}
+##    for word in testset :
+##        print ">> INV Candidates for '"+ word.encode(encoding='UTF-8',errors='strict')+"'"
+##        if word not in TARGET_NETWORK :
+##            print word+" not in source corpus"
+##            unknownSourceWords.add(word)
+##            candidates[word] = []
+##        else :
+##            #transferedVector = transferedNetwork[word] #getTransferedVector(word)
+##            #Base
+##            candidates[word] = findCandidateTranslations(word, TARGET_TRANSFERRED_VECTORS[word], SOURCE_NETWORK, 2*max(top_list), SIMILARITY_FUNCTION)
+##        data[word] = candidates[word][0:(2*max(top_list))]
+##        save_as_json(data, 'inv-context-cosinus-none.json')
+##    writeJsonGraph(data, 'inv-graph.json')
+        #print word.encode(encoding='UTF-8',errors='strict')
+        #print candidates[word][0:max(top_list)]
+        #print "========"
+        #print "========"
+
+    # CHIAO
+    testset = SOURCE_NETWORK.keys()
+
+    data = {}
     for word in testset :
-        print ">>Candidates for '"+ word.encode(encoding='UTF-8',errors='strict')+"'"
-        if word not in TARGET_NETWORK :
+        print ">> CHIAO Candidates for '"+ word.encode(encoding='UTF-8',errors='strict')+"'"
+        if word not in SOURCE_NETWORK :
             print word+" not in source corpus"
             unknownSourceWords.add(word)
             candidates[word] = []
         else :
             #transferedVector = transferedNetwork[word] #getTransferedVector(word)
             #Base
-            candidates[word] = findCandidateTranslations(word, TARGET_TRANSFERRED_VECTORS[word], SOURCE_NETWORK, 2*max(top_list), SIMILARITY_FUNCTION)
-        data[word] = candidates[word][0:(2*max(top_list))]
-        save_as_json(data, 'inv-context-cosinus-none.json')
-        writeJsonGraph(data, 'inv-graph.json')
+            candidates[word] = findCandidateTranslationsChiao(word, SOURCE_TRANSFERRED_VECTORS[word], TARGET_NETWORK, max(top_list), SIMILARITY_FUNCTION)
+        data[word] = candidates[word][0:max(top_list)]
+        save_as_json(data, 'chiao-context-cosinus-none.json') 
         #print word.encode(encoding='UTF-8',errors='strict')
-        #print candidates[word][0:max(top_list)]
-        #print "========"
-        #print "========"
+        print candidates[word][0:max(top_list)]
+        print "========"
+        print "========"
+    writeJsonGraphChiao(data, 'chiao-graph.json')
+    elapsed_time = time.time() - start_time
+    print str(elapsed_time)
     elapsed_time = time.time() - start_time
     print str(elapsed_time)

@@ -52,7 +52,8 @@ SIMILARITY_FUNCTION=measure.COSINE #JACCARD_SET #JACCARD #
 ##TOLERANCE_RATE=1 #1.5 #When there is several candidates with the same score, we accept
 TFIDF="TFIDF"
 PMI="PMI"
-NORMALIZATION=PMI #LO #"none" #TFIDF #
+NONE="NONE"
+NORMALIZATION=TFIDF #PMI #LO #NONE #
 ##STRATEGY_TRANSLATE=ALL_WEIGHTED #MOST_FREQ #SAME_WEIGHT #
 # to process max. TOP*TOLERANCE_RATE candidates
 ESPILON=numpy.finfo(float).eps
@@ -117,7 +118,7 @@ def findCandidateTranslationsChiao(word, transferedVector, targetNetwork, nb, si
             #if len(res1) >= nb*TOLERANCE_RATE :
             #print "----early exit"
             #break
-    print res1 #
+    #print res1 #
 
     d_rank = {}
 
@@ -261,7 +262,7 @@ def normalizePMI(vectors):
     total_entities_contexts = reduce(add, cooc_list, 0)
 
     for entity in vectors :
-        print "=============="+my_str(entity)
+        #print "=============="+my_str(entity)
         if entity not in freq_unigrams_entity  : continue
         p_entity = freq_unigrams_entity[entity] / total_entities
         #print "p_entity"+str(p_entity)
@@ -391,80 +392,82 @@ def yy() :
     data = read_json('OUTPUT/context-cosinus-none.json')
     #print data
     myGraph = writeJsonGraph(data)
-    print myGraph
+    #print myGraph
     
     
 #def xxx():
-if __name__ == "__main__":
-    print ">LOADING Pat candidates... TODO"
+
+def align():
+    print ">LOADING Pat candidates..."
     SOURCE_NETWORK = read_json(SOURCE_NETWORK_FILE_INPUT)
     #print SOURCE_NETWORK
-    print ">LOADING Med candidates... TODO"
+    print ">LOADING Med candidates..."
     TARGET_NETWORK = read_json(TARGET_NETWORK_FILE_INPUT)
     #print TARGET_NETWORK
+
+    start_time = time.time()
     
-    print ">NORMALIZING ("+NORMALIZATION+") CONTEXT VECTORS... TODO"
+    print ">NORMALIZING ("+NORMALIZATION+") CONTEXT VECTORS..."
     if (NORMALIZATION == TFIDF) :
         normalizeTFIDF(SOURCE_NETWORK)
         normalizeTFIDF(TARGET_NETWORK)
     elif (NORMALIZATION == PMI) :
         normalizePMI(SOURCE_NETWORK)
-        normalizePMI(TARGET_NETWORK)
-
-    start_time = time.time()
+        normalizePMI(TARGET_NETWORK)    
 
     PIVOT_WORDS = set()
 
     # We assume same language
     SOURCE_TRANSFERRED_VECTORS = SOURCE_NETWORK
-    print ">COMPUTING CANDIDATES RANKING... TODO"
+    TARGET_TRANSFERRED_VECTORS = TARGET_NETWORK
+    print ">COMPUTING CANDIDATES RANKING ("+SIMILARITY_FUNCTION+")..."
     top_list = [10]
     candidates = {} #Map< String, List<String> >
     unknownSourceWords = set()
     testset = SOURCE_NETWORK.keys()
 
     data = {}
-##    for word in testset :
-##        print ">> DIRECT Candidates for '"+ word.encode(encoding='UTF-8',errors='strict')+"'"
-##        if word not in SOURCE_NETWORK :
-##            print word+" not in source corpus"
-##            unknownSourceWords.add(word)
-##            candidates[word] = []
-##        else :
-##            #transferedVector = transferedNetwork[word] #getTransferedVector(word)
-##            #Base
-##            candidates[word] = findCandidateTranslations(word, SOURCE_TRANSFERRED_VECTORS[word], TARGET_NETWORK, max(top_list), SIMILARITY_FUNCTION)
-##        data[word] = candidates[word][0:max(top_list)]
-##        save_as_json(data, 'context-cosinus-none.json') 
-##        #print word.encode(encoding='UTF-8',errors='strict')
-##        #print candidates[word][0:max(top_list)]
-##        #print "========"
-##        #print "========"
-##    writeJsonGraph(data, 'graph.json')
+    for word in testset :
+        print ">> DIRECT Candidates for '"+ word.encode(encoding='UTF-8',errors='strict')+"'"
+        if word not in SOURCE_NETWORK :
+            print word+" not in source corpus"
+            unknownSourceWords.add(word)
+            candidates[word] = []
+        else :
+            #transferedVector = transferedNetwork[word] #getTransferedVector(word)
+            #Base
+            candidates[word] = findCandidateTranslations(word, SOURCE_TRANSFERRED_VECTORS[word], TARGET_NETWORK, max(top_list), SIMILARITY_FUNCTION)
+            data[word] = candidates[word][0:max(top_list)]
+        save_as_json(data, 'align-'+SIMILARITY_FUNCTION+'-'+NORMALIZATION+'.json') 
+        #print word.encode(encoding='UTF-8',errors='strict')
+        #print candidates[word][0:max(top_list)]
+        #print "========"
+        #print "========"
+    writeJsonGraph(data, 'graph-'+SIMILARITY_FUNCTION+'-'+NORMALIZATION+'.json')
     elapsed_time = time.time() - start_time
-    print str(elapsed_time)
+    #print str(elapsed_time)
 
+def suite():
     # INVERSE
     start_time = time.time()
-    TARGET_TRANSFERRED_VECTORS = TARGET_NETWORK
     candidates = {} #Map< String, List<String> >
-    unknownSourceWords = set()
+    #unknownSourceWords = set()
     testset = TARGET_NETWORK.keys()
 
     data = {}
-##    for word in testset :
-##        print ">> INV Candidates for '"+ word.encode(encoding='UTF-8',errors='strict')+"'"
-##        if word not in TARGET_NETWORK :
-##            print word+" not in source corpus"
-##            unknownSourceWords.add(word)
-##            candidates[word] = []
-##        else :
-##            #transferedVector = transferedNetwork[word] #getTransferedVector(word)
-##            #Base
-##            candidates[word] = findCandidateTranslations(word, TARGET_TRANSFERRED_VECTORS[word], SOURCE_NETWORK, 2*max(top_list), SIMILARITY_FUNCTION)
-##        data[word] = candidates[word][0:(2*max(top_list))]
-##        save_as_json(data, 'inv-context-cosinus-none.json')
-##    writeJsonGraph(data, 'inv-graph.json')
+    for word in testset :
+        print ">> INV Candidates for '"+ word.encode(encoding='UTF-8',errors='strict')+"'"
+        if word not in TARGET_NETWORK :
+            print word+" not in source corpus"
+            unknownSourceWords.add(word)
+            candidates[word] = []
+        else :
+            #transferedVector = transferedNetwork[word] #getTransferedVector(word)
+            #Base
+            candidates[word] = findCandidateTranslations(word, TARGET_TRANSFERRED_VECTORS[word], SOURCE_NETWORK, 2*max(top_list), SIMILARITY_FUNCTION)
+            data[word] = candidates[word][0:(2*max(top_list))]
+        save_as_json(data, 'inv-context-cosinus-none.json')
+    writeJsonGraph(data, 'inv-graph.json')
         #print word.encode(encoding='UTF-8',errors='strict')
         #print candidates[word][0:max(top_list)]
         #print "========"
@@ -475,7 +478,7 @@ if __name__ == "__main__":
 
     data = {}
     for word in testset :
-        print ">> CHIAO Candidates for '"+ word.encode(encoding='UTF-8',errors='strict')+"'"
+        #print ">> CHIAO Candidates for '"+ word.encode(encoding='UTF-8',errors='strict')+"'"
         if word not in SOURCE_NETWORK :
             print word+" not in source corpus"
             unknownSourceWords.add(word)
@@ -484,14 +487,21 @@ if __name__ == "__main__":
             #transferedVector = transferedNetwork[word] #getTransferedVector(word)
             #Base
             candidates[word] = findCandidateTranslationsChiao(word, SOURCE_TRANSFERRED_VECTORS[word], TARGET_NETWORK, max(top_list), SIMILARITY_FUNCTION)
-        data[word] = candidates[word][0:max(top_list)]
+            data[word] = candidates[word][0:max(top_list)]
         save_as_json(data, 'chiao-context-cosinus-none.json') 
         #print word.encode(encoding='UTF-8',errors='strict')
-        print candidates[word][0:max(top_list)]
-        print "========"
-        print "========"
+        #print candidates[word][0:max(top_list)]
+        #print "========"
+        #print "========"
     writeJsonGraphChiao(data, 'chiao-graph.json')
     elapsed_time = time.time() - start_time
     print str(elapsed_time)
-    elapsed_time = time.time() - start_time
-    print str(elapsed_time)
+
+if __name__ == "__main__":
+    for n_choice in [NONE, TFIDF, PMI] :
+        if n_choice == NONE : sim_choices = [measure.COSINE, measure.JACCARD, measure.JACCARD_SET]
+        else : sim_choices = [measure.COSINE, measure.JACCARD]
+        NORMALIZATION=n_choice
+        for sim_choice in sim_choices :
+            SIMILARITY_FUNCTION=sim_choice
+            align()

@@ -1,0 +1,10 @@
+{
+"acidité" : ["ph"],
+"chimio" : ["chimiothérapie"],
+"crabe" : ["cancer", "tumeur"],
+"dermato" : ["dermatologue"],
+"gynéco" : ["gynécologue"],
+"homéo" : ["homéopathie"],
+"image" : ["mammographie"],
+"mâchoire" : ["mandibule"]
+}

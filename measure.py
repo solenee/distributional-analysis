@@ -10,7 +10,7 @@ import re, sys, os #, nltk
 import types
 import time
 import codecs
-from math import sqrt, log, log10
+from math import sqrt, log, log10, fabs
 from collections import Counter
 from re import match
 
@@ -20,6 +20,7 @@ JACCARD="JACCARD"
 JACCARD_SET="JACCARD_SET"
 COSINE="COSINE"
 TFIDF="TFIDF"
+L1NORM="L1NORM"
 
 
 def sum_cooc(context_i):
@@ -68,12 +69,25 @@ def jaccard_set_similarity(x, y) :
     inter = x_set & y_set
   return len(inter) / len(union)
 
+def l1norm_similarity(x, y) :
+  x_set = set(x.keys())
+  y_set = set(y.keys())
+  union = x_set | y_set
+  l1norm = 0
+  if (len(x_set)== 0) or (len(x_set) == 0) : return 0 # not similar
+  else :
+    for i in union : 
+      l1norm = l1norm + fabs(float(x.get(i, 0) - y.get(i, 0)))
+  return 1 - l1norm
+
 def similarity(x, y, choice) :
   """ Cosine similarity : sigma_XiYi/ (sqrt_sigma_Xi2 * sqrt_sigma_Yi2) """
   result = 0
   try :
     if choice == JACCARD_SET :
       result = jaccard_set_similarity(x, y)
+    elif choice == L1NORM : 
+      result = l1norm_similarity(x, y)
     else : 
       
       Xi = [] # words

@@ -1,0 +1,161 @@
+eval_Solene_AL.csv
+eval_Solene_Solene.csv
+eval_Solene_Lea.csv
+coup
+peine
+corps
+impression
+chances
+taille
+impatientes
+retour
+questions
+enfants
+femme
+problème
+soucis
+endroit
+copines
+charge
+suite
+bout
+idée
+départ
+envie
+fond
+impatiente
+personne
+demande
+monde
+compte
+réconfort
+santé
+période
+partie
+temps en temps
+mesure
+solution
+choix
+entourage
+force
+doigts
+bonne soirée
+réponse
+droit
+vacances
+sport
+rendez-vous
+étape
+bien
+effets
+chemin
+reconstruction
+internet
+chaleur
+femmes
+cause
+expérience
+contrôles
+pose
+pensées
+nilou
+prise en charge
+pensées positives
+témoignages
+genre
+exemple
+lieu
+avenir
+cas
+amitié
+personnes
+sein gauche
+bonne
+eval_Solene_AL.csv
+eval_Solene_Lea.csv
+eval_Solene_Solene.csv
+consensus
+17
+68
+desaccord
+93
+76
+300
+232
+======
+(u'r\xe9ponse', u'r\xe9mission')-
+(u'soins', u'radioth\xe9rapie')-
+(u'soucis', u'angoisse')-
+(u'contr\xf4les', u'mammographie')-
+(u'tumeurs', u'nodule')-
+(u'r\xe9ponse', u'r\xe9cidive')-
+(u'analyses', u'scintigraphie')-
+(u'poumons', u'thorax')-
+(u'analyses', u'bilan h\xe9patique')-
+(u'examens', u'bilan')-
+(u'soins', u'protocole de soins')-
+(u'm\xe9decin', u'psychologue')-
+(u'examens', u'biopsie')-
+(u'm\xe9decin', u'canc\xe9rologue')
+(u'personnes', u'psychologue')
+(u'personne', u'oncologue')
+(u'personne', u'radiologue')
+(u'm\xe9decin', u'gyn\xe9cologue')
+(u'analyses', u'biopsie')
+(u'm\xe9tas', u'tumeur')
+(u'tumeurs', u'carcinome')
+(u'examen', u'mammographie')
+(u'examen', u'scintigraphie')
+(u'suite', u'scanner')
+(u'm\xe9decins', u'oncologue')
+(u'examens', u'scanner')
+(u'm\xe9decin', u'radioth\xe9rapeute')
+(u'examen', u'biopsie')
+(u'crabe', u'tumeur')
+(u'examen', u'scanner')
+(u'm\xe9decins', u'chirurgien')
+(u'm\xe9decin', u'm\xe9decin g\xe9n\xe9raliste')
+(u'peur', u'angoisse')
+(u's\xe9ance', u'cure')
+(u'soucis', u'inflammation')
+(u'm\xe9decin', u'oncologue')
+(u'corps', u'sang')
+(u'nodules', u'noyau')
+(u'examen', u'\xe9chographie')
+(u'm\xe9decins', u'radiologue')
+(u'personnes', u'oncologue')
+(u'contr\xf4les', u'pr\xe9l\xe8vement')
+(u'm\xe9decins', u'canc\xe9rologue')
+(u'avis', u'diagnostic')
+(u'r\xe9ponse', u'gu\xe9rison')
+(u'soins', u'hormonoth\xe9rapie')
+(u'cellules canc\xe9reuses', u'cellule')
+(u'demande', u'oncologue')
+(u'tumeurs', u'ad\xe9nocarcinome')
+(u'probl\xe8me', u'cancer')
+(u'ganglion sentinelle', u'ganglion')
+(u'radio', u'scanner')
+(u'examens', u'scintigraphie osseuse')
+(u'examen', u'bilan')
+(u'contr\xf4les', u'\xe9chographie')
+(u'cancer du sein', u'ad\xe9nocarcinome')
+(u'm\xe9decin', u'radiologue')
+(u'examens', u'scintigraphie')
+(u'examens', u'mammographie')
+(u'tumeurs', u'cancer')
+(u'm\xe9decin', u'chirurgien')
+(u'contr\xf4les', u'scanner')
+(u'analyses', u'bilan')
+(u'personne', u'chirurgien')
+(u'personnes', u'chirurgien')
+(u'radio', u'scintigraphie')
+(u'm\xe9decins', u'm\xe9decin traitant')
+(u'contr\xf4les', u'radioth\xe9rapie')
+(u'angoisses', u'anxi\xe9t\xe9')
+(u'soucis', u'douleur')
+(u'avenir', u'r\xe9cidive')
+(u'demande', u'chirurgien')
+(u'irm', u'scanner')
+(u'contr\xf4les', u'bilan')
+(u'contr\xf4les', u'biopsie')
+(u'personnes', u'protocole')

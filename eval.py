@@ -600,7 +600,118 @@ def printEvalSheet(sim_choice=measure.COSINE, n_choice=PMI, outputFile="eval.csv
         for pat in data :
             fOut.write(pat+';\n')
 
+def readEvalFile(filename, directory='Kappa'):
+    res = {}
+    pat = set()
+    print filename
+    with codecs.open(os.path.join(directory, filename), 'r', encoding='utf-8') as fIn:
+        for l in fIn.readlines()[2:1001] :
+            if not l.strip() : continue
+            answers = l.strip().split(';')
+            if filename == 'eval_Solene_Lea.csv' : 
+                answers = l.strip().split('\t')
+                #print answers
+                #print len(answers)
+                if len(answers) < 4 : answers.extend(['n', 'n'])
+            #if len(answers) == 1 : answers = l.strip().split('\t')
+            #print answers
+            #print '====='
+            pat = pat | set([answers[0]])
+            current = res.get(answers[0], {})
+            rel = current.get('rel', [])
+            alt = current.get('alt', [])
+            if answers[2].lower().strip() == 'o' :
+                alt.append(answers[1])
+                current['alt'] = alt
+            if answers[3].lower().strip() == 'o' :
+                rel.append(answers[1])
+                current['rel'] = rel
+            res[answers[0]] = current
+    #print len(pat)
+    #print pat
+    return res
+
+def readEvalFilePairs(evalDict):
+    altPairs = []
+    relPairs = []
+    for cand in evalDict.keys() :
+        relPairs.extend([(cand, i) for i in evalDict[cand].get('rel', [])])
+        altPairs.extend([(cand, i) for i in evalDict[cand].get('alt', [])])   
+    #print relPairs
+    #print altPairs
+    res = {'rel' : relPairs, 'alt' : altPairs}
+    #print res
+    return res
+
+def kappa(lFiles=['eval_Solene_AL.csv', 'eval_Solene_Solene.csv', 'eval_Solene_Lea.csv']):
+    res = []
+    candidates = set()
+    dictPairs = {}
+    for f in lFiles : 
+        annot = readEvalFile(f)
+        #print annot
+        candidates = candidates | set(annot.keys())
+        res.append(annot)
+        dictPairs[f] = readEvalFilePairs(annot)
+    #print len(candidates)
+    #print candidates
+
+    for cand in candidates :
+        consensusAlt = True
+        consensusRel = True
+        consensus = True
+        for annot in res : 
+            if not annot.get(cand, None) : 
+                consensus = False
+        if not consensus : print my_str(cand)
+    kappaTmp()
+    
+def kappaTmp(lFiles=['eval_Solene_AL.csv', 'eval_Solene_Lea.csv', 'eval_Solene_Solene.csv']) :
+    dictPairs_S = {}
+    dictPairs_AL = {}
+    dictPairs_L = {}    
+    candidates = set()
+    res = []
+
+    annot_AL = readEvalFile(lFiles[0])
+    #print annot
+    candidates = candidates | set(annot_AL.keys())
+    res.append(annot_AL)
+    dictPairs_AL = readEvalFilePairs(annot_AL)
+
+    annot_L = readEvalFile(lFiles[1])
+    #print annot
+    candidates = candidates | set(annot_L.keys())
+    res.append(annot_L)
+    dictPairs_L = readEvalFilePairs(annot_L)
+
+    annot_S = readEvalFile(lFiles[2])
+    #print annot
+    candidates = candidates | set(annot_S.keys())
+    res.append(annot_S)
+    dictPairs_S = readEvalFilePairs(annot_S)
+  
+    allAlt = set(dictPairs_AL.get('alt', [])) | set(dictPairs_L.get('alt', [])) | set(dictPairs_S.get('alt', []))
+    allRel = set(dictPairs_AL.get('rel', [])) | set(dictPairs_L.get('rel', [])) | set(dictPairs_S.get('rel', []))
+
+    consensusAlt = set(dictPairs_AL.get('alt', [])) & set(dictPairs_L.get('alt', [])) & set(dictPairs_S.get('alt', []))
+    consensusRel = set(dictPairs_AL.get('rel', [])) & set(dictPairs_L.get('rel', [])) & set(dictPairs_S.get('rel', []))
+    print 'consensus'
+    print len(consensusAlt)
+    print len(consensusRel)
+    print 'desaccord'
+    print len(allAlt)
+    desAlt = allAlt - consensusAlt
+    print len(desAlt)
+    desRel = allRel - consensusRel
+    print len(allRel)
+    print len(desRel)
+    print '======'
+    #for x in desRel :
+    #     print x
+    for x in desAlt :
+         print x
+
 if __name__ == "__main__":
-    #printEvalSheet()
-    testGoldStandard()
+    kappa()
 

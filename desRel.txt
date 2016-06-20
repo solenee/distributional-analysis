@@ -1,0 +1,317 @@
+eval_Solene_AL.csv
+eval_Solene_Solene.csv
+eval_Solene_Lea.csv
+coup
+peine
+corps
+impression
+chances
+taille
+impatientes
+retour
+questions
+enfants
+femme
+problème
+soucis
+endroit
+copines
+charge
+suite
+bout
+idée
+départ
+envie
+fond
+impatiente
+personne
+demande
+monde
+compte
+réconfort
+santé
+période
+partie
+temps en temps
+mesure
+solution
+choix
+entourage
+force
+doigts
+bonne soirée
+réponse
+droit
+vacances
+sport
+rendez-vous
+étape
+bien
+effets
+chemin
+reconstruction
+internet
+chaleur
+femmes
+cause
+expérience
+contrôles
+pose
+pensées
+nilou
+prise en charge
+pensées positives
+témoignages
+genre
+exemple
+lieu
+avenir
+cas
+amitié
+personnes
+sein gauche
+bonne
+eval_Solene_AL.csv
+eval_Solene_Lea.csv
+eval_Solene_Solene.csv
+consensus
+17
+68
+desaccord
+93
+76
+300
+232
+======
+(u'radio', u'bilan')
+(u'ganglion sentinelle', u'chirurgien')
+(u'hormono', u'herceptin')
+(u'poumons', u'sternum')
+(u'analyses', u'ex\xe9r\xe8se')
+(u'cellules canc\xe9reuses', u'anticorps')
+(u'nodules', u'm\xe9tastase')
+(u'femmes', u'gyn\xe9cologue')
+(u'nodules', u'nodule')
+(u'irm', u'bilan')
+(u'effet', u'fatigue')
+(u'rendez-vous', u'sophrologue')
+(u'effets', u'r\xe9cidive')
+(u'effets', u'cure')
+(u'poumons', u'thyro\xefde')
+(u'psy', u'psychologue')
+(u'crabe', u'rectum')
+(u'ganglion sentinelle', u'chirurgie')
+(u'\xe9cho', u'radiographie')
+(u'corps', u'foie')
+(u'cellules canc\xe9reuses', u'n\xe9crose')
+(u'corps', u'sang')
+(u'nodules', u'noyau')
+(u'amiti\xe9', u'd\xe9pression')
+(u'personnes', u'oncologue')
+(u'crabe', u'douleur')
+(u'crabe', u'fatigue')
+(u'peur', u'douleur')
+(u'cancer du sein', u'ablation')
+(u'irm', u'mammographie')
+(u'crabe', u'foie')
+(u'demande', u'oncologue')
+(u'radio', u'scintigraphie osseuse')
+(u'rendez-vous', u'oncologue')
+(u'cancer du sein', u'grade')
+(u'suite', u'bilan')
+(u'psy', u'sophrologue')
+(u'effets', u'radioth\xe9rapie')
+(u'pens\xe9es positives', u'r\xe9mission')
+(u'examens', u'm\xe9decin traitant')
+(u'crabe', u'hormonoth\xe9rapie')
+(u'prise en charge', u'biopsie')
+(u'm\xe9tas', u'foie')
+(u'in situ', u'hormonod\xe9pendant')
+(u'examen', u'radiologue')
+(u'contr\xf4les', u'scanner')
+(u'effet', u'ex\xe9r\xe8se')
+(u'crabe', u'cancer')
+(u'sant\xe9', u'r\xe9mission')
+(u'reconstruction', u'proth\xe8se')
+(u'ganglion sentinelle', u'curage axillaire')
+(u'gyn\xe9co', u'radiologue')
+(u'reconstruction', u'chirurgie')
+(u'pens\xe9es', u'd\xe9pression')
+(u'r\xe9ponse', u'r\xe9cidive')
+(u'rendez-vous', u'chirurgien')
+(u'corps', u'cancer')
+(u'rendez-vous', u'radioth\xe9rapie')
+(u'radio', u'scintigraphie')
+(u'doigts', u'aisselle')
+(u'analyses', u'ganglion')
+(u'personnes', u'psychologue')
+(u'prise en charge', u'radiologue')
+(u'personne', u'radiologue')
+(u'tumeurs', u'l\xe9sion')
+(u'hormono', u'cancer')
+(u'irm', u'tep')
+(u'sant\xe9', u'cancer')
+(u'crabe', u'tumeur')
+(u'm\xe9tas', u'm\xe9tastase')
+(u's\xe9ance', u'protocole')
+(u'sein gauche', u'tumorectomie')
+(u'chaleur', u'angoisse')
+(u'hormono', u'hormonod\xe9pendant')
+(u'crabe', u'angoisse')
+(u'nodules', u'foie')
+(u's\xe9ance', u'cure')
+(u'proches', u'personne de confiance')
+(u'curage', u'envahissement ganglionnaire')
+(u'effets', u'douleur')
+(u'cancer du sein', u'ganglion')
+(u'pens\xe9es positives', u'acupuncture')
+(u'tumeurs', u'grade')
+(u'hormono', u'progest\xe9rone')
+(u'probl\xe8me', u'cancer')
+(u'anapath', u'tumeur')
+(u'm\xe9decins', u'r\xe9cidive')
+(u'm\xe9decins', u'oncologie')
+(u'r\xe9ponse', u'gu\xe9rison')
+(u'gyn\xe9co', u'm\xe9decin traitant')
+(u'm\xe9tas', u'r\xe9cidive')
+(u'rendez-vous', u'm\xe9decin traitant')
+(u'sport', u'fatigue')
+(u'effets', u'cancer')
+(u'contr\xf4les', u'biopsie')
+(u'effet', u'cancer')
+(u'personnes', u'chirurgien')
+(u'poumons', u'poumon')
+(u'doigts', u'infection')
+(u'cause', u'fatigue')
+(u'sant\xe9', u'survie')
+(u'in situ', u'n\xe9crose')
+(u'contr\xf4les', u'mammographie')
+(u'\xe9cho', u'pet scan')
+(u'cellules canc\xe9reuses', u'prot\xe9ine')
+(u'demande', u'chirurgien')
+(u't\xe9moignages', u'survie')
+(u'pose', u'pac')
+(u'rendez-vous', u'scanner')
+(u'r\xe9ponse', u'r\xe9mission')
+(u'm\xe9tas', u'sternum')
+(u'in situ', u'ganglion')
+(u'ganglion sentinelle', u'tumeur')
+(u'analyses', u'scintigraphie')
+(u'poumons', u'thorax')
+(u'chaleur', u'sympt\xf4me')
+(u'sein gauche', u'biopsie')
+(u'm\xe9decins', u'gu\xe9rison')
+(u'\xe9cho', u'radiologue')
+(u'ganglion sentinelle', u'ablation')
+(u'prise en charge', u'endoscopie')
+(u'personne', u'oncologue')
+(u'soins', u'oncologue')
+(u'rendez-vous', u'radiologue')
+(u'angoisses', u'cancer')
+(u'femme', u'hormonoth\xe9rapie')
+(u'soins', u'chirurgie')
+(u'effets', u'hormonoth\xe9rapie')
+(u'gyn\xe9co', u'chirurgien')
+(u'curage', u'chirurgie')
+(u'cancer du sein', u'r\xe9cidive')
+(u'hormono', u'hormonoth\xe9rapie')
+(u'poumons', u'foie')
+(u'analyses', u'bilan h\xe9patique')
+(u'h\xf4pital', u'chirurgien')
+(u'analyses', u'oncologue')
+(u'\xe9cho', u'mammographie')
+(u'prise en charge', u'chirurgien')
+(u'effets', u'fatigue')
+(u'sport', u'jambe')
+(u'contr\xf4les', u'bilan')
+(u'contr\xf4les', u'pr\xe9l\xe8vement')
+(u'curage', u'ganglion')
+(u'avis', u'diagnostic')
+(u'poumons', u'ganglion')
+(u'soins', u'hormonoth\xe9rapie')
+(u'radio', u'biopsie')
+(u'soins', u'diagnostic')
+(u'sport', u'sophrologue')
+(u'irm', u'scintigraphie osseuse')
+(u'personnes', u'protocole')
+(u'chaleur', u'fatigue')
+(u'avenir', u'r\xe9insertion')
+(u'effet', u'hormonoth\xe9rapie')
+(u'rendez-vous', u'radioth\xe9rapeute')
+(u'effet', u'tumeur')
+(u'crabe', u'radioth\xe9rapie')
+(u'rendez-vous', u'm\xe9decin g\xe9n\xe9raliste')
+(u'sein gauche', u'ablation')
+(u'prise en charge', u'm\xe9decin traitant')
+(u'gyn\xe9co', u'dermatologue')
+(u's\xe9ance', u'psychologue')
+(u'personne', u'chirurgien')
+(u'poumons', u'hanche')
+(u's\xe9ance', u'aide-soignant')
+(u'ganglion sentinelle', u'tumorectomie')
+(u'm\xe9tas', u'pl\xe8vre')
+(u'avenir', u'r\xe9cidive')
+(u'effets', u'ablation')
+(u'cancer du sein', u'biopsie')
+(u'soins', u'radioth\xe9rapie')
+(u'cellules canc\xe9reuses', u'g\xe8ne')
+(u'cellules canc\xe9reuses', u'ganglion')
+(u'nodules', u'ganglion')
+(u'sein gauche', u'nodule')
+(u'contr\xf4les', u'mastectomie')
+(u'irm', u'radiologue')
+(u'radio', u'radioth\xe9rapie')
+(u'm\xe9tas', u'nodule')
+(u'crabe', u'r\xe9cidive')
+(u'examen', u'sang')
+(u'analyses', u'carcinome')
+(u'hormono', u'curage axillaire')
+(u'sport', u'proth\xe8se')
+(u'irm', u'\xe9chographie')
+(u'angoisses', u'r\xe9cidive')
+(u'\xe9cho', u'\xe9chographie')
+(u'angoisses', u'angoisse')
+(u'm\xe9tas', u'tumeur')
+(u'prise en charge', u'chirurgie')
+(u'\xe9cho', u'scanner')
+(u'h\xf4pital', u'ambulatoire')
+(u'irm', u'scintigraphie')
+(u'sein gauche', u'ganglion')
+(u'hormono', u'mastectomie')
+(u'poumons', u'extension')
+(u'gyn\xe9co', u'oncologue')
+(u'm\xe9decins', u'douleur')
+(u'soucis', u'fatigue')
+(u'angoisses', u'anxi\xe9t\xe9')
+(u'femme', u'mastectomie')
+(u'soins', u'chirurgien')
+(u'effet', u'radioth\xe9rapie')
+(u'soucis', u'douleur')
+(u'analyses', u'chirurgien')
+(u'ganglion sentinelle', u'biopsie')
+(u'm\xe9tas', u'cancer')
+(u'gyn\xe9co', u'm\xe9decin g\xe9n\xe9raliste')
+(u'pens\xe9es', u'angoisse')
+(u'tumeurs', u'tumeur')
+(u'prise en charge', u'oncologue')
+(u'cancer du sein', u'mastectomie')
+(u'examens', u'oncologue')
+(u'poumons', u'pancr\xe9as')
+(u'effet', u'effet secondaire')
+(u'gyn\xe9co', u'gyn\xe9cologue')
+(u'irm', u'scanner')
+(u'sein gauche', u'chirurgie')
+(u'contr\xf4les', u'\xe9chographie')
+(u'd\xe9part', u'stade')
+(u'sein gauche', u'carcinome')
+(u'soins', u'protocole')
+(u'contr\xf4les', u'oncologue')
+(u'nodules', u'scanner')
+(u'effets', u'angoisse')
+(u'reconstruction', u'chirurgien')
+(u'entourage', u'assistant social')
+(u'contr\xf4les', u'radioth\xe9rapie')
+(u'gyn\xe9co', u'radioth\xe9rapeute')
+(u'sein gauche', u'tumeur')
+(u'nodules', u'biopsie')
+(u'corps', u'glande mammaire')

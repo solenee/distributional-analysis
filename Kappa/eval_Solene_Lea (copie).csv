@@ -1,0 +1,2502 @@
+			thematiquement relié	quand je change ca change pas ( meme categorie)	collocation (rendez-vous et medecin)
+PATIENT	MEDECIN	ALTERNATIVE	RELATED	PARADIGMATIC	SYNTAGMATIC
+coup	chirurgien	n	n	n	n
+coup	oncologue	n	n	n	n
+coup	cancer	n	n	n	n
+coup	angoisse	n	n	n	n
+coup	tumeur	n	n	n	n
+coup	médecin traitant	n	n	n	o
+coup	mastectomie	n	n	n	n
+coup	fatigue	n	n	n	o
+coup	infection	n	n	n	n
+coup	biopsie	n	n	n	n
+peine	hormonothérapie	n	n	n	n
+peine	facteur de risque	n	n	n	n
+peine	protocole de soins	n	n	n	n
+peine	récidive	n	n	n	?
+peine	oncologue	n	n	n	n
+peine	tumorectomie	n	n	n	n
+peine	chirurgie	n	n	n	n
+peine	curage axillaire	n	n	n	n
+peine	radiofréquence	n	n	n	n
+peine	radiothérapie	n	n	n	n
+corps	protocole	n	n	n	n
+corps	cancer	n	n	n	o
+corps	angoisse	n	n	n	n
+corps	sang	n	n	n	o
+corps	douleur	n	n	n	o
+corps	foie	n	o	n	o
+corps	radiothérapie	n	n	n	o
+corps	glande mammaire	n	o	n	o
+corps	fatigue	n	n	n	o
+corps	oncologue	n	n	n	o
+impression	douleur	n	n	n	n
+impression	biopsie	n	n	n	n
+impression	angoisse	n	n	n	n
+impression	fatigue	n	n	n	n
+impression	protocole	n	n	n	n
+impression	cancer	n	n	n	n
+impression	oncologue	n	n	n	n
+impression	effet secondaire	n	n	n	?
+impression	chirurgie	n	n	n	n
+impression	récidive	n	n	n	n
+chances	survie	n	n	n	o
+chances	guérison	n	n	n	o
+chances	chirurgie conservatrice	n	n	n	n
+chances	récidive	n	n	n	o
+chances	rémission	n	n	n	o
+chances	posologie	n	n	n	n
+chances	chimiothérapie	n	n	n	o
+chances	mutation	n	n	n	n
+chances	tension	n	n	n	n
+chances	psychothérapie	n	n	n	o
+taille	ganglion	n	n	n	o
+taille	grade	n	n	o	n
+taille	tumeur	n	n	n	o
+taille	nodule	n	n	n	o
+taille	ovaire	n	n	n	o
+taille	recommandation	n	n	n	n
+taille	tep	n	n	n	n
+taille	signe	n	n	n	n
+taille	exérèse	n	n	n	n
+taille	protocole	n	n	n	n
+écho	échographie	o	n	n	n
+écho	scanner	n	o	o	n
+écho	radiologue	n	o	n	o
+écho	bilan	n	n	n	o
+écho	nodule	n	n	n	n
+écho	mammographie	n	o	o	n
+écho	radiographie	n	o	o	n
+écho	biopsie	n	n	o	n
+écho	pet scan	n	n	o	n
+écho	ponction	n	n	o	n
+anapath	ganglion	n	n	n	
+anapath	chirurgie	n	n	n	
+anapath	tumorectomie	n	n	n	
+anapath	biopsie	n	o	n	o
+anapath	personne de confiance	n	n	n	n
+anapath	tumeur	n	n	n	o
+anapath	grade	n	n	n	
+anapath	chimiothérapie	n	n	n	
+anapath	mastectomie	n	n	n	
+anapath	chirurgien	n	n	n	
+cellules cancéreuses	anticorps	n	n	n	n
+cellules cancéreuses	ganglion	n	n	n	o
+cellules cancéreuses	cellule	n	o	o	n
+cellules cancéreuses	fémur	n	n	n	n
+cellules cancéreuses	conisation	n	o	n	o
+cellules cancéreuses	progestérone	n	n	n	n
+cellules cancéreuses	nécrose	n	n	n	o
+cellules cancéreuses	gène	n	o	n	o
+cellules cancéreuses	cartilage	n	n	n	n
+cellules cancéreuses	protéine	n	o	n	o
+impatientes	oncologue	n	n	n	n
+impatientes	cancer	n	n	n	n
+impatientes	protocole	n	n	n	n
+impatientes	chirurgien	n	n	n	n
+impatientes	diagnostic	n	n	n	n
+impatientes	médecin traitant	n	n	n	n
+impatientes	douleur	n	n	n	n
+impatientes	récidive	n	n	n	n
+impatientes	chimiothérapie	n	n	n	n
+impatientes	radiothérapie	n	n	n	n
+retour	chimiothérapeute	n	n	n	n
+retour	chirurgien	n	n	n	n
+retour	biopsie	n	n	n	n
+retour	radiothérapeute	n	n	n	n
+retour	radiothérapie	n	n	n	n
+retour	signe	n	n	n	n
+retour	oncologue	n	n	n	n
+retour	chirurgie	n	n	n	n
+retour	fatigue	n	n	n	n
+retour	cancer	n	n	n	n
+radio	scanner	n	o	o	n
+radio	biopsie	n	n	o	n
+radio	radiothérapie	o	n	n	n
+radio	scintigraphie osseuse	n	n	o	n
+radio	scintigraphie	n	n	o	n
+radio	bilan	n	n	n	o
+radio	pelvis	n	n	n	
+radio	rate	n	n	n	
+radio	extension	n	n	n	n
+radio	foie	n	n	n	
+questions	oncologue	n	n	n	o
+questions	angoisse	n	n	o	n
+questions	cancer	n	n	n	o
+questions	pac	n	n	n	o
+questions	métastase	n	n	n	o
+questions	chirurgien	n	n	n	o
+questions	diagnostic	n	n	n	n
+questions	ablation	n	n	n	n
+questions	douleur	n	n	n	n
+questions	récidive	n	n	n	n
+soins	protocole de soins	n	o	n	n
+soins	radiothérapie	n	n	n	
+soins	chirurgie	n	n	n	
+soins	protocole	n	n	n	
+soins	oncologue	n	n	n	
+soins	hormonothérapie	n	n	n	
+soins	chirurgien	n	n	n	
+soins	diagnostic	n	n	n	
+soins	ablation	n	n	n	
+soins	radiologie	n	n	n	
+enfants	cancer	n	n	n	
+enfants	angoisse	n	n	n	n
+enfants	douleur	n	n	n	n
+enfants	oncologue	n	n	n	n
+enfants	mastectomie	n	n	n	n
+enfants	fatigue	n	n	n	n
+enfants	ablation	n	n	n	n
+enfants	chirurgien	n	n	n	n
+enfants	récidive	n	n	n	n
+enfants	diagnostic	n	n	n	n
+compte	mastectomie	n	n	n	n
+compte	ganglion	n	n	n	n
+compte	biopsie	n	n	n	n
+compte	psychologie	n	n	n	n
+compte	survie	n	n	n	n
+compte	guérison	n	n	n	n
+compte	ablation	n	n	n	n
+compte	protocole	n	n	n	n
+compte	angoisse	n	n	n	n
+compte	grade	n	n	n	n
+femme	cancer	n		n	n
+femme	protocole	n	n	n	n
+femme	douleur	n	n	n	n
+femme	chirurgien	n	n	n	n
+femme	prédisposition génétique	n	n	n	n
+femme	angoisse	n	n	n	n
+femme	mastectomie	n	o	n	n
+femme	oncologue	n	n	n	n
+femme	hormonothérapie	n	o	n	n
+femme	chirurgie	n	n	n	n
+tumeurs	tumeur	o	n	n	n
+tumeurs	nodule	n	o	n	n
+tumeurs	grade	n	o	n	o
+tumeurs	lésion	n	o	n	n
+tumeurs	ganglion	n	o	n	n
+tumeurs	tumorectomie	n	o	n	n
+tumeurs	carcinome	n	o	o	n
+tumeurs	cancer	n	o	o	n
+tumeurs	adénocarcinome	n	o	o	n
+tumeurs	biopsie	n	o	n	n
+problème	cancer	n	n	n	n
+problème	sang	n	n	n	n
+problème	médecin traitant	n	n	n	n
+problème	biopsie	n	n	n	n
+problème	mastectomie	n	n	n	n
+problème	radiothérapie	n	n	n	n
+problème	chirurgien	n	n	n	n
+problème	rate	n	n	n	n
+problème	douleur	n	n	n	n
+problème	récidive	n	n	n	n
+soucis	fatigue	n	n	n	n
+soucis	douleur	n	n	n	n
+soucis	estomac	n	n	n	n
+soucis	embolie	n	n	n	n
+soucis	déglutition	n	n	n	n
+soucis	ganglion	n	n	n	n
+soucis	oncologue	n	n	n	n
+soucis	inflammation	n	n	n	n
+soucis	angoisse	n	n	n	n
+soucis	récidive	n	n	n	n
+endroit	ganglion	n	n	n	n
+endroit	tumeur	n	n	n	o
+endroit	genou	n	n	n	n
+endroit	poumon	n	n	n	n
+endroit	récidive	n	n	n	n
+endroit	estomac	n	n	n	n
+endroit	hanche	n	n	n	n
+endroit	douleur	n	n	n	o
+endroit	nodule	n	n	n	n
+endroit	radiothérapie	n	n	n	n
+hôpital	chirurgien	n	o	n	o
+hôpital	oncologie	n	o	n	
+hôpital	anesthésiste	n	o	n	
+hôpital	médecin traitant	n	o	n	
+hôpital	oncologue	n	o	n	
+hôpital	radiologue	n	o	n	
+hôpital	ambulatoire	n	o	n	
+hôpital	psychologue	n	o	n	
+hôpital	médecine nucléaire	n	o	n	
+hôpital	échographie	n	o	n	
+copines	médecin traitant	n	n	n	n
+copines	angoisse	n	n	n	n
+copines	fractionnement	n	n	n	n
+copines	oncologue	n	n	n	n
+copines	chirurgien	n	n	n	n
+copines	radiothérapie	n	n	n	n
+copines	assistant social	n	n	n	n
+copines	bile	n	n	n	n
+copines	radiothérapeute	n	n	n	n
+copines	mastectomie	n	n	n	n
+peur	angoisse	?	o	o	n
+peur	douleur	n	n	o	
+peur	cancer	n	n	n	o
+peur	fatigue	n	n	o	n
+peur	hormonothérapie	n	n	n	n
+peur	oncologue	n	n	n	n
+peur	infection	n	n	n	n
+peur	ablation	n	n	n	n
+peur	récidive	n	n	n	n
+peur	sang	n	n	n	n
+charge	dermatologue	n	n	n	n
+charge	sénologue	n	n	n	n
+charge	sang	n	n	n	n
+charge	médecin généraliste	n	n	n	n
+charge	chirurgien	n	n	n	n
+charge	urologie	n	n	n	n
+charge	mortalité	n	n	n	n
+charge	sophrologue	n	n	n	n
+charge	médecin traitant	n	n	n	n
+charge	oncologue	n	n	n	n
+avis	protocole	n	n	n	n
+avis	médecin traitant	n	n	n	o
+avis	chirurgien	n	n	n	o
+avis	diagnostic	o	o	o	n
+avis	oncologue	n	n	n	o
+avis	ablation	n	n	n	n
+avis	tube digestif	n	n	n	n
+avis	biopsie	n	n	n	n
+avis	radiologue	n	n	n	o
+avis	cancer	n	n	n	n
+suite	biopsie	n	n	n	n
+suite	chirurgien	n	n	n	n
+suite	cancer	n	n	n	n
+suite	mastectomie	n	n	n	n
+suite	oncologue	n	n	n	n
+suite	bilan	n	n	n	o
+suite	nodule	n	n	n	n
+suite	ponction	n	n	n	n
+suite	radiothérapie	n	n	n	n
+suite	scanner	n	n	n	n
+bout	fatigue	n	n	n	n
+bout	tension	n	n	n	n
+bout	récidive	n	n	n	n
+bout	douleur	n	n	n	n
+bout	angoisse	n	n	n	n
+bout	radiothérapie	n	n	n	n
+bout	hémogramme	n	n	n	n
+bout	ganglion	n	n	n	o
+bout	chirurgie	n	n	n	n
+bout	rémission	n	n	n	n
+période	impuissance	n	n	n	n
+période	ostéoporose	n	n	n	n
+période	douleur	n	n	n	n
+période	protocole	n	n	n	n
+période	hormonothérapie	n	n	n	n
+période	angoisse	n	n	n	n
+période	ménopause	n	n	n	o
+période	récidive	n	n	n	n
+période	guérison	n	n	n	o
+période	cancer	n	n	n	n
+idée	radiothérapie	n	n	n	n
+idée	médecin traitant	n	n	n	n
+idée	angoisse	n	n	n	n
+idée	cancer	n	n	n	n
+idée	échographie	n	n	n	n
+idée	hormonothérapie	n	n	n	n
+idée	récidive	n	n	n	n
+idée	oncologue	n	n	n	n
+idée	hystérectomie	n	n	n	n
+idée	ablation	n	n	n	n
+départ	radiothérapie	n	n	n	n
+départ	oncologue	n	n	n	n
+départ	estomac	n	n	n	n
+départ	biopsie	n	n	n	n
+départ	protocole de soins	n	n	n	n
+départ	suture	n	n	n	n
+départ	stade	n	n	n	n
+départ	chirurgien	n	n	n	n
+départ	fatigue	n	n	n	n
+départ	mastectomie	n	n	n	n
+avenir	réinsertion	n		o	n
+avenir	radiofréquence	n	n		
+avenir	protocole	n	n		
+avenir	angoisse	n	n		
+avenir	urologue	n	n		
+avenir	hormonothérapie	n	n		
+avenir	cardiologue	n	n		
+avenir	récidive	n	n		
+avenir	ablation	n	n		
+avenir	douleur	n	n	n	
+envie	angoisse	n	n	o	
+envie	douleur	n	n	o	
+envie	oncologue	n	n		
+envie	estomac	n	n		
+envie	guérison	n	n		
+envie	chirurgien	n	n		
+envie	cancer	n	n		
+envie	fatigue	n	n	o	
+envie	chirurgie	n	n		
+envie	dépression	n	n		
+fond	vertèbre	n	n		
+fond	rémission	n	n		
+fond	angoisse	n	n		
+fond	tendon	n	n		
+fond	fibroscopie	n	n		
+fond	poumon	n	n		
+fond	fatigue	n	n		
+fond	tumeur	n	n		
+fond	bassin	n	n		
+fond	infection	n	n		
+impatiente	tumorectomie	n	n		
+impatiente	bile	n	n		
+impatiente	oncologue	n	n		
+impatiente	mastectomie	n	n		
+impatiente	hormonothérapie	n	n		
+impatiente	protocole	n	n		
+impatiente	cancer	n	n		
+impatiente	angoisse	n	n		
+impatiente	diagnostic	n	n		
+impatiente	chirurgien	n	n		
+personnes	protocole	n	n		
+personnes	oncologue	n	n		
+personnes	cancer	n	n		
+personnes	système nerveux	n	n		
+personnes	poumon	n	n		
+personnes	psychologue	n	n		
+personnes	chirurgien	n	n		
+personnes	diagnostic	n	n		
+personnes	sang	n	n		
+personnes	radiochirurgie	n	n		
+hormono	hormonothérapie	o	n		
+hormono	ablation	n	n		
+hormono	hormonodépendant	o	n		
+hormono	stade	n	n		
+hormono	curage axillaire	n	o		
+hormono	progestérone	n			
+hormono	grade	n	n		
+hormono	mastectomie	n	o		
+hormono	herceptin	n			
+hormono	cancer	n	o		
+nodules	nodule	o			
+nodules	thyroïde	n	n		
+nodules	biopsie	n	n		
+nodules	ganglion	n	n		
+nodules	foie	n	n		
+nodules	noyau	n	n		
+nodules	scanner	n	n		
+nodules	tumeur	n	o		
+nodules	métastase	n	n		
+nodules	échographie	n	n		
+personne	angoisse	n	n		
+personne	oncologue	n	n		
+personne	cancer	n	n		
+personne	chirurgien	n	n		
+personne	gynécologue	n	n		
+personne	radiothérapie	n	n		
+personne	tumeur	n	n		
+personne	radiologue	n	n		
+personne	récidive	n	n		
+personne	biopsie	n	n		
+demande	chirurgien	n	n		
+demande	oncologue	n	n		
+demande	scanner	n	n		
+demande	sang	n	n		
+demande	biopsie	n	n		
+demande	cancer	n	n		
+demande	douleur	n	n		
+demande	diagnostic	n	n		
+demande	angoisse	n	n		
+demande	médecin traitant	n	n		
+monde	angoisse	n	n		
+monde	douleur	n	n		
+monde	cancer	n	n		
+monde	protocole	n	n		
+monde	oncologue	n	n		
+monde	médecin traitant	n	n		
+monde	tumeur	n	n		
+monde	rémission	n	n		
+monde	diagnostic	n	n		
+monde	radiothérapie	n	n		
+psy	psychologue	o	o	o	
+psy	oncologue	n	n	o	
+psy	sophrologue	n	n	o	
+psy	chirurgien	n	n	o	
+psy	sénologie	n	n		
+psy	oncologie	n	n		
+psy	acupuncture	n	n		
+psy	cancérologue	n	n	o	
+psy	oncogénétique	n	n		
+psy	radiologue	n	n	o	
+curage	curage axillaire	o	o		
+curage	curage ganglionnaire	o	o		
+curage	mastectomie	n			
+curage	tumorectomie	n			
+curage	ablation	n			
+curage	ganglion	n			
+curage	mammectomie	n			
+curage	radiothérapie	n			
+curage	chirurgie	n			
+curage	envahissement ganglionnaire	n			
+examen	mammographie	n	o		
+examen	biopsie	n	o		
+examen	scanner	n	o		
+examen	échographie	n	o		
+examen	scintigraphie	n	o		
+examen	bilan	n	o		
+examen	diagnostic	n	o		
+examen	radiologue	n	o		
+examen	chirurgien	n	n		
+examen	sang	n	n		
+réconfort	traitement palliatif	n	n		
+réconfort	numération formule sanguine	n	n		
+réconfort	oncologue	n	n		
+réconfort	algologue	n	n		
+réconfort	pharmacien	n	n		
+réconfort	hormonothérapie	n	n		
+réconfort	radiothérapie	n	n		
+réconfort	effet secondaire	n	n		
+réconfort	pneumologue	n	n		
+réconfort	chirurgien	n	n		
+santé	angoisse	n	n		
+santé	cancer	n	o		
+santé	douleur	n	n		
+santé	rémission	n	n		
+santé	survie	n	n		
+santé	ménopause	n	n		
+santé	oncologue	n	n		
+santé	protocole	n	n		
+santé	castration	n	n		
+santé	radiothérapie	n	n		
+séance	cure	n	o		
+séance	injection	n	n		
+séance	aide-soignant	n	n		
+séance	protocole	n	n		
+séance	radiothérapie	n	o		
+séance	herceptin	n	n		
+séance	tumorectomie	n	n		
+séance	psychologue	n	o		
+séance	chirurgie	n	n		
+séance	pac	n			
+examens	scintigraphie	n	o		
+examens	mammographie	n	o		
+examens	biopsie	n	o		
+examens	scanner	n	o		
+examens	bilan	n	o		
+examens	diagnostic	n	o		
+examens	scintigraphie osseuse	n	o		
+examens	chirurgie	n	n		
+examens	médecin traitant	n	o		
+examens	oncologue	n			
+partie	cancer	n	n		o
+partie	tumeur	n	n		o
+partie	angoisse	n	n		
+partie	douleur	n	n		
+partie	capsule	n	n		
+partie	curage axillaire	n	n		
+partie	ganglion	n	n		
+partie	radiothérapie	n	n		
+partie	foie	n	n		
+partie	chirurgie	n	n		
+temps en temps	coagulation	n	n		
+temps en temps	orthèse	n	n		
+temps en temps	extension	n	n		
+temps en temps	fatigue	n	n		
+temps en temps	arthrose	n	n		
+temps en temps	signe	n	n		
+temps en temps	coloscopie	n	n		
+temps en temps	médecin traitant	n	n		
+temps en temps	infection	n	n		
+temps en temps	incision	n	n		
+proches	angoisse	n	n		
+proches	récidive	n	n		
+proches	personne de confiance	o	o	o	
+proches	cancer	n	n		
+proches	radiothérapie	n	n		
+proches	chimiothérapie	n	n		
+proches	rémission	n	n		
+proches	traitement ciblé	n	n		
+proches	hormonothérapie	n	n		
+proches	fatigue	n	n		
+mesure	récidive	n	n		
+mesure	chimiothérapie	n	n		
+mesure	ablation	n	n		
+mesure	radiothérapie	n	n		
+mesure	bistouri	n	n		
+mesure	stade	n	n		
+mesure	protocole	n	n		
+mesure	tep	n	n		
+mesure	mastectomie	n	n		
+mesure	oncologue	n	n		
+solution	tumeur maligne	n	n		
+solution	chirurgie	n	n		
+solution	tumorectomie	n	n		
+solution	estomac	n	n		
+solution	posologie	n	n		
+solution	mastectomie	n	n		
+solution	pneumologue	n	n		
+solution	antiémétique	n	n		
+solution	échographie	n	n		
+solution	biopsie	n	n		
+médecins	oncologue	n	o		
+médecins	chirurgien	n	o		
+médecins	radiologue	n	o		
+médecins	cancérologue	n	o		
+médecins	cancer	n	o		
+médecins	médecin traitant	o	o		
+médecins	douleur	n	n		
+médecins	guérison	n	o		
+médecins	récidive	n	n		
+médecins	oncologie	n	o		
+cas	cancer	n	n		
+cas	grade	n	n		
+cas	biopsie	n	n		
+cas	protocole	n	n		
+cas	tumeur	n	n		o
+cas	oncologue	n	n		
+cas	mastectomie	n	n		
+cas	hormonothérapie	n	n		
+cas	ablation	n	n		
+cas	ganglion	n	n		
+crabe	cancer	o	n	o	
+crabe	radiothérapie	n	o		
+crabe	rectum	n	n		
+crabe	douleur	n			
+crabe	tumeur	n	o		
+crabe	hormonothérapie	n			
+crabe	foie	n	n		
+crabe	angoisse	n	n		
+crabe	fatigue	n	n		
+crabe	récidive	n	o		
+angoisses	angoisse	o	o		
+angoisses	douleur	n	n	o	
+angoisses	fatigue	n	n	o	
+angoisses	radiothérapie	n	n		
+angoisses	oncologue	n	n		
+angoisses	cancer	n	n		
+angoisses	récidive	n	n		
+angoisses	ascite	n	n		
+angoisses	rémission	n	n		
+angoisses	anxiété	n	o	o	
+choix	ablation	n	n		
+choix	mastectomie	n	n		
+choix	récidive	n	n		
+choix	protocole	n	n		
+choix	radiothérapie	n	n		
+choix	chirurgien	n	n		
+choix	cancer	n	n		
+choix	oncologue	n	n		
+choix	hormonothérapie	n	n		
+choix	chirurgie	n	n		
+gynéco	chirurgien	n	n	o	
+gynéco	oncologue	n	n	o	
+gynéco	radiothérapeute	n	n	o	
+gynéco	radiologue	n	n	o	
+gynéco	médecin traitant	n	n	o	
+gynéco	médecin généraliste	n	n	o	
+gynéco	dermatologue	n	n	o	
+gynéco	gynécologue	o	o	o	
+gynéco	cancérologue	n	n	o	
+gynéco	biopsie	n	n	n	
+sein gauche	ganglion	n	o		
+sein gauche	carcinome	n	o		
+sein gauche	biopsie	n	n		
+sein gauche	curage axillaire	n			
+sein gauche	tumorectomie	n	o		
+sein gauche	nodule	n			
+sein gauche	ablation	n	o		
+sein gauche	tumeur	n	o		
+sein gauche	chirurgie	n	o		
+sein gauche	chirurgien	n			
+entourage	angoisse	n	n		
+entourage	médecin traitant	n	n		
+entourage	hormonothérapie	n	n		
+entourage	fatigue	n	n		
+entourage	assistant social	n	n		
+entourage	récidive	n	n		
+entourage	cancer	n	n		
+entourage	radiologue	n	n		
+entourage	anesthésie	n	n		
+entourage	chimiothérapie	n	n		
+force	angoisse	n	n		
+force	guérison	n	n		
+force	fatigue	n	n		
+force	douleur	n	n		
+force	cancer	n	n		
+force	récidive	n	n		
+force	sonde	n	n		
+force	ablation	n	n		
+force	chronique	n	n		
+force	oncologue	n	n		
+doigts	cancérologie	n	n		
+doigts	effet secondaire	n	n		
+doigts	orthèse	n	n		
+doigts	système nerveux	n	n		
+doigts	numération formule sanguine	n	n		
+doigts	infection	n	n		
+doigts	hormonosensible	n	n		
+doigts	aisselle	n	n		
+doigts	douleur	n	n		
+doigts	oncologue	n	n		
+lieu	mastectomie	n	n		
+lieu	radiothérapeute	n	n		
+lieu	tumorectomie	n	n		
+lieu	ablation	n	n		
+lieu	radiothérapie	n	n		
+lieu	épanchement pleural	n	n		
+lieu	chirurgien	n	n		
+lieu	radiologue	n	n		
+lieu	biopsie	n	n		
+lieu	scanner	n	n		
+bonne soirée	toxicité	n	n		
+bonne soirée	algologue	n	n		
+bonne soirée	psychologue	n	n		
+bonne soirée	sénologue	n	n		
+bonne soirée	médecine nucléaire	n	n		
+bonne soirée	oncologue	n	n		
+bonne soirée	hormonothérapie	n	n		
+bonne soirée	vitesse de sédimentation	n	n		
+bonne soirée	ascite	n	n		
+bonne soirée	thorax	n	n		
+cancer du sein	cancer	n	o		
+cancer du sein	carcinome	n	o		
+cancer du sein	tumeur	n	o		
+cancer du sein	biopsie	n	n		
+cancer du sein	mastectomie	n	o		
+cancer du sein	grade	n	o		
+cancer du sein	ganglion	n	o		
+cancer du sein	adénocarcinome	n	o		
+cancer du sein	ablation	n	o		
+cancer du sein	récidive	n	o		
+réponse	oncologue	n	n		
+réponse	angoisse	n	n		
+réponse	chirurgien	n	n		
+réponse	cancer	n	n		
+réponse	radiothérapie	n	n		
+réponse	récidive	n	n		
+réponse	rémission	n	n		
+réponse	protocole	n	n		
+réponse	guérison	n	n		
+réponse	hormonothérapie	n	n		
+droit	mastectomie	n	n		
+droit	ablation	n	n		
+droit	biopsie	n	n		
+droit	nodule	n	n		
+droit	cancer	n	n		
+droit	tumeur	n	n		
+droit	radiothérapie	n	n		
+droit	chirurgien	n	n		
+droit	curage axillaire	n	n		
+droit	douleur	n	n		
+vacances	chirurgien	n	n		
+vacances	thoracotomie	n	n		
+vacances	oncologue	n	n		
+vacances	radiothérapie	n	n		
+vacances	protocole	n	n		
+vacances	biopsie	n	n		
+vacances	angoisse	n	n		
+vacances	chirurgie	n	n		
+vacances	médecine nucléaire	n	n		
+vacances	cancer	n	n		
+sport	prothèse	n	n		
+sport	sophrologue	n	n		
+sport	tumorectomie	n	n		
+sport	curage axillaire	n	n		
+sport	frottis	n	n		
+sport	jambe	n	n		
+sport	fatigue	n	n		
+sport	hormonothérapie	n	n		
+sport	angoisse	n	n		
+sport	douleur	n	n		
+rendez-vous	oncologue	n			o
+rendez-vous	sophrologue	n			o
+rendez-vous	chirurgien	n			o
+rendez-vous	médecin traitant	n			o
+rendez-vous	biopsie	n			o
+rendez-vous	radiothérapie	n			o
+rendez-vous	médecin généraliste	n			o
+rendez-vous	radiothérapeute	n			o
+rendez-vous	scanner	n			o
+rendez-vous	radiologue	n			o
+métas	foie	n			
+métas	bassin	n			
+métas	nodule	n			
+métas	métastase	o			
+métas	tumeur	n			
+métas	récidive	n			
+métas	cancer	n			
+métas	sternum	n			
+métas	plèvre	n			
+métas	hanche	n			
+étape	radiothérapie	n	n		
+étape	glande mammaire	n	n		
+étape	vitesse de sédimentation	n	n		
+étape	scanner	n	n		
+étape	cure	n	n		
+étape	récidive	n	n		
+étape	chirurgie	n	n		
+étape	tumorectomie	n	n		
+étape	rayon	n	n		
+étape	protocole	n	n		
+bonne	cancer	n	n		
+bonne	tumorectomie	n	n		
+bonne	angoisse	n	n		
+bonne	protocole	n	n		
+bonne	mastectomie	n	n		
+bonne	hormonodépendant	n	n		
+bonne	radiothérapie	n	n		
+bonne	grade	n	n		
+bonne	fatigue	n	n		
+bonne	tumeur	n	n		
+bien	cancer	n	n		
+bien	angoisse	n	n		
+bien	protocole	n	n		
+bien	douleur	n	n		
+bien	hormonothérapie	n	n		
+bien	tumeur	n	n		
+bien	oncologue	n	n		
+bien	fatigue	n	n		
+bien	guérison	n	n		
+bien	foie	n	n		
+effets	fatigue	n	n		
+effets	radiothérapie	n	n		
+effets	douleur	n	n		
+effets	hormonothérapie	n	n		
+effets	ablation	n	n		
+effets	cancer	n	n		
+effets	récidive	n	n		
+effets	antigène	n	n		
+effets	angoisse	n	n		
+effets	cure	n	n		
+chemin	rémission	n	n		
+chemin	radiothérapie	n	n		
+chemin	oncologue	n	n		
+chemin	angoisse	n	n		
+chemin	médecin traitant	n	n		
+chemin	protocole	n	n		
+chemin	guérison	n	n		
+chemin	curage ganglionnaire	n	n		
+chemin	chirurgie	n	n		
+chemin	récidive	n	n		
+irm	échographie	n	o	o	
+irm	scanner	n	o	o	
+irm	biopsie	n	n	o	
+irm	scintigraphie osseuse	n	n	o	
+irm	scintigraphie	n	n	o	
+irm	extension	n	n	n	
+irm	mammographie	n	n	o	
+irm	tep	n			
+irm	bilan	n			
+irm	radiologue	n	o	n	
+reconstruction	ablation	n	n		
+reconstruction	prothèse	n	n		
+reconstruction	annexectomie	n	n		
+reconstruction	mastectomie	n	n		
+reconstruction	récidive	n	n		
+reconstruction	tumorectomie	n	n		
+reconstruction	oncologue	n	n		
+reconstruction	chirurgie	n	n		
+reconstruction	chirurgien	n	n		
+reconstruction	protocole	n	n		
+internet	organe	n	n		
+internet	angoisse	n	n		
+internet	algologue	n	n		
+internet	médecin traitant	n	n		
+internet	radiologue	n	n		
+internet	protocole	n	n		
+internet	hormonodépendant	n	n		
+internet	leucémie	n	n		
+internet	oncologue	n	n		
+internet	biopsie	n	n		
+chaleur	fatigue	n	n		
+chaleur	symptôme	n	n		
+chaleur	douleur	n	n		
+chaleur	angoisse	n	n		
+chaleur	ménopause	n	n		
+chaleur	tendon	n	n		
+chaleur	épanchement	n	n		
+chaleur	radiothérapie	n	n		
+chaleur	anxiété	n	n		
+chaleur	phlébite	n	n		
+femmes	cancer	n	n		
+femmes	fatigue	n	n		
+femmes	oncologue	n	n		
+femmes	tumeur	n	n		
+femmes	angoisse	n	n		
+femmes	chirurgien	n	n		
+femmes	gynécologue	n	n		
+femmes	hormonothérapie	n	n		
+femmes	récidive	n	n		
+femmes	plèvre	n	n		
+cause	fatigue	n	n		
+cause	sang	n	n		
+cause	douleur	n	n		
+cause	cancer	n	n		
+cause	diagnostic	n	n		
+cause	signe	n	n		
+cause	estomac	n	n		
+cause	sternum	n	n		
+cause	infection	n	n		
+cause	angoisse	n	n		
+amitié	récidive	n	n		
+amitié	dépression	n	n		
+amitié	signe	n	n		
+amitié	angoisse	n	n		
+amitié	rayon	n	n		
+amitié	essai thérapeutique	n	n		
+amitié	orthèse	n	n		
+amitié	pneumologue	n	n		
+amitié	cancer	n	n		
+amitié	ablation	n	n		
+médecin	médecin traitant	o	o		
+médecin	médecin généraliste	o	o		
+médecin	oncologue	n	o		
+médecin	chirurgien	n	o		
+médecin	cancérologue	n	o		
+médecin	radiologue	n	o		
+médecin	psychologue	n	o		
+médecin	radiothérapeute	n	o		
+médecin	gynécologue	n	o		
+médecin	cancer	n	o		
+expérience	oncologue	n	n		
+expérience	cancer	n	n		
+expérience	pharmacien	n	n		
+expérience	protocole	n	n		
+expérience	hormonothérapie	n	n		
+expérience	pac	n	n		
+expérience	récidive	n	n		
+expérience	angoisse	n	n		
+expérience	douleur	n	n		
+expérience	médecin traitant	n	n		
+pose	anesthésie	n	n		
+pose	angoisse	n	n		
+pose	anesthésie locale	n	n		
+pose	pac	n	n		
+pose	anesthésie générale	n	n		
+pose	ganglion	n	n		
+pose	douleur	n	n		
+pose	chirurgien	n	n		
+pose	microcalcification	n	n		
+pose	prélèvement	n	n		
+effet	effet secondaire	o	o		
+effet	cancer	n	o		
+effet	pac	n	n		
+effet	exérèse	n	n		
+effet	douleur	n	n		
+effet	hormonothérapie	n	o		
+effet	radiothérapie	n	o		
+effet	fatigue	n	n		
+effet	oncologue	n	n		
+effet	tumeur	n	o		
+contrôles	prélèvement	n	n		
+contrôles	scanner	n	n		
+contrôles	mammographie	n	n		
+contrôles	bilan	n	n		
+contrôles	radiothérapie	n	n		
+contrôles	biopsie	n	n		
+contrôles	échographie	n	n		
+contrôles	mastectomie	n	n		
+contrôles	diagnostic	n	n		
+contrôles	oncologue	n	n		
+pensées	essai thérapeutique	n	n		
+pensées	traitement adjuvant	n	n		
+pensées	oncologue	n	n		
+pensées	dépression	n	n		
+pensées	iode	n	n		
+pensées	angoisse	n	n		
+pensées	douleur	n	n		
+pensées	ménopause	n	n		
+pensées	protocole	n	n		
+pensées	tension	n	n		
+nilou	antécédent familial	n	n		
+nilou	oncologue	n	n		
+nilou	antécédent	n	n		
+nilou	fatigue	n	n		
+nilou	poumon	n	n		
+nilou	bile	n	n		
+nilou	chirurgien	n	n		
+nilou	médecin traitant	n	n		
+nilou	diagnostic	n	n		
+nilou	tumorectomie	n	n		
+prise en charge	chirurgien	n	o		
+prise en charge	oncologue	n	o		
+prise en charge	médecin traitant	n	o		
+prise en charge	survie	n	n		
+prise en charge	radiologue	n	o		
+prise en charge	endoscopie	n	n		
+prise en charge	chirurgie	n	o		
+prise en charge	épanchement pleural	n	n		
+prise en charge	anxiété	n	n		
+prise en charge	biopsie	n	n		
+pensées positives	essai thérapeutique	n	n		
+pensées positives	kinésithérapie	n	n	n	
+pensées positives	rayon	n	n	n	
+pensées positives	acupuncture	n	n	n	
+pensées positives	traitement adjuvant	n	n	n	
+pensées positives	angoisse	n	n	n	
+pensées positives	péritonite	n	n	n	
+pensées positives	rémission	n	n	n	
+pensées positives	oncologue	n	n	n	
+pensées positives	phlébite	n	n	n	
+poumons	poumon	o	o	o	n
+poumons	foie	n	n	o	
+poumons	extension	n	n	n	
+poumons	sternum	n	n	o	
+poumons	pancréas	n	n	o	
+poumons	thyroïde	n	n	o	
+poumons	hanche	n	n	o	
+poumons	thorax	n	n	o	
+poumons	ganglion	n	n	n	
+poumons	radiothérapie	n	n	n	
+témoignages	survie	n	n	n	
+témoignages	vitamine	n	n	n	
+témoignages	angoisse	n	n	n	
+témoignages	hormonothérapie	n	n	n	
+témoignages	mastectomie	n	n	n	
+témoignages	cancer	n	n	n	
+témoignages	radiologue	n	n	n	
+témoignages	hormonodépendant	n	n	n	
+témoignages	oncologue	n	n	n	
+témoignages	chimiothérapie	n	n	n	
+in situ	carcinome	n	o		
+in situ	grade	n	o		
+in situ	adénocarcinome	n	o		
+in situ	stade	n	o		
+in situ	ganglion	n	o		
+in situ	tumeur	n	o		
+in situ	hormonodépendant	n	n		
+in situ	articulation	n	n		
+in situ	nécrose	n	o		
+in situ	cancer	n	o		
+genre	douleur	n	n		
+genre	fatigue	n	n		
+genre	foie	n	n		
+genre	effet secondaire	n	n		
+genre	cancer	n	n		
+genre	tension	n	n		
+genre	prémédication	n	n		
+genre	poumon	n	n		
+genre	hanche	n	n		
+genre	chirurgien	n	n		
+exemple	génétique	n	n		
+exemple	pleurésie	n	n		
+exemple	radiothérapie	n	n		
+exemple	protocole	n	n		
+exemple	pharmacien	n	n		
+exemple	douleur	n	n		
+exemple	trachéite	n	n		
+exemple	anesthésie générale	n	n		
+exemple	médecin traitant	n	n		
+exemple	angoisse	n	n		
+analyses	biopsie	n	o	o	n
+analyses	oncologue	n	n	n	n
+analyses	bilan	n	o	o	n
+analyses	carcinome	n	n	n	n
+analyses	bilan hépatique	n	o	o	n
+analyses	chirurgien	n	n	n	n
+analyses	exérèse	n	n	n	n
+analyses	chirurgie	n	n	n	n
+analyses	scintigraphie	n	o	o	n
+analyses	ganglion	n	n	n	n
+ganglion sentinelle	ganglion	o	o	o	n
+ganglion sentinelle	tumorectomie	n	n	n	n
+ganglion sentinelle	biopsie	n	n	n	n
+ganglion sentinelle	tumeur	n	n	n	n
+ganglion sentinelle	examen extemporané	n	n	n	n
+ganglion sentinelle	ablation	n	n	n	n
+ganglion sentinelle	chirurgien	n	n	n	n
+ganglion sentinelle	curage axillaire	n	n	n	n
+ganglion sentinelle	chirurgie	n	n	n	n
+ganglion sentinelle	chimiothérapie	n	n	n	n
+aide	fatigue	n	n	n	n
+aide	angoisse	n	n	n	n
+aide	cancer	n	n	n	n
+aide	psychologue	n	n	n	n
+aide	chirurgien	n	n	n	n
+aide	douleur	n	n	n	n
+aide	oncologue	n	n	n	n
+aide	hormonothérapie	n	n	n	n
+aide	homéopathie	n	n	n	n
+aide	ablation	n	n	n	n
+seins	échographie	n	o	n	o
+seins	chirurgien	n	n	n	n
+seins	tumeur	n	o	n	n
+seins	diagnostic	n	n	n	n
+seins	biopsie	n	n	n	o
+seins	inflammation	n	n	n	n
+seins	nodule	n	n	n	n
+seins	ganglion	n	n	n	
+seins	ablation	n	n	n	o
+seins	aisselle	n	n	o	n
+opération	mastectomie				
+opération	ablation				
+opération	chirurgie				
+opération	tumorectomie				
+opération	radiothérapie				
+opération	oncologue				
+opération	biopsie				
+opération	tumeur				
+opération	chirurgien				
+opération	scanner				
+inquiétudes	angoisse	o	o		
+inquiétudes	ascite	n			
+inquiétudes	mastectomie	n			
+inquiétudes	récidive	n			
+inquiétudes	fatigue	n			
+inquiétudes	bilirubine	n			
+inquiétudes	douleur	n			
+inquiétudes	ablation	n			
+inquiétudes	psychologue	n			
+inquiétudes	stade	n			
+choc	récidive	n			
+choc	fatigue	n			
+choc	douleur	n			
+choc	cancer	n			
+choc	ablation	n			
+choc	protocole	n			
+choc	hormonothérapie	n			
+choc	tumeur	n			
+choc	angoisse	n			
+choc	option	n			
+forme	ganglion	n			
+forme	varice	n			
+forme	inflammation	n			
+forme	rémission	n			
+forme	guérison	n			
+forme	cancer	n			
+forme	douleur	n			
+forme	angoisse	n			
+forme	poumon	n			
+forme	carcinome	n			
+rayons	radiothérapie	o			
+rayons	hormonothérapie	n			
+rayons	mastectomie	n			
+rayons	ablation	n			
+rayons	chimiothérapie	n			
+rayons	radiothérapeute	n			
+rayons	tumorectomie	n			
+rayons	oncologue	n			
+rayons	biopsie	n			
+rayons	tumeur	n			
+métastases	métastase	o			
+métastases	récidive	n			
+métastases	scintigraphie	n			
+métastases	inflammation	n			
+métastases	bassin	n			
+métastases	foie	n			
+métastases	nodule	n			
+métastases	ganglion	n			
+métastases	cancer	n			
+métastases	hormonothérapie	n			
+gens	oncologue	n			
+gens	cancérologue	n			
+gens	cancer	n			
+gens	fatigue	n			
+gens	ostéoporose	n			
+gens	angoisse	n			
+gens	chirurgien	n			
+gens	rémission	n			
+gens	guérison	n			
+gens	médecin traitant	n			
+traitements	hormonothérapie		o		
+traitements	chimiothérapie		o		
+traitements	cancer				
+traitements	protocole				
+traitements	radiothérapie		o		
+traitements	mastectomie		o		
+traitements	ablation				
+traitements	oncologue				
+traitements	récidive				
+traitements	douleur				
+ondes	essai thérapeutique	n			
+ondes	traitement adjuvant	n			
+ondes	ambulancier	n			
+ondes	mucite	n			
+ondes	acupuncture	n			
+ondes	organe	n			
+ondes	mutation	n			
+ondes	psychiatre	n			
+ondes	pneumologue	n			
+ondes	angoisse	n			
+marche	hystérectomie	n			
+marche	effet secondaire	n			
+marche	cure	n			
+marche	radiothérapie	n			
+marche	fatigue	n			
+marche	grain de beauté	n			
+marche	gène	n			
+marche	hormonothérapie	n			
+marche	antiémétique	n			
+marche	angoisse	n			
+cures	cure	o			
+cures	mastectomie	n			
+cures	radiothérapie	n			
+cures	protocole	n			
+cures	chimiothérapie	n			
+cures	tumorectomie	n			
+cures	pac	n			
+cures	ablation	n			
+cures	hormonothérapie	n			
+cures	chirurgie	n			
+façon	ablation	n			
+façon	oncologue	n			
+façon	mastectomie	n			
+façon	radiologue	n			
+façon	chirurgien	n			
+façon	cancer	n			
+façon	protocole	n			
+façon	radiothérapie	n			
+façon	biopsie	n			
+façon	pneumologue	n			
+nouvelles	angoisse	n			
+nouvelles	médecin traitant	n			
+nouvelles	cancer	n			
+nouvelles	biopsie	n			
+nouvelles	scanner	n			
+nouvelles	oncologue	n			
+nouvelles	chirurgie	n			
+nouvelles	chirurgien	n			
+nouvelles	immunothérapie	n			
+nouvelles	radiothérapie	n			
+reste	chirurgien	n			
+reste	angoisse	n			
+reste	protocole	n			
+reste	fatigue	n			
+reste	radiologue	n			
+reste	douleur	n			
+reste	tumeur	n			
+reste	tumorectomie	n			
+reste	cancer	n			
+reste	récidive	n			
+résultat	chirurgien				
+résultat	biopsie				
+résultat	radiologue				
+résultat	ganglion				
+résultat	diagnostic				
+résultat	radiothérapie				
+résultat	bilan				
+résultat	scanner				
+résultat	mastectomie				
+résultat	tumorectomie				
+hopital	ambulatoire				
+hopital	radiologie				
+hopital	chirurgien				
+hopital	chirurgie				
+hopital	anesthésiste				
+hopital	gynécologue				
+hopital	médecine nucléaire				
+hopital	oncologue				
+hopital	cancérologie				
+hopital	ponction				
+esprit	posologie				
+esprit	pneumologue				
+esprit	chirurgien				
+esprit	douleur				
+esprit	cancer				
+esprit	antécédent				
+esprit	protocole				
+esprit	veine				
+esprit	bronche				
+esprit	psychothérapie				
+côté	jambe				
+côté	angoisse				
+côté	ganglion				
+côté	tumeur				
+côté	cancer				
+côté	mastectomie				
+côté	organe				
+côté	chirurgien				
+côté	tumorectomie				
+côté	foie				
+mail	médecin traitant				
+mail	cancérologue				
+mail	oncologue				
+mail	algologue				
+mail	psychologue				
+mail	protocole				
+mail	chirurgien				
+mail	radiologue				
+mail	chirurgie				
+mail	rémission				
+vie	cancer				
+vie	espérance de vie				
+vie	rémission				
+vie	guérison				
+vie	angoisse				
+vie	douleur				
+vie	fatigue				
+vie	tumeur				
+vie	hormonothérapie				
+vie	radiothérapie				
+patience	curage axillaire				
+patience	chimiothérapie				
+patience	aplasie				
+patience	guérison				
+patience	incision				
+patience	effet secondaire				
+patience	rémission				
+patience	coloscopie				
+patience	cancer				
+patience	protocole de soins				
+choses	médecin traitant				
+choses	cancer				
+choses	oncologue				
+choses	diagnostic				
+choses	radiologue				
+choses	douleur				
+choses	angoisse				
+choses	fatigue				
+choses	tumeur				
+choses	biopsie				
+belle	cancer				
+belle	angoisse				
+belle	biopsie				
+belle	chirurgien				
+belle	sang				
+belle	oncologue				
+belle	mastectomie				
+belle	récidive				
+belle	fatigue				
+belle	médecin traitant				
+echo	échographie				
+echo	scanner				
+echo	thorax				
+echo	radiologue				
+echo	radiographie				
+echo	pelvis				
+echo	scintigraphie osseuse				
+echo	bilan				
+echo	poumon				
+echo	biopsie				
+trouille	angoisse				
+trouille	mammectomie				
+trouille	radiothérapie				
+trouille	récidive				
+trouille	hormonothérapie				
+trouille	impuissance				
+trouille	douleur				
+trouille	estomac				
+trouille	mastectomie				
+trouille	protocole				
+attente	angoisse				
+attente	biopsie				
+attente	mastectomie				
+attente	oncologue				
+attente	douleur				
+attente	protocole				
+attente	diagnostic				
+attente	cancer				
+attente	radiothérapie				
+attente	médecin traitant				
+moral	angoisse				
+moral	oncologue				
+moral	estomac				
+moral	tension				
+moral	fatigue				
+moral	globule blanc				
+moral	radiothérapie				
+moral	cancer				
+moral	récidive				
+moral	guérison				
+rapport	ganglion				
+rapport	bile				
+rapport	protocole				
+rapport	grade				
+rapport	tumeur				
+rapport	cancer				
+rapport	diagnostic				
+rapport	biopsie				
+rapport	nodule				
+rapport	radiologue				
+besoin	angoisse				
+besoin	cancer				
+besoin	psychologue				
+besoin	oncologue				
+besoin	chirurgien				
+besoin	guérison				
+besoin	protocole				
+besoin	radiothérapie				
+besoin	récidive				
+besoin	ablation				
+traitement	protocole				
+traitement	hormonothérapie				
+traitement	radiothérapie				
+traitement	cancer				
+traitement	oncologue				
+traitement	ménopause				
+traitement	mastectomie				
+traitement	chimiothérapie				
+traitement	chirurgie				
+traitement	herceptin				
+plaisir	médecin traitant				
+plaisir	oncologue				
+plaisir	douleur				
+plaisir	chirurgien				
+plaisir	angoisse				
+plaisir	système immunitaire				
+plaisir	signe				
+plaisir	anesthésie locale				
+plaisir	protocole				
+plaisir	radiothérapie				
+post	diagnostic				
+post	oncologue				
+post	anesthésiste				
+post	gynécologue				
+post	radiothérapie				
+post	mastectomie				
+post	médecin traitant				
+post	chirurgien				
+post	chirurgie				
+post	ménopause				
+ganglions	ganglion				
+ganglions	tumeur				
+ganglions	grade				
+ganglions	tumorectomie				
+ganglions	cellule				
+ganglions	carcinome				
+ganglions	nodule				
+ganglions	aisselle				
+ganglions	cancer				
+ganglions	mastectomie				
+intervention	biopsie				
+intervention	chirurgie				
+intervention	tumorectomie				
+intervention	chirurgien				
+intervention	ablation				
+intervention	radiothérapie				
+intervention	pac				
+intervention	protocole				
+intervention	anesthésie				
+intervention	mastectomie				
+service	sénologie				
+service	chirurgien				
+service	oncologie				
+service	sophrologue				
+service	oncologue				
+service	médecin traitant				
+service	dermatologue				
+service	gynécologie				
+service	bilan				
+service	psychiatre				
+surement	diabète				
+surement	rayon				
+surement	ablation				
+surement	posologie				
+surement	chirurgien				
+surement	endoscopie				
+surement	diagnostic				
+surement	oncologue				
+surement	radiothérapie				
+surement	mastectomie				
+cicatrice	aisselle				
+cicatrice	hématome				
+cicatrice	tumeur				
+cicatrice	ganglion				
+cicatrice	prélèvement				
+cicatrice	ablation				
+cicatrice	échographie				
+cicatrice	douleur				
+cicatrice	drain				
+cicatrice	cartilage				
+question	tumeur				
+question	cancer				
+question	radiothérapie				
+question	oncologue				
+question	hormonothérapie				
+question	angoisse				
+question	chambre implantable				
+question	chimiothérapie				
+question	mastectomie				
+question	chirurgien				
+mari	cancer				
+mari	oncologue				
+mari	angoisse				
+mari	chirurgien				
+mari	médecin traitant				
+mari	radiologue				
+mari	diagnostic				
+mari	récidive				
+mari	douleur				
+mari	ablation				
+épreuve	hormonothérapie				
+épreuve	angoisse				
+épreuve	chirurgien				
+épreuve	récidive				
+épreuve	protocole				
+épreuve	rémission				
+épreuve	guérison				
+épreuve	échographie				
+épreuve	handicap				
+épreuve	anesthésique				
+soutien	prothèse				
+soutien	angoisse				
+soutien	fatigue				
+soutien	médecin traitant				
+soutien	cancer				
+soutien	douleur				
+soutien	oncologie				
+soutien	hormonothérapie				
+soutien	oncologue				
+soutien	radiologue				
+consultation	laser				
+consultation	oncologue				
+consultation	radiothérapeute				
+consultation	radiothérapie				
+consultation	dépistage				
+consultation	médecin traitant				
+consultation	bilan				
+consultation	chirurgien				
+consultation	examen clinique				
+consultation	tumorectomie				
+mamo	mammographie				
+mamo	radiologue				
+mamo	biopsie				
+mamo	échographie				
+mamo	tumorectomie				
+mamo	scanner				
+mamo	tep				
+mamo	ponction				
+mamo	poumon				
+mamo	nodule				
+réponses	diagnostic				
+réponses	biopsie				
+réponses	oncologue				
+réponses	chirurgien				
+réponses	cancer				
+réponses	douleur				
+réponses	angoisse				
+réponses	pac				
+réponses	pet scan				
+réponses	radiologue				
+généraliste	médecin généraliste				
+généraliste	médecin traitant				
+généraliste	chirurgien				
+généraliste	oncologue				
+généraliste	radiothérapeute				
+généraliste	sénologue				
+généraliste	cancérologue				
+généraliste	radiologue				
+généraliste	gynécologue				
+généraliste	scanner				
+maman	cancer				
+maman	récidive				
+maman	douleur				
+maman	guérison				
+maman	ablation				
+maman	fatigue				
+maman	angoisse				
+maman	oncologue				
+maman	mastectomie				
+maman	biopsie				
+type	grade				
+type	carcinome				
+type	stade				
+type	protocole				
+type	diagnostic				
+type	cancer				
+type	lésion				
+type	biopsie				
+type	prémédication				
+type	antécédent				
+annonce	biopsie				
+annonce	chirurgie				
+annonce	chirurgien				
+annonce	cancer				
+annonce	angoisse				
+annonce	ablation				
+annonce	mastectomie				
+annonce	diagnostic				
+annonce	oncologue				
+annonce	gynécologue				
+ondes positives	essai thérapeutique				
+ondes positives	ambulancier				
+ondes positives	angoisse				
+ondes positives	rayon				
+ondes positives	sénologue				
+ondes positives	traitement adjuvant				
+ondes positives	médecin traitant				
+ondes positives	douleur				
+ondes positives	pneumologue				
+ondes positives	oncologue				
+taxotère	cure				
+taxotère	radiothérapie				
+taxotère	protocole				
+taxotère	injection				
+taxotère	chimiothérapie				
+taxotère	pac				
+taxotère	herceptin				
+taxotère	hormonothérapie				
+taxotère	tumorectomie				
+taxotère	perfusion				
+conseil	antiémétique				
+conseil	psychiatre				
+conseil	médecin traitant				
+conseil	chirurgien				
+conseil	oncologue				
+conseil	fibrose				
+conseil	neurologue				
+conseil	psychologue				
+conseil	hormonosensible				
+conseil	protocole				
+doute	angoisse				
+doute	chirurgien				
+doute	mastectomie				
+doute	douleur				
+doute	extension				
+doute	médecin traitant				
+doute	protocole				
+doute	hormonothérapie				
+doute	radiothérapie				
+doute	oncologue				
+histoire	ganglion				
+histoire	angoisse				
+histoire	cancer				
+histoire	rémission				
+histoire	biopsie				
+histoire	mastectomie				
+histoire	médecin traitant				
+histoire	oncologue				
+histoire	sang				
+histoire	diagnostic				
+travail	radiologue				
+travail	angoisse				
+travail	douleur				
+travail	protocole				
+travail	chirurgien				
+travail	mammographie				
+travail	oncologue				
+travail	médecine nucléaire				
+travail	chimiothérapie				
+travail	biopsie				
+décision	hormonothérapie				
+décision	protocole				
+décision	randomisation				
+décision	orthopédiste				
+décision	ablation				
+décision	angoisse				
+décision	mastectomie				
+décision	tumorectomie				
+décision	diagnostic				
+décision	chirurgien				
+analyse	ganglion				
+analyse	anatomopathologie				
+analyse	exérèse				
+analyse	prélèvement				
+analyse	mastectomie				
+analyse	tumeur				
+analyse	ponction				
+analyse	tumorectomie				
+analyse	échographie				
+analyse	sang				
+stress	angoisse				
+stress	fatigue				
+stress	douleur				
+stress	radiothérapie				
+stress	tension				
+stress	oncologue				
+stress	récidive				
+stress	mastectomie				
+stress	ablation				
+stress	sang				
+peau	estomac				
+peau	aisselle				
+peau	douleur				
+peau	chirurgien				
+peau	infection				
+peau	sarcome				
+peau	genou				
+peau	poumon				
+peau	iode				
+peau	radiothérapie				
+part	chirurgien				
+part	cancer				
+part	angoisse				
+part	protocole				
+part	radiothérapie				
+part	douleur				
+part	oncologue				
+part	tumeur				
+part	fatigue				
+part	grade				
+larmes	angoisse				
+larmes	prédisposition génétique				
+larmes	tep				
+larmes	fractionnement				
+larmes	douleur				
+larmes	ambulancier				
+larmes	tension				
+larmes	drain				
+larmes	chirurgie				
+larmes	cancer				
+cheveux	organe				
+cheveux	cancer				
+cheveux	fatigue				
+cheveux	radiothérapie				
+cheveux	guérison				
+cheveux	pac				
+cheveux	cure				
+cheveux	globule blanc				
+cheveux	protocole				
+cheveux	diarrhée				
+perte	fatigue				
+perte	gynécologue				
+perte	prédisposition génétique				
+perte	radiothérapie				
+perte	ménopause				
+perte	estomac				
+perte	chimiothérapie				
+perte	anticorps				
+perte	ablation				
+perte	handicap				
+chimio	chimiothérapie				
+chimio	radiothérapie				
+chimio	cure				
+chimio	protocole				
+chimio	chirurgie				
+chimio	ablation				
+chimio	mastectomie				
+chimio	hormonothérapie				
+chimio	injection				
+chimio	cancer				
+infos	médecin traitant				
+infos	handicap				
+infos	protocole				
+infos	cancer				
+infos	oncologue				
+infos	chirurgien				
+infos	diagnostic				
+infos	hormonodépendant				
+infos	rayon				
+infos	angoisse				
+cellules	cellule				
+cellules	tumeur				
+cellules	cancer				
+cellules	polype				
+cellules	grade				
+cellules	ganglion				
+cellules	signe				
+cellules	tumeur bénigne				
+cellules	foie				
+cellules	adénocarcinome				
+eau	sang				
+eau	selles				
+eau	mycose				
+eau	douleur				
+eau	effet indésirable				
+eau	angoisse				
+eau	mortalité				
+eau	tumeur bénigne				
+eau	lymphe				
+eau	médecin traitant				
+sein droit	nodule				
+sein droit	biopsie				
+sein droit	tumeur				
+sein droit	ganglion				
+sein droit	grade				
+sein droit	carcinome				
+sein droit	mastectomie				
+sein droit	curage axillaire				
+sein droit	tumorectomie				
+sein droit	ablation				
+méta	métastase				
+méta	scanner				
+méta	foie				
+méta	bassin				
+méta	tumeur				
+méta	rein				
+méta	pet scan				
+méta	métastatique				
+méta	récidive				
+méta	radiothérapie				
+produit	iode				
+produit	injection				
+produit	protocole				
+produit	scintigraphie				
+produit	ponction				
+produit	inflammation				
+produit	biopsie				
+produit	cancer				
+produit	angoisse				
+produit	radiothérapie				
+résultats	chirurgien				
+résultats	biopsie				
+résultats	oncologue				
+résultats	scanner				
+résultats	radiologue				
+résultats	protocole				
+résultats	diagnostic				
+résultats	médecin traitant				
+résultats	sang				
+résultats	bilan				
+problèmes	douleur				
+problèmes	fatigue				
+problèmes	occlusion				
+problèmes	diarrhée				
+problèmes	radiothérapie				
+problèmes	angoisse				
+problèmes	cancer				
+problèmes	scanner				
+problèmes	signe				
+problèmes	perfusion				
+plein	cancer				
+plein	traitement adjuvant				
+plein	angoisse				
+plein	chirurgien				
+plein	douleur				
+plein	protocole				
+plein	alopécie				
+plein	inflammation				
+plein	mastectomie				
+plein	oncologue				
+rdv	chirurgien				
+rdv	oncologue				
+rdv	radiothérapeute				
+rdv	scanner				
+rdv	biopsie				
+rdv	radiologue				
+rdv	radiothérapie				
+rdv	tumorectomie				
+rdv	anesthésiste				
+rdv	médecin traitant				
+dossier	oncologue				
+dossier	médecin traitant				
+dossier	chirurgien				
+dossier	psychologue				
+dossier	cardiologue				
+dossier	radiologue				
+dossier	diagnostic				
+dossier	ablation				
+dossier	protocole				
+dossier	angoisse				
+maux	fatigue				
+maux	infection				
+maux	impuissance				
+maux	mycose				
+maux	inflammation				
+maux	douleur				
+maux	poumon				
+maux	radiothérapie				
+maux	angoisse				
+maux	scanner				
+confiance	dépistage				
+confiance	oncologue				
+confiance	angoisse				
+confiance	chirurgien				
+confiance	diagnostic				
+confiance	oncogénétique				
+confiance	tension				
+confiance	radiologue				
+confiance	chirurgie				
+confiance	récidive				
+air	urologue				
+air	radiologue				
+air	tumeur bénigne				
+air	oncologue				
+air	protocole				
+air	récidive				
+air	douleur				
+air	cancérologue				
+air	chirurgien				
+air	diagnostic				
+amie	ascite				
+amie	poumon				
+amie	chirurgien				
+amie	rémission				
+amie	prédisposition génétique				
+amie	ablation				
+amie	oncologue				
+amie	guérison				
+amie	angoisse				
+amie	traitement adjuvant				
+reconstruction immédiate	annexectomie				
+reconstruction immédiate	ablation				
+reconstruction immédiate	prothèse				
+reconstruction immédiate	radiofréquence				
+reconstruction immédiate	mastectomie				
+reconstruction immédiate	hormonothérapie				
+reconstruction immédiate	oncologue radiothérapeute				
+reconstruction immédiate	tumorectomie				
+reconstruction immédiate	métastatique				
+reconstruction immédiate	récidive				
+cancers	cancer				
+cancers	grade				
+cancers	stade				
+cancers	tumeur				
+cancers	rémission				
+cancers	carcinome				
+cancers	hormonothérapie				
+cancers	mastectomie				
+cancers	radiothérapie				
+cancers	adénocarcinome				
+sens	angoisse				
+sens	douleur				
+sens	cancer				
+sens	fatigue				
+sens	radiologue				
+sens	prothèse				
+sens	ablation				
+sens	ganglion				
+sens	chirurgien				
+sens	radiothérapie				
+attention	douleur				
+attention	hystérectomie				
+attention	anesthésie locale				
+attention	guérison				
+attention	cancérologue				
+attention	angoisse				
+attention	bile				
+attention	ablation				
+attention	cancer				
+attention	inflammation				
+situation	gynécologue				
+situation	protocole				
+situation	douleur				
+situation	hormonothérapie				
+situation	fatigue				
+situation	cancer				
+situation	angoisse				
+situation	guérison				
+situation	mastectomie				
+situation	antécédent				
+séances	radiothérapie				
+séances	tumorectomie				
+séances	chimiothérapie				
+séances	mastectomie				
+séances	ablation				
+séances	chirurgie				
+séances	hormonothérapie				
+séances	protocole				
+séances	cure				
+séances	fatigue				
+écoute	douleur				
+écoute	ablation				
+écoute	oncologue				
+écoute	cancer				
+écoute	hormonothérapie				
+écoute	adénome				
+écoute	médecin généraliste				
+écoute	lymphe				
+écoute	déglutition				
+écoute	guérison				
+fils	orbite				
+fils	chirurgien				
+fils	récidive				
+fils	cancer				
+fils	diagnostic				
+fils	chirurgie				
+fils	angoisse				
+fils	radiothérapie				
+fils	prédisposition génétique				
+fils	articulation				
+âge	mortalité				
+âge	tumeur				
+âge	cancer				
+âge	grade				
+âge	biopsie				
+âge	protocole				
+âge	poumon				
+âge	chirurgie				
+âge	chimiothérapeute				
+âge	chirurgien				
+raison	cancer				
+raison	angoisse				
+raison	fatigue				
+raison	oncologue				
+raison	hormonothérapie				
+raison	diagnostic				
+raison	douleur				
+raison	biopsie				
+raison	récidive				
+raison	protocole				
+chir	chirurgien				
+chir	oncologue				
+chir	biopsie				
+chir	cancérologue				
+chir	radiologue				
+chir	gynécologue				
+chir	radiothérapeute				
+chir	médecin traitant				
+chir	mastectomie				
+chir	ablation				
+cerveau	sternum				
+cerveau	foie				
+cerveau	cellule				
+cerveau	pancréas				
+cerveau	polype				
+cerveau	poumon				
+cerveau	bassin				
+cerveau	nodule				
+cerveau	cancer				
+cerveau	radiothérapie				
+repos	perfusion				
+repos	antidépresseur				
+repos	angoisse				
+repos	rémission				
+repos	tendon				
+repos	tumorectomie				
+repos	chirurgie				
+repos	injection				
+repos	infection				
+repos	fatigue				
+soin	cartilage				
+soin	oncologue				
+soin	prévention				
+soin	psychologue				
+soin	guérison				
+soin	pédiatre				
+soin	diététicien				
+soin	moelle osseuse				
+soin	coloscopie				
+soin	récidive				
+medecin	cirrhose				
+medecin	chirurgien				
+medecin	médecin traitant				
+medecin	oncologue				
+medecin	radiothérapeute				
+medecin	radiologue				
+medecin	échographie				
+medecin	cancérologue				
+medecin	médecin généraliste				
+medecin	gynécologue				
+site	cancer				
+site	oncologue				
+site	angoisse				
+site	chirurgien				
+site	médecin traitant				
+site	protocole				
+site	guérison				
+site	sonde urinaire				
+site	métastatique				
+site	diagnostic				
+risque	récidive				
+risque	cancer				
+risque	facteur de risque				
+risque	signe				
+risque	ablation				
+risque	protocole				
+risque	radiothérapie				
+risque	chimiothérapie				
+risque	ganglion				
+risque	angoisse				
+ablation du sein	ablation				
+ablation du sein	mammectomie				
+ablation du sein	tumorectomie				
+ablation du sein	curage axillaire				
+ablation du sein	envahissement ganglionnaire				
+ablation du sein	mastectomie				
+ablation du sein	hormonodépendant				
+ablation du sein	radiofréquence				
+ablation du sein	poumon				
+ablation du sein	chirurgie				
+boule	aisselle				
+boule	nodule				
+boule	ganglion				
+boule	ponction				
+boule	tumeur				
+boule	poumon				
+boule	biopsie				
+boule	clavicule				
+boule	échographie				
+boule	inflammation				
+mots	impuissance				
+mots	angoisse				
+mots	cancer				
+mots	radiologue				
+mots	oncologue				
+mots	ph				
+mots	douleur				
+mots	poumon				
+mots	cellule				
+mots	mastectomie				
+ventre	estomac				
+ventre	aisselle				
+ventre	aine				
+ventre	genou				
+ventre	poumon				
+ventre	angoisse				
+ventre	sternum				
+ventre	ganglion				
+ventre	inflammation				
+ventre	thyroïde				
+point	ganglion				
+point	hématome				
+point	douleur				
+point	ascite				
+point	radiothérapie				
+point	fatigue				
+point	incision				
+point	angoisse				
+point	tension				
+point	polype				
+soeur	prédisposition génétique				
+soeur	mastectomie				
+soeur	rayon				
+soeur	récidive				
+soeur	leucémie				
+soeur	cure				
+soeur	cancer				
+soeur	diagnostic				
+soeur	angoisse				
+soeur	fatigue				
+amour	angoisse				
+amour	option				
+amour	survie				
+amour	cancérologie				
+amour	chirurgie				
+amour	cancer				
+amour	antigène				
+amour	traitement adjuvant				
+amour	leucémie				
+amour	récidive				
+fiche	protocole				
+fiche	radiologue				
+fiche	oncologue				
+fiche	cancer				
+fiche	médecin traitant				
+fiche	cancérologue				
+fiche	chirurgien				
+fiche	rémission				
+fiche	mastectomie				
+fiche	tumeur				
+infirmière	oncologie				
+infirmière	chirurgien				
+infirmière	sophrologue				
+infirmière	radiothérapeute				
+infirmière	cancérologue				
+infirmière	radiologue				
+infirmière	oncologue				
+infirmière	psychologue				
+infirmière	hémorragie				
+infirmière	gynécologue				
+marqueurs	sang				
+marqueurs	scanner				
+marqueurs	bilan				
+marqueurs	angoisse				
+marqueurs	tumeur				
+marqueurs	antigène				
+marqueurs	tension				
+marqueurs	protocole				
+marqueurs	extension				
+marqueurs	oncologue				
+scinti	scintigraphie				
+scinti	scintigraphie osseuse				
+scinti	scanner				
+scinti	échographie				
+scinti	pet scan				
+scinti	bilan				
+scinti	extension				
+scinti	tep				
+scinti	sang				
+scinti	ponction				
+cours	psychologie				
+cours	radiothérapie				
+cours	chirurgien				
+cours	hormonothérapie				
+cours	mammographie				
+cours	rayon				
+cours	injection				
+cours	ablation				
+cours	mastectomie				
+cours	cure				
+courant	larynx				
+courant	angoisse				
+courant	scanner				
+courant	oncologue				
+courant	médecin traitant				
+courant	examen complémentaire				
+courant	rate				
+courant	génétique				
+courant	ablation				
+courant	protocole				
+soleil	fatigue				
+soleil	douleur				
+soleil	angoisse				
+soleil	rayon				
+soleil	cancer				
+soleil	ablation				
+soleil	bactérie				
+soleil	protocole				
+soleil	coloscopie				
+soleil	chirurgie				
+kiné	psycho-oncologue				
+kiné	chirurgien				
+kiné	antibiotique				
+kiné	sophrologue				
+kiné	douleur				
+kiné	biopsie				
+kiné	radiothérapie				
+kiné	oncologue				
+kiné	extension				
+kiné	médecin traitant				
+crabus	cancer				
+crabus	récidive				
+crabus	signe				
+crabus	angoisse				
+crabus	fatigue				
+crabus	tumeur				
+crabus	mastectomie				
+crabus	hormonothérapie				
+crabus	tumorectomie				
+crabus	douleur				
+colère	angoisse				
+colère	fatigue				
+colère	tension				
+colère	douleur				
+colère	impuissance				
+colère	cancer				
+colère	sidération				
+colère	radiothérapie				
+colère	guérison				
+colère	biopsie				
+maison	angoisse				
+maison	chirurgien				
+maison	hémogramme				
+maison	radiochirurgie				
+maison	radiologue				
+maison	pneumologue				
+maison	douleur				
+maison	handicap				
+maison	fatigue				
+maison	médecine nucléaire				
+kyste	ponction				
+kyste	nodule				
+kyste	biopsie				
+kyste	ganglion				
+kyste	carcinome				
+kyste	infection				
+kyste	échographie				
+kyste	lésion				
+kyste	aisselle				
+kyste	gastroentérologue				
+prise de sang	sang				
+prise de sang	extension				
+prise de sang	scanner				
+prise de sang	bilan				
+prise de sang	biopsie				
+prise de sang	scintigraphie osseuse				
+prise de sang	poumon				
+prise de sang	échographie				
+prise de sang	oncologue				
+prise de sang	scintigraphie				
+forces	tension				
+forces	sénologue				
+forces	fatigue				
+forces	angoisse				
+forces	fractionnement				
+forces	handicap				
+forces	polype				
+forces	irradiation				
+forces	récidive				
+forces	douleur				
+big	bactérie				
+big	bile				
+big	angoisse				
+big	examen complémentaire				
+big	médecin généraliste				
+big	mastectomie				
+big	guérison				
+big	oncologue				
+big	récidive				
+big	psychologie				
+place	oncologue				
+place	chirurgien				
+place	angoisse				
+place	ganglion				
+place	protocole				
+place	anesthésie locale				
+place	radiothérapie				
+place	anesthésique				
+place	tumorectomie				
+place	tumeur				
+prise	oncologue				
+prise	hématologie				
+prise	chirurgien				
+prise	bilan				
+prise	scanner				
+prise	biopsie				
+prise	fatigue				
+prise	scintigraphie				
+prise	scintigraphie osseuse				
+prise	médecin traitant				
+parcours	protocole				
+parcours	radiothérapie				
+parcours	hormonothérapie				
+parcours	oncologue				
+parcours	mastectomie				
+parcours	cancer				
+parcours	échographie				
+parcours	diagnostic				
+parcours	biopsie				
+parcours	angoisse				
+herceptine	herceptin				
+herceptine	hormonothérapie				
+herceptine	chimiothérapie				
+herceptine	tdm				
+herceptine	cure				
+herceptine	radiothérapie				
+herceptine	protocole				
+herceptine	tumorectomie				
+herceptine	mastectomie				
+herceptine	traitement adjuvant				
+combat	guérison				
+combat	ablation				
+combat	angoisse				
+combat	cancer				
+combat	hormonothérapie				
+combat	protocole				
+combat	oncologue				
+combat	radiothérapie				
+combat	rémission				
+combat	survie				
+inquiétude	angoisse				
+inquiétude	médecin traitant				
+inquiétude	fatigue				
+inquiétude	impuissance				
+inquiétude	protocole				
+inquiétude	douleur				
+inquiétude	biopsie				
+inquiétude	chimiothérapie				
+inquiétude	scintigraphie osseuse				
+inquiétude	radiothérapie				
+arrêt	hormonothérapie				
+arrêt	herceptin				
+arrêt	immunothérapie				
+arrêt	inflammation				
+arrêt	handicap				
+arrêt	radiothérapie				
+arrêt	fatigue				
+arrêt	hépatite				
+arrêt	antécédent familial				
+arrêt	poumon				
+tête	fatigue				
+tête	angoisse				
+tête	cancer				
+tête	douleur				
+tête	bactérie				
+tête	estomac				
+tête	oncologue				
+tête	scanner				
+tête	anesthésie locale				
+tête	tumeur				
+sinon	oncologue				
+sinon	fatigue				
+sinon	chirurgien				
+sinon	cancer				
+sinon	médecin traitant				
+sinon	radiologue				
+sinon	chirurgie				
+sinon	infirmier				
+sinon	douleur				
+sinon	angoisse				
+tamoxifène	hormonothérapie				
+tamoxifène	herceptin				
+tamoxifène	castration				
+tamoxifène	ovariectomie				
+tamoxifène	radiothérapie				
+tamoxifène	signe				
+tamoxifène	curiethérapie				
+tamoxifène	mastectomie				
+tamoxifène	effet secondaire				
+tamoxifène	ménopause				
+visite	laser				
+visite	chirurgien				
+visite	oncologue				
+visite	médecin traitant				
+visite	anesthésiste				
+visite	radiothérapeute				
+visite	scanner				
+visite	ponction				
+visite	scintigraphie osseuse				
+visite	chirurgie				
+gros	cancer				
+gros	douleur				
+gros	angoisse				
+gros	laser				
+gros	foie				
+gros	rayon				
+gros	ganglion				
+gros	tumeur				
+gros	bile				
+gros	signe				
+marie	infirmier				
+marie	antécédent				
+marie	fibroscopie				
+marie	scanner				
+marie	bilan				
+marie	psychologue				
+marie	angoisse				
+marie	phobie				
+marie	guérison				
+marie	scintigraphie osseuse				
+mère	cancer				
+mère	psychothérapie				
+mère	récidive				
+mère	chirurgien				
+mère	fatigue				
+mère	tumorectomie				
+mère	rémission				
+mère	angoisse				
+mère	hormonothérapie				
+mère	prédisposition génétique				
+mal	douleur				
+mal	fatigue				
+mal	angoisse				
+mal	cancer				
+mal	aine				
+mal	oncologue				
+mal	foie				
+mal	bassin				
+mal	récidive				
+mal	tumeur				
+avance	angoisse				
+avance	oncologue				
+avance	hormonothérapie				
+avance	protocole				
+avance	rémission				
+avance	biopsie				
+avance	mastectomie				
+avance	récidive				
+avance	fatigue				
+avance	chirurgien				
+maladie	cancer				
+maladie	angoisse				
+maladie	douleur				
+maladie	récidive				
+maladie	fatigue				
+maladie	stade				
+maladie	guérison				
+maladie	diagnostic				
+maladie	protocole				
+maladie	oncologue				
+urgence	anesthésiste				
+urgence	médecin traitant				
+urgence	chirurgien				
+urgence	oncologue				
+urgence	ambulatoire				
+urgence	radiologue				
+urgence	anesthésie locale				
+urgence	aide-soignant				
+urgence	fatigue				
+urgence	mammographie				
+niveau	rein				
+niveau	aisselle				
+niveau	bassin				
+niveau	ganglion				
+niveau	poumon				
+niveau	aine				
+niveau	foie				
+niveau	sternum				
+niveau	douleur				
+niveau	nodule				
+doc	médecin traitant				
+doc	chirurgien				
+doc	tension				
+doc	oncologue				
+doc	radiologue				
+doc	cancérologue				
+doc	gynécologue				
+doc	protocole				
+doc	radiothérapeute				
+doc	biopsie				
+poches	chirurgien				
+poches	ambulatoire				
+poches	orthèse				
+poches	perfusion				
+poches	scanner				
+poches	anus				
+poches	hormonothérapie				
+poches	angoisse				
+poches	protocole				
+poches	biopsie				
+conseils	laser				
+conseils	chirurgien				
+conseils	médecin traitant				
+conseils	dépression				
+conseils	oncologue				
+conseils	protocole				
+conseils	angoisse				
+conseils	biopsie				
+conseils	guérison				
+conseils	radiochirurgie				
+face	angoisse				
+face	cancer				
+face	bilan				
+face	douleur				
+face	mammographie				
+face	signe				
+face	guérison				
+face	stade				
+face	hormonothérapie				
+face	séquelle				
+fille	cancer				
+fille	oncologue				
+fille	angoisse				
+fille	antécédent				
+fille	pneumologue				
+fille	mastectomie				
+fille	fatigue				
+fille	ablation				
+fille	arthrose				
+fille	douleur				
+contrôle	scanner				
+contrôle	extension				
+contrôle	scintigraphie osseuse				
+contrôle	radiographie				
+contrôle	poumon				
+contrôle	biopsie				
+contrôle	bilan				
+contrôle	échographie				
+contrôle	mammographie				
+contrôle	sang				
+onco	oncologue				
+onco	chirurgien				
+onco	médecin traitant				
+onco	radiologue				
+onco	gynécologue				
+onco	biopsie				
+onco	radiothérapeute				
+onco	cancérologue				
+onco	ponction				
+onco	médecin généraliste				
+chimios	radiothérapie				
+chimios	chimiothérapie				
+chimios	cure				
+chimios	chirurgie				
+chimios	tumorectomie				
+chimios	oncologue				
+chimios	ablation				
+chimios	mastectomie				
+chimios	hormonothérapie				
+chimios	injection				
+bonne journée	organe				
+bonne journée	drain				
+bonne journée	protocole				
+bonne journée	oncologue				
+bonne journée	chambre implantable				
+bonne journée	oncologie				
+bonne journée	angoisse				
+bonne journée	pneumologue				
+bonne journée	douleur				
+bonne journée	scintigraphie				
+mammo	mammographie				
+mammo	radiologue				
+mammo	biopsie				
+mammo	scanner				
+mammo	scintigraphie osseuse				
+mammo	bilan				
+mammo	échographie				
+mammo	chirurgien				
+mammo	nodule				
+mammo	oncologue				
+sentinelle	ganglion				
+sentinelle	urologue				
+sentinelle	tumorectomie				
+sentinelle	recommandation				
+sentinelle	tumeur				
+sentinelle	médiastin				
+sentinelle	biopsie				
+sentinelle	chimiothérapie				
+sentinelle	nodule				
+sentinelle	mammographie				
+amis	angoisse				
+amis	récidive				
+amis	médecin traitant				
+amis	radiologue				
+amis	bactérie				
+amis	chirurgien				
+amis	cancer				
+amis	fatigue				
+amis	diagnostic				
+amis	oncologue				

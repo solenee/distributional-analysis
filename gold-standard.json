@@ -30,7 +30,7 @@
 "kyste" : ["tumeur", "ganglion"],
 "mal" : ["douleur"],
 "mammo" : ["mammographie"],
-"masectomie" : ["mastectomie"],
+"masectomie" : ["mastectomie", "mammectomie"], 
 "medecin traitant" : ["médecin traitant"],
 "métastases" : ["métastase"],
 "nodules" : ["nodule"],

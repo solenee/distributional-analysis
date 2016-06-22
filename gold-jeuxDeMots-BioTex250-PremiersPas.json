@@ -14,7 +14,7 @@
 "radio" : ["radiographie"],
 "rayons" : ["rayon"],
 "seins" : ["sein"],
-"traitement" : ["cure", "thérapeutique", "médecine", "soins", "médications", "intervention", "soin", "remède", "opération"],
+"traitement" : ["cure"],
 "tumeurs" : ["tumeur"],
 "mal" : ["douleur"],
 "métastases" : ["métastase"],

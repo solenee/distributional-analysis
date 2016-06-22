@@ -21,6 +21,8 @@ import measure
 from measure import similarity
 from measure import arithmeticMean, harmonicMean
 
+#import matplotlib.pyplot as plt
+
 
 DICO = {}
 DICO_INV = {}
@@ -356,6 +358,43 @@ def writeJsonGraphChiao(data, output='chiao-graph.json') :
     save_as_json(graph, output)
     return graph
 
+def writeJsonGraphAll(data, output='graph.json') :
+    """ keygroup can be 'pat' or 'med' """
+    # nodes
+    keygroup_nodes = set()
+    nodes = []
+    source = {}
+    n_id = 0
+    target = {}
+    # links
+    links = []
+    for key_node in data.keys() :
+        if not data[key_node] : continue
+        # add node
+        if key_node not in source :
+            source[key_node] = n_id
+            nodes.append({"name":key_node, "group":"1"})
+            n_id += 1
+        source_id = source[key_node]     
+        for relation in data[key_node] :
+            cand = relation["name"]
+            if cand not in target :
+                target[cand] = n_id
+                nodes.append({"name":cand, "group":"2"})
+                n_id += 1
+            target_id = target[cand]
+            # Build edge
+            my_link = {"source":source_id,
+                       "target":target_id,
+                       "value":(-log(relation["score"]))
+                       }
+            links.append(my_link)
+    graph = {}
+    graph["nodes"] = nodes
+    graph["links"] = links
+    save_as_json(graph, output)
+    return graph
+
 def writeJsonGraph(data, output='graph.json') :
     """ keygroup can be 'pat' or 'med' """
     # nodes
@@ -384,7 +423,7 @@ def writeJsonGraph(data, output='graph.json') :
             # Build edge
             my_link = {"source":source_id,
                        "target":target_id,
-                       "value":(relation["score"]*100)
+                       "value":(-log(relation["score"]))
                        }
             links.append(my_link)
     graph = {}
@@ -463,7 +502,7 @@ def evaluate_against_gold(data, top=20) :
     
     
 
-def align():
+def align(top_list = [10]):
     global SOURCE_NETWORK
     global TARGET_NETWORK
     global SOURCE_TRANSFERRED_VECTORS
@@ -491,7 +530,6 @@ def align():
     SOURCE_TRANSFERRED_VECTORS = SOURCE_NETWORK
     TARGET_TRANSFERRED_VECTORS = TARGET_NETWORK
     print ">COMPUTING CANDIDATES RANKING ("+SIMILARITY_FUNCTION+")..."
-    top_list = [20]
 
     # DIRECT
     candidates = {} #Map< String, List<String> >
@@ -664,7 +702,7 @@ def kappa(lFiles=['eval_Solene_AL.csv', 'eval_Solene_Solene.csv', 'eval_Solene_L
             if not annot.get(cand, None) : 
                 consensus = False
         if not consensus : print my_str(cand)
-    kappaTmp()
+    
     
 def kappaTmp(lFiles=['eval_Solene_AL.csv', 'eval_Solene_Lea.csv', 'eval_Solene_Solene.csv']) :
     dictPairs_S = {}
@@ -711,7 +749,141 @@ def kappaTmp(lFiles=['eval_Solene_AL.csv', 'eval_Solene_Lea.csv', 'eval_Solene_S
     #     print x
     for x in desAlt :
          print x
+    res = {'alt' : consensusAlt, 'rel' : consensusRel}
+    return res
+
+def jsonFormatToPairsFormat_correctCHV_only(data, thres, goldCand) : 
+    pairs = []
+    altPairs = []
+    relPairs = []
+    for cand in data.keys() :
+        pairs.extend([ (cand, i['name']) for i in data.get(cand, []) if cand in goldCand and i['score'] > thres ])  
+    print pairs
+    return set(pairs)
+
+def jsonFormatToPairsFormat(data, thres) : 
+    pairs = []
+    altPairs = []
+    relPairs = []
+    for cand in data.keys() :
+        pairs.extend([ (cand, i['name']) for i in data.get(cand, []) if i['score'] > thres ])  
+    #print pairs
+    return set(pairs)
+
+def microEval(): 
+    global NORMALIZATION
+    global SIMILARITY_FUNCTION
+    res = kappaTmp()
+    r = []
+    p = []
+    fm = []
+    thresholds = [ESPILON, 0.06, 0.07, 0.08, 0.09]# 0.01, 0.02, 0.03, 0.04, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+    NORMALIZATION=PMI
+    SIMILARITY_FUNCTION=measure.COSINE
+    data = align()
+    for thres in thresholds :
+        pairs = jsonFormatToPairsFormat(data, thres)
+        tp = pairs & res['alt']
+        if len(tp) == 0 : recall = 0
+        else : recall = len(tp) / len(res['alt'])
+        if len(tp) == 0 : precision = 0
+        else : precision = len(tp) / len(pairs)
+        if recall+precision < ESPILON : fmeasure = 0
+        else : fmeasure = 2*recall*precision / (recall+precision)
+        r.append(recall)
+        p.append(precision)
+        fm.append(fmeasure)
+    print 'fm'
+    print fm
+    print 'p'
+    print p
+    print 'r'
+    print r
+    # Plot
+    #plt.plot(thresholds, fm) 
+    #plt.ylabel('F-measure')
+    #plt.xlabel('Similarity threshold')
+    #plt.show() #, 'r--', t1, t1**2, 'bs', t2, t2**3, 'g^-')
+    
+
+def successEval():
+    global NORMALIZATION
+    global SIMILARITY_FUNCTION
+    res = kappaTmp()
+    goldCand = set([t for (t, x) in res.get('alt', []) ])
+    print 'goldCand : '
+    print len(goldCand)
+    r = []
+    p = []
+    fm = []
+    thresholds = [0.055] #[ESPILON, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1]#, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+    NORMALIZATION=PMI
+    SIMILARITY_FUNCTION=measure.COSINE
+    data = align()
+    for thres in thresholds :
+        pairs = jsonFormatToPairsFormat_correctCHV_only(data, thres, goldCand)
+        tp = pairs & res['alt']
+        if len(tp) == 0 : recall = 0
+        else : recall = len(tp) / len(res['alt'])
+        if len(tp) == 0 : precision = 0
+        else : precision = len(tp) / len(pairs)
+        if recall+precision < ESPILON : fmeasure = 0
+        else : fmeasure = 2*recall*precision / (recall+precision)
+        r.append(recall)
+        p.append(precision)
+        fm.append(fmeasure)
+    print 'fm'
+    print fm
+    print 'p'
+    print p
+    print 'r'
+    print r
+
+def finalOutput(thres):
+    global NORMALIZATION
+    global SIMILARITY_FUNCTION
+    global ESPILON
+    NORMALIZATION=PMI
+    SIMILARITY_FUNCTION=measure.COSINE
+    ESPILON = thres
+    data = align()
+    cand = [c for c in data if len(data[c]) > 0 ]
+    print "============"
+    print "============"
+    for c in cand : print my_str(c)
+
+def candidatesAfterThres(thres) :
+    global NORMALIZATION
+    global SIMILARITY_FUNCTION
+    global ESPILON
+    NORMALIZATION=PMI
+    SIMILARITY_FUNCTION=measure.COSINE
+    ESPILON = thres
+    print '============='
+    print thres
+    print '-------------'
+    data = align()
+    cand = [c for c in data if len(data[c]) > 0 ]
+    print '-------------'
+    print cand
+    print '============='    
+    #print len(data)
+    return len(cand)
+
+def testThres(thresList) :
+    #thres = [0.055] #[ESPILON, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1]
+    nb = []
+    for thr in thresList :
+        nb.append(candidatesAfterThres(thr))
+    #print thres
+    print nb
+    print '============='
+    print '============='
 
 if __name__ == "__main__":
-    kappa()
+    #microEval()
+    #successEval()
+    finalOutput(0.055)
+    #testThres([ESPILON, 0.05, 0.055, 0.06, 0.07, 0.08, 0.09, 0.1])
+
 

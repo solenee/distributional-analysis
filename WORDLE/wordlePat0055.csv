@@ -1,0 +1,244 @@
+>LOADING Pat candidates...
+>LOADING Med candidates...
+>NORMALIZING (PMI) CONTEXT VECTORS...
+>COMPUTING CANDIDATES RANKING (COSINE)...
+[u'mammographie', u'radiologue', u'biopsie', u'scanner', u'scintigraphie osseuse', u'bilan', u'\xe9chographie', u'chirurgien', u'nodule', u'oncologue', u'radioth\xe9rapie', u'diagnostic', u'sang']
+mammo	1.0
+[u'chirurgien', u'oncologue', u'biopsie', u'canc\xe9rologue', u'radiologue', u'gyn\xe9cologue', u'radioth\xe9rapeute', u'm\xe9decin traitant', u'mastectomie', u'ablation']
+chir	1.0
+[u'\xe9chographie', u'scanner', u'radiologue', u'bilan', u'nodule', u'mammographie', u'radiographie', u'biopsie', u'pet scan', u'ponction', u'chirurgie', u'scintigraphie osseuse', u'extension', u'foie', u'd\xe9pistage', u'ganglion', u'm\xe9decin traitant', u'tumeur', u'pancr\xe9as']
+écho	1.0
+[u'protocole', u'hormonoth\xe9rapie', u'radioth\xe9rapie', u'cancer', u'oncologue', u'm\xe9nopause']
+traitement	0
+[u'ponction', u'nodule', u'biopsie', u'ganglion', u'carcinome', u'infection', u'\xe9chographie', u'l\xe9sion', u'aisselle', u'gastroent\xe9rologue', u'tumorectomie']
+kyste	0.25
+[u'scanner', u'biopsie', u'radioth\xe9rapie', u'scintigraphie osseuse', u'scintigraphie', u'bilan', u'pelvis', u'rate', u'extension', u'foie', u'oncologue', u'mammographie']
+radio	0.333333333333
+[u'psycho-oncologue', u'chirurgien', u'antibiotique']
+kiné	0
+[u'ganglion', u'tumeur', u'grade', u'tumorectomie', u'cellule', u'carcinome', u'nodule', u'aisselle', u'cancer']
+ganglions	1.0
+[u'scintigraphie', u'scintigraphie osseuse', u'scanner', u'\xe9chographie', u'pet scan', u'bilan', u'extension', u'tep', u'sang', u'ponction', u'biopsie', u'mammographie', u'hanche', u'genou', u'oncologue', u'bassin', u'lymphome', u'foie', u'm\xe9decin traitant']
+scinti	1.0
+[u'tumeur', u'nodule', u'grade', u'l\xe9sion', u'ganglion', u'tumorectomie', u'carcinome', u'cancer', u'ad\xe9nocarcinome', u'biopsie', u'glande', u'\xe9chographie', u'scintigraphie', u'curage axillaire']
+tumeurs	1.0
+[u'\xe9chographie', u'chirurgien', u'tumeur', u'diagnostic', u'biopsie', u'inflammation', u'nodule', u'ganglion', u'ablation']
+seins	0
+seins couldn't be found
+[u'angoisse', u'douleur', u'cancer']
+peur	1.0
+[u'nodule', u'thyro\xefde', u'biopsie', u'ganglion', u'foie', u'noyau', u'scanner', u'tumeur', u'm\xe9tastase', u'\xe9chographie', u'carcinome', u'bassin', u'ad\xe9nome', u'fibrose', u'tumorectomie', u'radiologue', u'm\xe9tastatique', u'poumon', u'cancer']
+nodules	1.0
+[u'poumon', u'foie', u'extension', u'sternum', u'pancr\xe9as', u'thyro\xefde', u'hanche', u'thorax', u'ganglion']
+poumons	1.0
+[u'fatigue']
+soucis	0
+[u'psychologue', u'oncologue', u'sophrologue', u'chirurgien', u's\xe9nologie', u'oncologie']
+psy	1.0
+[u'chimioth\xe9rapie', u'radioth\xe9rapie', u'cure', u'protocole', u'chirurgie', u'ablation', u'mastectomie', u'hormonoth\xe9rapie']
+chimio	1.0
+[u'cellule', u'tumeur', u'cancer', u'polype']
+cellules	1.0
+[u'douleur']
+mal	1.0
+[u'chirurgien', u'oncologue', u'radioth\xe9rapeute', u'radiologue', u'm\xe9decin traitant', u'm\xe9decin g\xe9n\xe9raliste', u'dermatologue', u'gyn\xe9cologue', u'canc\xe9rologue', u'biopsie', u'anesth\xe9siste', u'bilan', u'ponction']
+gynéco	0.125
+[u'radioth\xe9rapie', u'hormonoth\xe9rapie', u'mastectomie', u'ablation', u'chimioth\xe9rapie', u'radioth\xe9rapeute']
+rayons	0
+[u'm\xe9decin traitant', u'chirurgien', u'tension', u'oncologue', u'radiologue', u'canc\xe9rologue', u'gyn\xe9cologue']
+doc	0
+doc couldn't be found
+[u'm\xe9tastase', u'r\xe9cidive', u'scintigraphie', u'inflammation', u'bassin', u'foie', u'nodule', u'ganglion', u'cancer', u'hormonoth\xe9rapie', u'\xe9panchement', u'pl\xe8vre', u'douleur']
+métastases	1.0
+[u'oncologie', u'chirurgien', u'sophrologue', u'radioth\xe9rapeute', u'canc\xe9rologue', u'radiologue', u'oncologue', u'psychologue']
+infirmière	0
+[u'cure', u'mastectomie', u'radioth\xe9rapie', u'protocole', u'chimioth\xe9rapie', u'tumorectomie', u'pac', u'ablation', u'hormonoth\xe9rapie', u'chirurgie', u'fatigue']
+cures	1.0
+[u'cancer', u'grade', u'stade', u'tumeur']
+cancers	1.0
+[u'oncologue', u'chirurgien', u'm\xe9decin traitant', u'radiologue', u'gyn\xe9cologue', u'biopsie', u'radioth\xe9rapeute', u'canc\xe9rologue']
+onco	1.0
+[u'cancer']
+crabe	1.0
+[u'angoisse', u'douleur', u'fatigue']
+angoisses	1.0
+[u'estomac', u'aisselle', u'aine', u'genou', u'poumon']
+ventre	1.0
+tp = 23 /28
+Precision = 0.40350877193
+Real precision = 0.821428571429
+MAP (classic) = 0.618303571429
+MAP (recall) = 0.608258928571
+MAP (best) = 0.739583333333
+nbPairs ok = 24
+16.6349718571
+chances:91
+taille:113
+écho:278
+anapath:113
+cellules cancéreuses:64
+radio:230
+questions:623
+soins:147
+tumeurs:125
+problème:266
+soucis:137
+endroit:99
+hôpital:150
+copines:113
+peur:1161
+charge:146
+choses:508
+suite:737
+bout:281
+période:114
+avenir:90
+envie:398
+impatiente:126
+personnes:238
+hormono:129
+nodules:136
+personne:396
+demande:393
+psy:197
+curage:243
+examen:233
+séance:118
+examens:418
+temps en temps:47
+proches:166
+mesure:106
+solution:112
+médecins:353
+cas:1105
+crabe:163
+angoisses:267
+choix:244
+gynéco:220
+sein gauche:175
+entourage:136
+lieu:131
+bonne soirée:89
+cancer du sein:456
+droit:535
+vacances:160
+rendez-vous:141
+métas:196
+étape:123
+effets:418
+irm:439
+reconstruction:244
+internet:149
+chaleur:88
+femmes:315
+cause:211
+médecin:759
+pose:278
+effet:271
+contrôles:96
+prise en charge:87
+pensées positives:54
+poumons:105
+in situ:165
+analyses:138
+ganglion sentinelle:89
+seins:217
+opération:631
+inquiétudes:110
+forme:184
+rayons:483
+métastases:237
+traitements:650
+ondes:163
+cures:170
+façon:241
+reste:516
+résultat:264
+hopital:111
+côté:304
+mail:225
+vie:1211
+echo:121
+trouille:146
+attente:418
+traitement:884
+post:177
+ganglions:618
+intervention:216
+service:97
+surement:100
+cicatrice:206
+consultation:86
+mamo:115
+réponses:378
+généraliste:234
+maman:551
+type:175
+annonce:302
+ondes positives:125
+avis:350
+conseil:129
+doute:263
+histoire:196
+décision:122
+analyse:183
+stress:184
+chimio:2335
+infos:161
+cellules:268
+sein droit:150
+méta:100
+produit:134
+résultats:860
+problèmes:172
+rdv:432
+dossier:121
+maux:87
+air:135
+reconstruction immédiate:55
+cancers:178
+situation:160
+séances:240
+fils:159
+âge:156
+chir:186
+cerveau:136
+repos:114
+medecin:155
+site:595
+risque:249
+ablation du sein:57
+boule:253
+mots:202
+ventre:104
+infirmière:113
+marqueurs:237
+scinti:135
+taxotère:188
+cours:100
+kiné:145
+crabus:153
+colère:119
+kyste:107
+prise de sang:180
+parcours:328
+herceptine:184
+inquiétude:106
+tête:498
+sinon:257
+tamoxifène:102
+visite:109
+mère:223
+mal:1304
+avance:276
+maladie:725
+urgence:107
+niveau:270
+doc:109
+face:209
+fille:349
+contrôle:157
+onco:612
+chimios:234
+mammo:274
+sentinelle:120

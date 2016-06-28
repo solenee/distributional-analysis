@@ -442,6 +442,7 @@ def yy() :
     
 def evaluate_against_gold(data, top=20) :
     tp = 0
+    nbPairs = 0
     testsetSize = 0
     averageMAP = 0
     averageMAP_recall = 0
@@ -466,6 +467,7 @@ def evaluate_against_gold(data, top=20) :
             if ( len(candidates[word]) > 0 ) and r in [ candidates[word][i] for i in range( min([top, len(candidates[word])]) ) ] :
                 #print "===================" + r
                 found = found+1
+                nbPairs = nbPairs + 1
                 wordMAP = wordMAP + ( 1.0 / (candidates[word].index(r)+1) )
                 wordMAP_best = max(wordMAP_best, ( 1.0 / (candidates[word].index(r)+1) ))
         print my_str(word) + "\t"+ str(wordMAP_best)
@@ -499,10 +501,11 @@ def evaluate_against_gold(data, top=20) :
     print "MAP (classic) = "+str(averageMAP)
     print "MAP (recall) = "+str(averageMAP_recall)
     print "MAP (best) = "+str(averageMAP_best)
+    print "nbPairs ok = "+str(nbPairs)
     
     
 
-def align(top_list = [10]):
+def align(top_list = [20]):
     global SOURCE_NETWORK
     global TARGET_NETWORK
     global SOURCE_TRANSFERRED_VECTORS
@@ -512,6 +515,12 @@ def align(top_list = [10]):
     #print SOURCE_NETWORK
     print ">LOADING Med candidates..."
     TARGET_NETWORK = read_json(TARGET_NETWORK_FILE_INPUT)
+##    print TARGET_NETWORK
+##    print "Med projection :"
+##    print len([x for x in TARGET_NETWORK if len(TARGET_NETWORK[x]) > 0])
+##    print len(TARGET_NETWORK)
+##    print "================"
+    #return
     #print TARGET_NETWORK
 
     start_time = time.time()
@@ -556,60 +565,60 @@ def align(top_list = [10]):
     writeJsonGraph(data, 'graph-'+SIMILARITY_FUNCTION+'-'+NORMALIZATION+'.json')
     elapsed_time = time.time() - start_time
     print str(elapsed_time)
-    return data
+    ##ATTENTION DECOMMENTER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! return data
 
-##    # INVERSE
-##    print TARGET_TRANSFERRED_VECTORS
-##    start_time = time.time()
-##    candidates = {} #Map< String, List<String> >
-##    #unknownSourceWords = set()
-##    testset = TARGET_NETWORK.keys()
-##
-##    data = {}
-##    for word in testset :
-##        print ">> INV Candidates for '"+ word.encode(encoding='UTF-8',errors='strict')+"'"
-##        if word not in TARGET_NETWORK :
-##            print word+" not in source corpus"
-##            unknownSourceWords.add(word)
-##            candidates[word] = []
-##        else :
-##            #transferedVector = transferedNetwork[word] #getTransferedVector(word)
-##            #Base
-##            candidates[word] = findCandidateTranslations(word, TARGET_TRANSFERRED_VECTORS[word], SOURCE_NETWORK, 2*max(top_list), SIMILARITY_FUNCTION)
-##            data[word] = candidates[word][0:(2*max(top_list))]
-##    save_as_json(data, 'inv-align-'+SIMILARITY_FUNCTION+'-'+NORMALIZATION+'.json')
-##    writeJsonGraph(data, 'inv-graph-'+SIMILARITY_FUNCTION+'-'+NORMALIZATION+'.json')
-##        #print word.encode(encoding='UTF-8',errors='strict')
-##        #print candidates[word][0:max(top_list)]
-##        #print "========"
-##        #print "========"
+    # INVERSE
+    print TARGET_TRANSFERRED_VECTORS
+    start_time = time.time()
+    candidates = {} #Map< String, List<String> >
+    #unknownSourceWords = set()
+    testset = TARGET_NETWORK.keys()
 
-##    # CHIAO
-##    #print TARGET_TRANSFERRED_VECTORS
-##    candidates = {}
-##    testset = SOURCE_NETWORK.keys()
-##
-##    data = {}
-##    for word in testset :
-##        #print ">> CHIAO Candidates for '"+ word.encode(encoding='UTF-8',errors='strict')+"'"
-##        if word not in SOURCE_NETWORK :
-##            print word+" not in source corpus"
-##            unknownSourceWords.add(word)
-##            candidates[word] = []
-##        else :
-##            #transferedVector = transferedNetwork[word] #getTransferedVector(word)
-##            #Base
-##            candidates[word] = findCandidateTranslationsChiao(word, SOURCE_TRANSFERRED_VECTORS[word], TARGET_NETWORK, max(top_list)*2, SIMILARITY_FUNCTION)
-##            data[word] = candidates[word][0:max(top_list)]
-##        #print word.encode(encoding='UTF-8',errors='strict')
-##        #print candidates[word][0:max(top_list)]
-##        #print "========"
-##        #print "========"
-##    save_as_json(data, 'chiao-align-'+SIMILARITY_FUNCTION+'-'+NORMALIZATION+'.json')
-##    evaluate_against_gold(data)
-##    writeJsonGraphChiao(data, 'chiao-graph-'+SIMILARITY_FUNCTION+'-'+NORMALIZATION+'.json')
-##    elapsed_time = time.time() - start_time
-##    print str(elapsed_time)
+    data = {}
+    for word in testset :
+        print ">> INV Candidates for '"+ word.encode(encoding='UTF-8',errors='strict')+"'"
+        if word not in TARGET_NETWORK :
+            print word+" not in source corpus"
+            unknownSourceWords.add(word)
+            candidates[word] = []
+        else :
+            #transferedVector = transferedNetwork[word] #getTransferedVector(word)
+            #Base
+            candidates[word] = findCandidateTranslations(word, TARGET_TRANSFERRED_VECTORS[word], SOURCE_NETWORK, 2*max(top_list), SIMILARITY_FUNCTION)
+            data[word] = candidates[word][0:(2*max(top_list))]
+    save_as_json(data, 'inv-align-'+SIMILARITY_FUNCTION+'-'+NORMALIZATION+'.json')
+    writeJsonGraph(data, 'inv-graph-'+SIMILARITY_FUNCTION+'-'+NORMALIZATION+'.json')
+        #print word.encode(encoding='UTF-8',errors='strict')
+        #print candidates[word][0:max(top_list)]
+        #print "========"
+        #print "========"
+
+    # CHIAO
+    #print TARGET_TRANSFERRED_VECTORS
+    candidates = {}
+    testset = SOURCE_NETWORK.keys()
+
+    data = {}
+    for word in testset :
+        #print ">> CHIAO Candidates for '"+ word.encode(encoding='UTF-8',errors='strict')+"'"
+        if word not in SOURCE_NETWORK :
+            print word+" not in source corpus"
+            unknownSourceWords.add(word)
+            candidates[word] = []
+        else :
+            #transferedVector = transferedNetwork[word] #getTransferedVector(word)
+            #Base
+            candidates[word] = findCandidateTranslationsChiao(word, SOURCE_TRANSFERRED_VECTORS[word], TARGET_NETWORK, max(top_list)*2, SIMILARITY_FUNCTION)
+            data[word] = candidates[word][0:max(top_list)]
+        #print word.encode(encoding='UTF-8',errors='strict')
+        #print candidates[word][0:max(top_list)]
+        #print "========"
+        #print "========"
+    save_as_json(data, 'chiao-align-'+SIMILARITY_FUNCTION+'-'+NORMALIZATION+'.json')
+    evaluate_against_gold(data)
+    writeJsonGraphChiao(data, 'chiao-graph-'+SIMILARITY_FUNCTION+'-'+NORMALIZATION+'.json')
+    elapsed_time = time.time() - start_time
+    print str(elapsed_time)
 
 def testGoldStandard():
     global NORMALIZATION
@@ -839,18 +848,22 @@ def successEval():
     print 'r'
     print r
 
-def finalOutput(thres):
+def finalOutput(thres, printCand=False):
     global NORMALIZATION
     global SIMILARITY_FUNCTION
     global ESPILON
     NORMALIZATION=PMI
     SIMILARITY_FUNCTION=measure.COSINE
     ESPILON = thres
-    data = align()
-    cand = [c for c in data if len(data[c]) > 0 ]
-    print "============"
-    print "============"
-    for c in cand : print my_str(c)
+    data = align([10])
+    if printCand : 
+        cand = [c for c in data if len(data[c]) > 0 ]
+        print "============"
+        print "============"
+        for c in cand : print my_str(c)
+        print "============"
+        print len(cand)
+    return data
 
 def candidatesAfterThres(thres) :
     global NORMALIZATION
@@ -880,14 +893,37 @@ def testThres(thresList) :
     print '============='
     print '============='
 
+def printForWordle(freqFile=ENTITY_FREQ_FILE_INPUT, patOrMedFile=TARGET_NETWORK_FILE_INPUT):
+    freq_unigrams_entity = read_json(freqFile)
+    target = read_json(patOrMedFile)
+    #print "PatOrMed projection :"
+    targetThere = [x for x in target if len(target[x]) > 0]
+    for e in targetThere :
+        print my_str(e)+":"+str(freq_unigrams_entity[e])
+    #print len(targetThere)
+    #print len(target)
+    #print "================"
 
+def printCandForWordle(data, freqFile=ENTITY_FREQ_FILE_INPUT):
+    freq_unigrams_entity = read_json(freqFile)
+    target = data
+    #print "PatOrMed projection :"
+    targetThere = [x for x in target if len(target[x]) > 0]
+    for e in targetThere :
+        print my_str(e)+":"+str(freq_unigrams_entity[e])
+    #print len(targetThere)
+    #print len(target)
+    #print "================"
 
     #for pair
 if __name__ == "__main__":
     #microEval()
     #successEval()
-    #finalOutput(0.055)
+    data = finalOutput(0.055)
+    #printForWordle()
+    #printForWordle(freqFile=ENTITY_FREQ_FILE_INPUT, patOrMedFile=SOURCE_NETWORK_FILE_INPUT)
+    #printCandForWordle(data)
     #testThres([ESPILON, 0.05, 0.055, 0.06, 0.07, 0.08, 0.09, 0.1])
-    print printKappaAlt()
+    #print printKappaAlt()
 
 

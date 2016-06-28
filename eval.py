@@ -880,44 +880,7 @@ def testThres(thresList) :
     print '============='
     print '============='
 
-def printKappaAlt(lFiles=['eval_Solene_AL.csv', 'eval_Solene_Lea.csv', 'eval_Solene_Solene.csv']):
-    nSubj = 1000
-    nCat = 2
-    matAlt = [] #Cette liste contiendra ma map en 2D$
-    for i in range(nSubj):
-        matAlt.append([0] * nCat) #Ajoute nCat colonnes de nCat entiers(int) ayant pour valeurs 0
-    for filename in lFiles : 
-        with codecs.open(os.path.join(directory, filename), 'r', encoding='utf-8') as fIn:
-            lines = fIn.readlines()[2:1001]
-            for pairId in range(len(lines)) :
-                l = lines[pairId]
-                if not l.strip() : continue
-                answers = l.strip().split(';')
-                if filename == 'eval_Solene_Lea.csv' : 
-                    answers = l.strip().split('\t')
-                    #print answers
-                    #print len(answers)
-                    if len(answers) < 4 : answers.extend(['n', 'n'])
-                #if len(answers) == 1 : answers = l.strip().split('\t')
-                #print answers
-                #print '====='
-                #pat = pat | set([answers[0]])
-                #current = res.get(answers[0], {})
-                #rel = current.get('rel', [])
-                #alt = current.get('alt', [])
-                if answers[2].lower().strip() == 'o' :
-                    matAlt[pairId][0] = matAlt[pairId][0] + 1
-                    #alt.append(answers[1])
-                    #current['alt'] = alt
-                else : matAlt[pairId][1] = matAlt[pairId][1] + 1
-                #if answers[3].lower().strip() == 'o' :
-                    #rel.append(answers[1])
-                    #current['rel'] = rel
-                #res[answers[0]] = current
-    #annot_AL = readEvalFile(lFiles[0])
-    #annot_L = readEvalFile(lFiles[1])
-    #annot_S = readEvalFile(lFiles[2])
-    kappaFleiss.computeKappa(matAlt)
+
 
     #for pair
 if __name__ == "__main__":

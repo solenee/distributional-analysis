@@ -1,0 +1,67 @@
+h1 {
+    color: #ffffff;
+    font-family:  'Raleway';
+    font-weight: normal;
+        font-size: 1.75em;
+    letter-spacing: .2em;
+    line-height: 1.1em;
+    margin:0px;
+    text-align: center;
+    text-transform: uppercase;
+}
+#container {
+    width:800px;
+}
+#header {
+    width:800px;
+    height: 50px;
+    padding: 5px;
+    background: #1abc9c;
+}
+#sidebar {
+    height:400px;
+    width:140px;
+    background: #1abc9c;
+    float:left;
+    font-family:  'Raleway';
+    font-size: 11px;
+    padding: 5px;
+}
+select, button {
+    margin: 5px;
+    font-family:  'Raleway'
+    font-size: 20px;
+}
+#content {
+    background-color:#ffffff;
+    height:400px;
+    width:650px;
+    float:left;
+}
+#footer {
+    width:800px;
+    height: 50px;
+    background: #1abc9c;
+    float:left;
+}
+circle {
+    stroke: #1abc9c;
+    stroke-width: 2;
+    fill: white;
+}
+.d3-tip {
+    font-family:  'Raleway';
+    line-height: 1;
+    padding: 1px;
+    background: transparent;
+    color: #000;
+    border-radius: 2px;
+}
+.axis path, .axis line {
+    fill: none;
+    stroke: grey;
+    shape-rendering: crispEdges;
+}
+.axis text {
+    font-family: 'Raleway';
+    font-size: 11px;

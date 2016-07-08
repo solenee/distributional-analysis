@@ -1,0 +1,956 @@
+PATIENT;MEDECIN;ALTERNATIVE;RELATED
+prise de sang;sang;;
+curage;curage axillaire;1;
+ganglion sentinelle;ganglion;0;is_a
+cancer du sein;cancer;;inv_is_a
+ablation du sein;ablation;;inv_is_a
+généraliste;médecin généraliste;1;
+reconstruction immédiate;annexectomie;;
+curage;curage ganglionnaire;1;
+in situ;carcinome;;
+boule;aisselle;;
+scinti;scintigraphie;1;
+echo;échographie;1;
+scinti;scintigraphie osseuse;;inv_is_a
+angoisses;angoisse;1;
+effet;effet secondaire;;
+ganglions;ganglion;1;
+scinti;scanner;;same_cat
+médecin;médecin traitant;;inv_is_a
+mammo;mammographie;1;
+chir;chirurgien;1;
+in situ;grade;;
+généraliste;médecin traitant;;same_cat
+médecin;médecin généraliste;;inv_is_a
+gynéco;chirurgien;;same_cat
+contrôle;scanner;;same_cat
+écho;échographie;1;
+médecin;oncologue;;inv_is_a
+ablation du sein;mammectomie;1;
+nodules;nodule;1;
+echo;scanner;;same_cat
+irm;échographie;;same_cat
+médecin;chirurgien;;inv_is_a
+mammo;radiologue;;
+curage;mastectomie;;same_cat
+tumeurs;tumeur;1;
+prise de sang;extension;;
+métastases;métastase;1;
+cicatrice;aisselle;;
+irm;scanner;;same_cat
+tamoxifène;hormonothérapie;;
+généraliste;chirurgien;;same_cat
+poumons;poumon;1;
+chir;oncologue;;same_cat
+psy;psychologue;1;
+boule;nodule;;
+contrôle;extension;;
+mammo;biopsie;;same_cat
+onco;oncologue;1;
+echo;thorax;;
+irm;biopsie;;
+reconstruction;ablation;;opposite
+ganglions;tumeur;;
+irm;scintigraphie osseuse;;same_cat
+colère;angoisse;;same_cat
+irm;scintigraphie;;same_cat
+sein droit;nodule;;
+ablation du sein;tumorectomie;0;
+généraliste;oncologue;;same_cat
+taxotère;cure;;
+généraliste;radiothérapeute;;same_cat
+cellules cancéreuses;anticorps;;
+radio;scanner;;
+nodules;thyroïde;;
+mamo;mammographie;1;
+scinti;échographie;;
+écho;scanner;;
+scinti;pet scan;;
+gynéco;oncologue;;same_cat
+reconstruction immédiate;ablation;;
+ablation du sein;curage axillaire;0;
+prise de sang;scanner;;
+onco;chirurgien;;
+in situ;adénocarcinome;;
+rdv;chirurgien;;
+contrôle;scintigraphie osseuse;;
+infirmière;oncologie;;
+sentinelle;ganglion;;
+onco;médecin traitant;;same_cat
+curage;tumorectomie;0;
+ablation du sein;envahissement ganglionnaire;;
+doc;médecin traitant;;same_cat
+reconstruction;prothèse;;
+irm;extension;;
+rayons;radiothérapie;1;
+prise de sang;bilan;;
+type;grade;;
+ablation du sein;mastectomie;1;
+séance;cure;;inv_is_a
+contrôle;radiographie;;
+écho;radiologue;;
+opération;mastectomie;;inv_is_a
+curage;ablation;;
+examen;mammographie;;inv_is_a
+anapath;ganglion;;
+maladie;cancer;;inv_is_a
+ganglion sentinelle;tumorectomie;;
+examens;scintigraphie;;inv_is_a
+opération;ablation;;inv_is_a
+inquiétude;angoisse;1;
+chances;survie;;
+poumons;foie;;
+analyse;ganglion;;
+ablation du sein;hormonodépendant;;
+service;sénologie;;
+sein droit;biopsie;;
+séances;radiothérapie;;
+boule;ganglion;;
+méta;métastase;1;
+avenir;réinsertion;;
+cures;cure;1;
+anapath;chirurgie;;
+tumeurs;nodule;;
+mamo;radiologue;;
+echo;radiologue;;
+prise de sang;biopsie;;
+kyste;ponction;;
+stress;angoisse;1;
+opération;chirurgie;1;
+nodules;biopsie;;
+ganglion sentinelle;biopsie;;
+prise de sang;scintigraphie osseuse;;
+taxotère;radiothérapie;;
+urgence;anesthésiste;;
+métastases;récidive;;
+nodules;ganglion;;
+contrôle;poumon;;
+contrôle;biopsie;;
+chimio;chimiothérapie;1;
+pose;anesthésie;;
+séance;injection;;
+hopital;radiologie;;
+herceptine;herceptin;1;
+anapath;tumorectomie;;
+reconstruction;annexectomie;;
+contrôle;bilan;1;
+analyse;anatomopathologie;;inv_is_a
+nodules;foie;;
+seins;échographie;;
+echo;radiographie;;
+reconstruction;mastectomie;;
+hopital;chirurgien;;
+visite;laser;;
+généraliste;sénologue;;
+rendez-vous;oncologue;;
+tumeurs;grade;;
+visite;chirurgien;;
+echo;pelvis;;
+séances;tumorectomie;;
+traitement;protocole;1;
+scinti;bilan;;
+contrôles;prélèvement;;inv_is_a
+rendez-vous;sophrologue;;
+hôpital;chirurgien;;
+visite;oncologue;;
+tumeurs;lésion;;
+prise de sang;poumon;;
+stress;fatigue;;
+kyste;nodule;1;
+chances;guérison;;
+examens;mammographie;;inv_is_a
+mammo;scanner;;
+rayons;hormonothérapie;;
+tumeurs;ganglion;;
+écho;bilan;;
+mammo;scintigraphie osseuse;;same_cat
+risque;récidive;;
+service;chirurgien;;
+rdv;oncologue;;
+scinti;extension;;
+séances;chimiothérapie;;
+nodules;noyau;;
+irm;mammographie;;
+sein gauche;ganglion;;
+rendez-vous;chirurgien;;
+inquiétudes;angoisse;1;
+tumeurs;tumorectomie;;
+contrôle;échographie;;
+contrôles;scanner;;
+kiné;psycho-oncologue;;
+tumeurs;carcinome;1;
+gynéco;radiothérapeute;;
+traitement;hormonothérapie;;inv_is_a
+opération;tumorectomie;;inv_is_a
+gynéco;radiologue;;same_cat
+scinti;tep;;same_cat
+métas;foie;;
+taxotère;protocole;;
+sein droit;tumeur;;
+rayons;mastectomie;;
+écho;nodule;;
+ablation du sein;radiofréquence;;
+généraliste;cancérologue;;same_cat
+ablation du sein;poumon;;
+visite;médecin traitant;;
+résultat;chirurgien;;
+traitements;hormonothérapie;1;
+sentinelle;urologue;;
+gynéco;médecin traitant;;same_cat
+ondes;essai thérapeutique;;
+echo;scintigraphie osseuse;;
+chimio;radiothérapie;;same_cat
+intervention;biopsie;;inv_is_a
+reconstruction immédiate;prothèse;;
+service;oncologie;;inv_is_a
+kyste;biopsie;;
+chir;biopsie;;
+intervention;chirurgie;1;
+prise de sang;échographie;;
+ganglion sentinelle;tumeur;;
+médecins;oncologue;;inv_is_a
+intervention;tumorectomie;;inv_is_a
+peur;angoisse;1;
+sein gauche;carcinome;;
+intervention;chirurgien;;
+médecins;chirurgien;;inv_is_a
+taxotère;injection;;
+annonce;biopsie;;
+tamoxifène;herceptin;;same_cat
+cellules;cellule;1;
+irm;tep;;
+ondes positives;essai thérapeutique;;
+généraliste;radiologue;;same_cat
+service;sophrologue;;
+métastases;scintigraphie;;
+contrôle;mammographie;;same_cat
+chimio;cure;;
+opération;radiothérapie;;
+echo;bilan;;
+reconstruction immédiate;radiofréquence;;
+herceptine;hormonothérapie;;
+gynéco;médecin généraliste;;same_cat
+sein droit;ganglion;;same_cat
+gynéco;dermatologue;;same_cat
+cancer du sein;carcinome;;same_cat
+examens;biopsie;;inv_is_a
+écho;mammographie;;same_cat
+reconstruction immédiate;mastectomie;;same_cat
+intervention;ablation;;inv_is_a
+examen;biopsie;;inv_is_a
+prise de sang;oncologue;;
+nodules;scanner;;
+cerveau;sternum;;same_cat
+infirmière;chirurgien;;same_cat
+sein gauche;biopsie;;
+doc;chirurgien;;same_cat
+examens;scanner;;inv_is_a
+prise de sang;scintigraphie;;same_cat
+echo;poumon;;
+herceptine;chimiothérapie;;
+sein droit;grade;;
+méta;scanner;;
+taxotère;chimiothérapie;;
+scinti;sang;;
+contrôle;sang;;
+cures;mastectomie;;
+curage;ganglion;;
+irm;bilan;;
+analyse;exérèse;;inv_is_a
+sein droit;carcinome;;
+gynéco;gynécologue;1;
+ganglions;grade;;
+traitements;chimiothérapie;;inv_is_a
+reconstruction immédiate;hormonothérapie;;same_cat
+cas;cancer;;
+cures;radiothérapie;;
+prise de sang;bilan hépatique;;
+résultat;biopsie;;
+doc;tension;;
+rayons;ablation;;
+type;carcinome;;
+opération;oncologue;;
+medecin;cirrhose;;
+irm;radiologue;;
+mammo;bilan;;
+contrôle;oncologue;;
+métas;bassin;;
+examen;scanner;;inv_is_a
+nodules;tumeur;;
+urgence;médecin traitant;;
+examen;échographie;;inv_is_a
+charge;dermatologue;;
+opération;biopsie;;
+reconstruction immédiate;oncologue radiothérapeute;;
+anapath;biopsie;;same_cat
+consultation;laser;;
+contrôles;mammographie;;inv_is_a
+medecin;chirurgien;;inv_is_a
+résultats;chirurgien;;
+cellules;tumeur;;
+mammo;échographie;;same_cat
+urgence;chirurgien;;
+chir;cancérologue;;same_cat
+opération;tumeur;;
+mesure;récidive;;
+médecin;cancérologue;;inv_is_a
+sentinelle;tumorectomie;;
+dossier;oncologue;;
+mamo;biopsie;;same_cat
+séance;aide-soignant;;
+séances;mastectomie;;
+chimios;radiothérapie;;same_cat
+gynéco;cancérologue;;same_cat
+analyse;prélèvement;;same_cat
+séances;ablation;;
+sentinelle;recommandation;;
+ganglion sentinelle;examen extemporané;;
+écho;radiographie;;same_cat
+echo;biopsie;;same_cat
+anapath;personne de confiance;;
+généraliste;gynécologue;;same_cat
+analyse;mastectomie;;
+écho;biopsie;;
+métastases;inflammation;;
+curage;mammectomie;;same_cat
+intervention;radiothérapie;;
+dossier;médecin traitant;;
+nodules;métastase;;
+medecin;médecin traitant;;inv_is_a
+contrôles;bilan;;
+boule;ponction;;
+sein gauche;curage axillaire;;
+opération;chirurgien;;
+métas;nodule;;
+rendez-vous;médecin traitant;;
+tamoxifène;castration;;
+hormono;hormonothérapie;1;
+métastases;bassin;;
+métastases;foie;;
+poumons;extension;;
+kyste;ganglion;1;
+infirmière;sophrologue;;same_cat
+métastases;nodule;;
+médecins;radiologue;;inv_is_a
+cancers;cancer;1;
+rdv;radiothérapeute;;
+ganglion sentinelle;ablation;;
+scinti;ponction;;
+cancers;grade;;
+psy;oncologue;;same_cat
+chimio;protocole;;
+examens;bilan;;
+onco;radiologue;;same_cat
+scinti;biopsie;;same_cat
+chimio;chirurgie;;
+analyse;tumeur;;
+medecin;oncologue;;inv_is_a
+contrôle;scintigraphie;;inv_is_a
+tumeurs;cancer;1;
+cures;protocole;;
+lieu;mastectomie;;
+médecin;radiologue;;inv_is_a
+résultats;biopsie;;
+analyses;biopsie;;inv_is_a
+analyses;oncologue;;
+résultats;oncologue;;
+prise de sang;chirurgien;;
+cerveau;foie;;same_cat
+résultats;scanner;;
+âge;mortalité;;
+mamo;échographie;;
+sein gauche;tumorectomie;;
+pensées positives;essai thérapeutique;;
+nodules;échographie;;
+contrôle;tumorectomie;;
+examen;scintigraphie;;inv_is_a
+ganglion sentinelle;chirurgien;;
+niveau;rein;;
+hopital;chirurgie;;
+soins;protocole de soins;;
+cures;chimiothérapie;;
+traitements;cancer;;
+intervention;pac;;
+sein droit;mastectomie;;
+service;oncologue;;
+anapath;tumeur;;
+anapath;grade;;
+chir;radiologue;;same_cat
+doc;oncologue;;inv_is_a
+radio;biopsie;;same_cat
+prise de sang;foie;;
+contrôle;pet scan;;inv_is_a
+radio;radiothérapie;1;
+analyses;bilan;;
+sein gauche;nodule;;
+traitements;protocole;;
+lieu;radiothérapeute;;
+doc;radiologue;;inv_is_a
+lieu;tumorectomie;;
+doc;cancérologue;;inv_is_a
+hôpital;oncologie;;
+mamo;tumorectomie;;
+métastases;ganglion;;
+contrôle;diagnostic;;
+echo;glande;;
+stress;douleur;;
+chir;gynécologue;;same_cat
+crabus;cancer;1;
+sentinelle;tumeur;;
+curage;radiothérapie;;
+contrôle;récidive;;
+onco;gynécologue;;
+femmes;cancer;;
+irm;oncologue;;
+contrôle;chirurgie;;
+urgence;oncologue;;
+service;médecin traitant;;
+echo;scintigraphie;;same_cat
+écho;pet scan;;same_cat
+prise de sang;mammographie;;
+sentinelle;médiastin;;
+analyses;carcinome;;
+ablation du sein;chirurgie;;is_a
+avenir;radiofréquence;;
+hôpital;anesthésiste;;
+crabe;cancer;1;
+cerveau;cellule;;same_cat
+contrôle;foie;;
+consultation;oncologue;;
+hormono;ablation;;
+doute;angoisse;;
+personne;angoisse;;
+opération;scanner;;
+poumons;sternum;;same_cat
+conseil;antiémétique;;
+radio;scintigraphie osseuse;;same_cat
+kyste;carcinome;;same_cat
+ablation du sein;prévention;;
+fils;orbite;;
+traitement;radiothérapie;;is_a
+résultat;radiologue;;
+mal;douleur;1;
+in situ;stade;;
+personne;oncologue;;
+analyses;bilan hépatique;;inv_is_a
+kiné;chirurgien;;same_cat
+in situ;ganglion;;
+contrôle;dépistage;;
+méta;foie;;
+anapath;chimiothérapie;;
+chir;radiothérapeute;;same_cat
+boule;tumeur;;
+résultats;radiologue;;
+traitements;radiothérapie;;inv_is_a
+niveau;aisselle;;
+sein droit;curage axillaire;;
+lieu;ablation;;
+tamoxifène;ovariectomie;;
+psy;sophrologue;;same_cat
+ganglion sentinelle;curage axillaire;;
+taille;ganglion;;
+métastases;cancer;;same_cat
+gynéco;biopsie;;
+séances;chirurgie;;
+hormono;hormonodépendant;1;
+in situ;tumeur;;
+repos;perfusion;;
+effets;fatigue;;
+endroit;ganglion;;
+tamoxifène;radiothérapie;;
+écho;ponction;;
+vacances;chirurgien;;
+nodules;carcinome;;
+irm;chirurgien;;
+annonce;chirurgie;;
+hôpital;médecin traitant;;
+surement;diabète;;
+contrôles;radiothérapie;;
+décision;hormonothérapie;;
+résultat;ganglion;;
+taxotère;pac;;
+ganglions;tumorectomie;;
+ganglion sentinelle;chirurgie;;
+décision;protocole;;
+contrôle;ablation;;
+vie;cancer;;
+infos;médecin traitant;;
+mamo;scanner;;
+hopital;anesthésiste;;
+doc;gynécologue;;inv_is_a
+examens;diagnostic;;
+onco;biopsie;;
+infirmière;radiothérapeute;;same_cat
+poumons;pancréas;;same_cat
+peur;douleur;;
+prise de sang;radiologue;;
+ganglion sentinelle;chimiothérapie;;
+hôpital;oncologue;;
+endroit;tumeur;;
+cellules;cancer;;
+résultat;diagnostic;;
+façon;ablation;;
+métastases;hormonothérapie;;
+hopital;gynécologue;;
+scinti;mammographie;;same_cat
+écho;chirurgie;;
+herceptine;tdm;;
+poumons;thyroïde;;same_cat
+type;stade;;
+avenir;protocole;;
+contrôles;biopsie;;inv_is_a
+examen;bilan;;inv_is_a
+avis;protocole;;
+façon;oncologue;;
+opération;protocole;;
+intervention;protocole;;
+endroit;genou;;
+examens;scintigraphie osseuse;;inv_is_a
+mesure;chimiothérapie;;
+hôpital;radiologue;;
+annonce;chirurgien;;
+examen;diagnostic;;
+echo;nodule;;
+traitement;cancer;;
+herceptine;cure;;
+chaleur;fatigue;;
+sein droit;tumorectomie;;
+avenir;angoisse;;
+risque;cancer;;
+ablation du sein;genou;;
+personne;cancer;;
+séance;protocole;;
+hopital;oncologue;;
+hopital;médecine nucléaire;;
+mammo;chirurgien;;
+chir;médecin traitant;;same_cat
+chimio;ablation;;
+trouille;angoisse;1;
+réponses;diagnostic;;
+infirmière;cancérologue;;same_cat
+radio;scintigraphie;;same_cat
+résultat;radiothérapie;;
+maux;fatigue;;
+irm;radiothérapie;;
+séances;hormonothérapie;;
+envie;angoisse;;
+analyses;chirurgien;;
+ganglion sentinelle;carcinome;;
+mamo;tep;;same_cat
+méta;bassin;;
+métas;métastase;1;
+radio;bilan;;
+âge;tumeur;;
+scinti;hanche;;
+taille;grade;;
+séance;radiothérapie;;
+consultation;radiothérapeute;;
+scinti;genou;;
+ganglion sentinelle;radiothérapie;;
+résultat;bilan;;
+traitements;mastectomie;;
+intervention;anesthésie;;
+kyste;infection;;
+prise en charge;chirurgien;;
+sein gauche;ablation;;
+annonce;cancer;;
+consultation;radiothérapie;;
+attente;angoisse;;
+medecin;radiothérapeute;;inv_is_a
+nodules;bassin;;
+bonne soirée;toxicité;;
+endroit;poumon;;
+ganglions;cellule;;
+parcours;protocole;;
+inquiétude;médecin traitant;;
+écho;scintigraphie osseuse;;same_cat
+ganglions;carcinome;;
+temps en temps;coagulation;;
+sein droit;ablation;;
+analyse;ponction;;
+echo;foie;;
+parcours;radiothérapie;;
+nodules;adénome;;
+reconstruction;récidive;;
+médecins;cancérologue;;inv_is_a
+infirmière;radiologue;;
+solution;tumeur maligne;;
+inquiétude;fatigue;;
+suite;biopsie;;
+rendez-vous;biopsie;;
+service;dermatologue;;
+reconstruction immédiate;tumorectomie;;
+prise de sang;tep;;
+nodules;fibrose;;
+ablation du sein;annexectomie;;
+intervention;mastectomie;;inv_is_a
+sein droit;poumon;;
+sein gauche;tumeur;;
+cures;tumorectomie;;
+kyste;échographie;;
+gynéco;anesthésiste;;same_cat
+sein gauche;chirurgie;;
+analyse;tumorectomie;;
+cancer du sein;tumeur;;inv_is_a
+nodules;tumorectomie;;
+visite;anesthésiste;;
+rendez-vous;radiothérapie;;
+taxotère;herceptin;;same_cat
+maux;infection;;
+sein gauche;chirurgien;;
+mail;médecin traitant;;
+sein gauche;mammographie;;
+nodules;radiologue;;
+niveau;bassin;;
+psy;chirurgien;;
+bout;fatigue;;
+métastases;épanchement;;
+echo;ganglion;;
+anapath;mastectomie;;
+ganglion sentinelle;grade;;
+onco;radiothérapeute;;same_cat
+intervention;curage axillaire;;inv_is_a
+sein gauche;mastectomie;;
+lieu;radiothérapie;;
+résultat;scanner;;
+effets;radiothérapie;;
+séances;protocole;;
+curage;chirurgie;;is_a
+reconstruction immédiate;métastatique;;
+radio;pelvis;;
+lieu;épanchement pleural;;
+annonce;angoisse;;
+kyste;lésion;;
+choix;ablation;;
+infirmière;oncologue;;same_cat
+résultats;protocole;;
+surement;rayon;;
+rdv;scanner;;
+internet;organe;;
+service;gynécologie;;
+reconstruction;tumorectomie;;
+tamoxifène;signe;;
+opération;cure;;
+médecins;cancer;;
+echo;ponction;;
+radio;rate;;
+nodules;métastatique;;
+résultat;mastectomie;;
+forme;ganglion;;
+ablation du sein;ovaire;;
+chimio;mastectomie;;
+ganglions;nodule;;
+consultation;dépistage;;
+rdv;biopsie;;
+sein gauche;glande;;
+rdv;radiologue;;
+rendez-vous;médecin généraliste;;
+chimios;chimiothérapie;1;
+boule;poumon;;
+seins;chirurgien;;
+sein droit;échographie;;
+irm;diagnostic;;
+temps en temps;orthèse;;
+rendez-vous;radiothérapeute;;
+tamoxifène;curiethérapie;;
+scinti;oncologue;;
+taille;tumeur;;
+cures;pac;;
+seins;tumeur;;
+ablation du sein;posologie;;
+analyse;échographie;;inv_is_a
+suite;chirurgien;;
+niveau;ganglion;;
+poumons;hanche;;same_cat
+chances;chirurgie conservatrice;;
+rayons;chimiothérapie;;same_cat
+radio;extension;;
+marqueurs;sang;;
+rdv;radiothérapie;;
+résultat;tumorectomie;;
+face;angoisse;;
+nodules;poumon;;
+traitements;ablation;;
+cours;psychologie;;
+psy;sénologie;;
+dossier;chirurgien;;
+anapath;chirurgien;;
+cancers;stade;;
+boule;biopsie;;
+étape;radiothérapie;;
+opération;diagnostic;;
+ondes;traitement adjuvant;;
+métastases;plèvre;;
+inquiétudes;ascite;;
+sentinelle;biopsie;;
+ablation du sein;coelioscopie;;
+irm;métastase;;
+cancer du sein;biopsie;;
+endroit;récidive;;
+cures;ablation;;
+examen;radiologue;;
+ondes;ambulancier;;
+métas;tumeur;;inv_is_a
+pose;angoisse;;
+cerveau;pancréas;;same_cat
+tumeurs;adénocarcinome;;inv_is_a
+tamoxifène;mastectomie;;
+façon;mastectomie;;
+seins;diagnostic;;
+résultat;oncologue;;
+herceptine;radiothérapie;;
+radio;foie;;
+prise de sang;pet scan;;
+marqueurs;scanner;;
+opération;curage axillaire;;inv_is_a
+analyses;exérèse;;inv_is_a
+irm;foie;;
+problème;cancer;;
+service;bilan;;
+métastases;douleur;;
+anapath;carcinome;;
+hormono;stade;;
+boule;clavicule;;
+poumons;thorax;;same_cat
+analyse;sang;;
+sein gauche;pancréas;;
+niveau;poumon;;
+analyse;chirurgien;;
+ventre;estomac;1;
+visite;radiothérapeute;;
+angoisses;douleur;;
+chir;mastectomie;;
+mesure;ablation;;
+endroit;estomac;;
+séances;cure;;
+maman;cancer;;
+onco;cancérologue;1;
+cancer du sein;mastectomie;;
+avance;angoisse;;
+psy;oncologie;;
+ventre;aisselle;;same_cat
+tumeurs;biopsie;;
+résultat;sang;;
+anapath;examen extemporané;;same_cat
+analyses;chirurgie;;
+analyse;pleurésie;;
+mammo;nodule;;
+cancer du sein;grade;;
+gynéco;bilan;;
+repos;antidépresseur;;
+kyste;aisselle;;
+méta;tumeur;;is_a
+sein droit;aisselle;;same_cat
+poumons;ganglion;;same_cat
+reconstruction;oncologue;;
+service;psychiatre;;
+tumeurs;glande;;
+scinti;bassin;;
+visite;scanner;;
+tumeurs;échographie;;
+marqueurs;bilan;;
+seins;biopsie;;
+opération;nodule;;
+choses;médecin traitant;;
+visite;ponction;;
+surement;ablation;;
+cerveau;polype;;
+contrôles;échographie;;inv_is_a
+produit;iode;;
+anapath;radiothérapie;;
+contrôles;mastectomie;;
+scinti;lymphome;;
+analyses;scintigraphie;;inv_is_a
+histoire;ganglion;;
+examens;chirurgie;;
+hopital;cancérologie;;
+in situ;hormonodépendant;;same_cat
+taxotère;hormonothérapie;;
+tumeurs;scintigraphie;;
+ganglions;aisselle;;
+métas;récidive;;
+ganglion sentinelle;exérèse;;
+cicatrice;hématome;;
+intervention;oncologue;;
+curage;envahissement ganglionnaire;;
+soucis;fatigue;;
+cellules cancéreuses;ganglion;;
+prise de sang;médecin généraliste;;
+séances;fatigue;;
+kyste;gastroentérologue;;
+taxotère;tumorectomie;;
+sein droit;cellule;;
+taxotère;perfusion;;
+service;cancérologue;;
+médecin;psychologue;;
+infirmière;psychologue;;
+kiné;antibiotique;;
+type;protocole;;
+chimio;hormonothérapie;;same_cat
+effets;douleur;;
+résultats;diagnostic;1;
+côté;jambe;;
+traitements;oncologue;;
+mammo;oncologue;;
+cas;grade;;
+cures;hormonothérapie;;
+rdv;tumorectomie;;
+gynéco;ponction;;
+forme;varice;;
+droit;mastectomie;;
+inquiétudes;mastectomie;;
+niveau;aine;;
+rdv;anesthésiste;;
+solution;chirurgie;;
+impatiente;tumorectomie;;
+suite;cancer;;
+cancers;tumeur;1;
+lieu;chirurgien;;
+consultation;médecin traitant;;
+examens;médecin traitant;;
+choix;mastectomie;;
+séance;herceptin;;
+côté;angoisse;;
+scinti;foie;;
+mesure;radiothérapie;;
+écho;extension;;
+peur;cancer;;
+choses;cancer;;
+écho;foie;;
+décision;randomisation;;
+ablation du sein;biopsie;;
+ablation du sein;gynécologue;;
+choses;oncologue;;
+seins;inflammation;;
+dossier;psychologue;;
+examen;chirurgien;;
+doute;chirurgien;;
+ganglions;cancer;;
+médecin;radiothérapeute;;
+situation;gynécologue;;
+ventre;aine;;same_cat
+écho;dépistage;;
+seins;nodule;;
+écho;ganglion;;
+période;impuissance;;
+seins;ganglion;;
+analyses;ganglion;;
+proches;angoisse;;
+cures;chirurgie;;
+ventre;genou;;same_cat
+hôpital;psychologue;;
+prise de sang;nodule;;
+côté;ganglion;;
+cellules;polype;;
+demande;chirurgien;;
+écho;médecin traitant;;
+radio;oncologue;;
+hopital;ponction;;
+opération;hormonothérapie;;
+traitement;oncologue;;
+sein droit;chirurgie;;
+hopital;radiologue;;
+rendez-vous;scanner;;
+reconstruction;chirurgie;;
+consultation;bilan;;
+intervention;sang;;
+echo;rate;;
+écho;tumeur;;
+chir;ablation;;
+problème;sang;;
+sein gauche;grade;;
+rayons;radiothérapeute;;
+contrôles;diagnostic;;
+solution;tumorectomie;;
+ganglion sentinelle;prélèvement;;
+niveau;foie;;
+cause;fatigue;;
+cancer du sein;ganglion;;
+marqueurs;angoisse;;
+tête;fatigue;;
+attente;biopsie;;
+endroit;hanche;;
+cancer du sein;adénocarcinome;;same_cat
+mots;impuissance;;
+façon;radiologue;;
+cancer du sein;ablation;;
+contrôles;oncologue;;
+fille;cancer;;
+radio;mammographie;;same_cat
+niveau;sternum;;
+analyses;échographie;;inv_is_a
+mamo;ponction;;
+consultation;chirurgien;;
+surement;posologie;;
+boule;échographie;;
+angoisses;fatigue;;
+âge;cancer;;
+traitements;récidive;;
+post;diagnostic;;
+seins;ablation;;
+boule;inflammation;;
+chimios;cure;;
+façon;chirurgien;;
+cures;fatigue;;
+scinti;médecin traitant;;
+prise de sang;rémission;;
+rendez-vous;radiologue;;
+nodules;cancer;;
+ganglion sentinelle;nodule;;
+boule;douleur;;
+résultat;scintigraphie;;
+anapath;oncologue;;
+situation;protocole;;
+écho;pancréas;;
+urgence;radiologue;;
+sinon;oncologue;;
+rdv;médecin traitant;;
+anapath;protocole;;
+chimios;chirurgie;;
+irm;médecin traitant;;
+air;urologue;;
+marqueurs;tumeur;;
+examen;sang;;
+ganglion sentinelle;mastectomie;;
+problèmes;douleur;;
+conseil;psychiatre;;
+demande;oncologue;;
+doute;mastectomie;;
+ventre;poumon;;same_cat
+hôpital;médecine nucléaire;;
+post;oncologue;;
+cancer du sein;récidive;;
+résultat;chirurgie;;
+pose;anesthésie locale;;
+sentinelle;chimiothérapie;;
+mammo;radiothérapie;;
+étape;glande mammaire;;
+echo;pancréas;;
+mammo;diagnostic;;
+tumeurs;curage axillaire;;
+mammo;sang;;
+questions;oncologue;;
+surement;chirurgien;;
+vacances;thoracotomie;;
+contrôles;chirurgie;;
+traitement;ménopause;;
+ganglion sentinelle;anesthésiste;;
+trouille;mammectomie;;
+personnes;protocole;;
+lieu;radiologue;;
+histoire;angoisse;;
+intervention;récidive;;
+endroit;douleur;;
+copines;médecin traitant;;same_cat
+opération;ganglion;;
+entourage;angoisse;;
+site;cancer;;
+mère;cancer;;
+reste;chirurgien;;
+cellules cancéreuses;cellule;;is_a
+kyste;tumorectomie;;
+boule;antécédent familial;;
+mamo;poumon;;
+rdv;scintigraphie osseuse;;
+ablation du sein;oncologue;;
+décision;orthopédiste;;

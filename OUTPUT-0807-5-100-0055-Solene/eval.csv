@@ -1,0 +1,102 @@
+PATIENT;MEDECIN;ALTERNATIVE;RELATED
+prise de sang;sang;;
+curage;curage axillaire;1;
+ganglion sentinelle;ganglion;0;
+cancer du sein;cancer;;inv_is_a
+ablation du sein;ablation;;inv_is_a
+généraliste;médecin généraliste;1;
+reconstruction immédiate;annexectomie;;
+curage;curage ganglionnaire;1;
+in situ;carcinome;;
+boule;aisselle;;
+scinti;scintigraphie;1;
+echo;échographie;1;
+scinti;scintigraphie osseuse;1;
+angoisses;angoisse;1;
+effet;effet secondaire;;
+ganglions;ganglion;1;
+scinti;scanner;;same_cat
+médecin;médecin traitant;;inv_is_a
+mammo;mammographie;1;
+chir;chirurgien;1;
+in situ;grade;;
+généraliste;médecin traitant;;
+médecin;médecin généraliste;;inv_is_a
+gynéco;chirurgien;;same_cat
+contrôle;scanner;;same_cat
+écho;échographie;1;
+médecin;oncologue;;inv_is_a
+ablation du sein;mammectomie;1;
+nodules;nodule;1;
+echo;scanner;;same_cat
+irm;échographie;;same_cat
+médecin;chirurgien;;inv_is_a
+mammo;radiologue;;
+curage;mastectomie;;
+tumeurs;tumeur;1;
+prise de sang;extension;;
+métastases;métastase;1;
+cicatrice;aisselle;;
+irm;scanner;;same_cat
+tamoxifène;hormonothérapie;;
+généraliste;chirurgien;;same_cat
+poumons;poumon;1;
+chir;oncologue;;same_cat
+psy;psychologue;1;
+boule;nodule;;
+contrôle;extension;;
+mammo;biopsie;;same_cat
+onco;oncologue;1;
+echo;thorax;;
+irm;biopsie;;same_cat
+reconstruction;ablation;;opposite
+ganglions;tumeur;;
+irm;scintigraphie osseuse;;same_cat
+colère;angoisse;;same_cat
+irm;scintigraphie;;same_cat
+sein droit;nodule;;
+ablation du sein;tumorectomie;;
+généraliste;oncologue;;same_cat
+taxotère;cure;;
+généraliste;radiothérapeute;;same_cat
+cellules cancéreuses;anticorps;;
+radio;scanner;;
+nodules;thyroïde;;
+mamo;mammographie;1;
+scinti;échographie;;
+écho;scanner;;
+scinti;pet scan;;
+gynéco;oncologue;;same_cat
+reconstruction immédiate;ablation;;
+ablation du sein;curage axillaire;;
+prise de sang;scanner;;same_cat
+onco;chirurgien;;same_cat
+in situ;adénocarcinome;;
+rdv;chirurgien;;
+contrôle;scintigraphie osseuse;;
+infirmière;oncologie;;
+sentinelle;ganglion;;
+onco;médecin traitant;;same_cat
+curage;tumorectomie;;
+ablation du sein;envahissement ganglionnaire;;
+doc;médecin traitant;;same_cat
+reconstruction;prothèse;;
+rayons;radiothérapie;1;
+prise de sang;bilan;;
+type;grade;;
+séance;cure;;inv_is_a
+contrôle;radiographie;;
+écho;radiologue;;
+opération;mastectomie;;inv_is_a
+curage;ablation;;is_a
+examen;mammographie;;inv_is_a
+anapath;ganglion;;
+maladie;cancer;;inv_is_a
+ganglion sentinelle;tumorectomie;;
+examens;scintigraphie;;inv_is_a
+opération;ablation;;inv_is_a
+inquiétude;angoisse;1;
+chances;survie;;
+poumons;foie;;
+analyse;ganglion;;
+;;21;

@@ -40,6 +40,7 @@ TARGET_NETWORK_FILE_INPUT = "IN/med_context.json"
 SOURCE_NETWORK_FILE_INPUT = "IN/pat_context.json"
 CONTEXT_FREQ_FILE_INPUT = "IN/frequency_contextTerms.json"
 ENTITY_FREQ_FILE_INPUT = "IN/frequency_lexicon.json"
+GOLD_FILE_INPUT = 'gold-standard.json'
 
 
 #-------------------------------------------------------------------------
@@ -407,7 +408,6 @@ def evaluate_against_gold(data, top=20) :
     averageMAP = 0
     averageMAP_recall = 0
     averageMAP_best = 0
-    GOLD_FILE_INPUT = 'gold-standard.json'
     testset = read_json(GOLD_FILE_INPUT)
     candidates = {}
     for word in testset :
@@ -473,6 +473,9 @@ def align(top=20):
     #print SOURCE_NETWORK
     print ">LOADING Med candidates..."
     TARGET_NETWORK = read_json(TARGET_NETWORK_FILE_INPUT)
+    TARGET_NETWORK.pop("ambulatoire", None)
+    TARGET_NETWORK.pop("métastasique", None)
+    TARGET_NETWORK.pop("métastatique", None)
     #print TARGET_NETWORK
 
     start_time = time.time()
@@ -560,8 +563,8 @@ def align(top=20):
 ##        else :
 ##            #transferedVector = transferedNetwork[word] #getTransferedVector(word)
 ##            #Base
-##            candidates[word] = findCandidateTranslationsChiao(word, SOURCE_TRANSFERRED_VECTORS[word], TARGET_NETWORK, max(top_list)*2, SIMILARITY_FUNCTION)
-##            data[word] = candidates[word][0:max(top_list)]
+##            candidates[word] = findCandidateTranslationsChiao(word, SOURCE_TRANSFERRED_VECTORS[word], TARGET_NETWORK, top*2, SIMILARITY_FUNCTION)
+##            data[word] = candidates[word][0:top]
 ##        #print word.encode(encoding='UTF-8',errors='strict')
 ##        #print candidates[word][0:max(top_list)]
 ##        #print "========"
@@ -571,6 +574,7 @@ def align(top=20):
 ##    writeJsonGraphChiao(data, 'chiao-graph-'+SIMILARITY_FUNCTION+'-'+NORMALIZATION+'.json')
 ##    elapsed_time = time.time() - start_time
 ##    print str(elapsed_time)
+##    return data
 
 def testGoldStandard():
     global NORMALIZATION
@@ -583,23 +587,70 @@ def testGoldStandard():
             SIMILARITY_FUNCTION=sim_choice
             align()
 
-def printEvalSheet(sim_choice=measure.COSINE, n_choice=PMI, outputFile="eval.csv", directory="OUTPUT"):
+def printEvalSheet(sim_choice=measure.COSINE, n_choice=PMI, thres=0.055, outputFile="eval.csv", directory="OUTPUT-0707-chiao-4"):
     global NORMALIZATION
     global SIMILARITY_FUNCTION
+    global ESPILON
     NORMALIZATION=n_choice
     SIMILARITY_FUNCTION=sim_choice
-    data = align()
+    ESPILON=thres
+    data = align(top=20)
+    gold = read_json(GOLD_FILE_INPUT)
     with codecs.open(os.path.join(directory, outputFile), 'w', encoding='utf-8') as fOut:
-        fOut.write('PATIENT;MEDECIN;ALTERNATIVE;RELATED;PARADIGMATIC;SYNTAGMATIC\n')
+        fOut.write('PATIENT;MEDECIN;ALTERNATIVE;RELATED\n')
         for pat in data :
-            for item in data[pat][0:10]: 
-                fOut.write(pat+';'+item['name']+';;;;\n')
+            for item in data[pat][0:5]:
+                if item['name'] in gold.get(pat, []) : fOut.write(pat+';'+item['name']+';o;;\n')
+                else : fOut.write(pat+';'+item['name']+';;;\n')
+                
     with codecs.open(os.path.join(directory, 'candidates.csv'), 'w', encoding='utf-8') as fOut:
         fOut.write('PATIENT;CHV\n')
         for pat in data :
+            if len(data[pat]) > 0 : fOut.write(pat+';\n')
+
+def printEvalSheetBestPairs(nbScores, sim_choice=measure.COSINE, n_choice=PMI, thres=0.055, outputFile="eval.csv", directory="OUTPUT-0707-chiao-4"):
+    global NORMALIZATION
+    global SIMILARITY_FUNCTION
+    global ESPILON
+    NORMALIZATION=n_choice
+    SIMILARITY_FUNCTION=sim_choice
+    ESPILON=thres
+    data = align(top=20)
+    gold = read_json(GOLD_FILE_INPUT)
+
+    selectedPat = set()
+    scoreToPairs = {}
+    for pat in data :
+        for item in data[pat][0:100]:
+            score = item['score']
+            scoreL = scoreToPairs.get(score, [])
+            if item['name'] in gold.get(pat, []) : scoreL.append(pat+';'+item['name']+';o;;\n')
+            else : scoreL.append(pat+';'+item['name']+';;;\n')
+            scoreToPairs[score] = scoreL
+    scores = sorted(scoreToPairs.keys(), reverse=True)#isScore)
+
+    with codecs.open(os.path.join(directory, outputFile), 'w', encoding='utf-8') as fOut:
+        fOut.write('PATIENT;MEDECIN;ALTERNATIVE;RELATED\n')
+        nbPairs = 0
+        for s in scores[0:nbScores] :
+            for line in scoreToPairs[s] :
+                fOut.write(line)
+                print my_str(line)
+                selectedPat.add(line.split(';')[0])
+                nbPairs = nbPairs + 1
+                if (nbPairs >= nbScores) : break
+            if (nbPairs >= nbScores) : break
+    print nbPairs
+    print len(scores)
+
+    with codecs.open(os.path.join(directory, 'candidates.csv'), 'w', encoding='utf-8') as fOut:
+        fOut.write('PATIENT;CHV\n')
+        for pat in selectedPat :
+            #if len(data[pat]) > 0 :
             fOut.write(pat+';\n')
 
 if __name__ == "__main__":
-    #printEvalSheet()
-    testGoldStandard()
+    #printEvalSheet(thres=0.1, directory="OUTPUT-0807-01")
+    printEvalSheetBestPairs(nbScores=1000, thres=0.055, directory="OUTPUT-0807-10-1000-0055")
+    #testGoldStandard()
 

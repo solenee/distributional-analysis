@@ -516,7 +516,7 @@ def align(top=20):
         #print "========"
         #print "========"
     save_as_json(data, 'align-'+SIMILARITY_FUNCTION+'-'+NORMALIZATION+'.json')
-    evaluate_against_gold(data)
+    #evaluate_against_gold(data)
     writeJsonGraph(data, 'graph-'+SIMILARITY_FUNCTION+'-'+NORMALIZATION+'.json')
     elapsed_time = time.time() - start_time
     print str(elapsed_time)
@@ -587,6 +587,54 @@ def testGoldStandard():
             SIMILARITY_FUNCTION=sim_choice
             align()
 
+def getCumScore(orderedScoreList) :
+    cum = 0
+    cumList = []
+    for s in orderedScoreList :
+        cum = cum + s
+        cumList.append(cum)
+    #print 'Cum='+str(cum)
+    return cumList
+    
+def getPercentile(data, per=0.75):
+    fData = {}
+    nbCand = []
+    #numpy.finfo('float').eps
+    for pat in data :
+        cand = data[pat]
+        if len(cand) == 0 : continue
+        cumScore = getCumScore([item['score'] for item in cand])
+        #print 'Cum='+str(max(cumScore))
+        thres = (max(cumScore))*per
+        fData[pat] = [cand[i] for i in range(len(cand)) if (cumScore[i] - thres < numpy.finfo('float').eps) or i==0]
+        nbCand.append(len(fData[pat]))
+    if len(nbCand) > 0 :
+        print 'mean Cand = '+str(sum(nbCand)/len(nbCand))
+        print 'min Cand = '+str(min(nbCand))
+        print 'max Cand = '+str(max(nbCand))
+    else : print 'mean Cand = 0'
+    return fData
+        
+def testGoldStandardQuartile(esp=0.05):
+    global NORMALIZATION
+    global SIMILARITY_FUNCTION
+    global ESPILON
+    ESPILON=esp
+    n_choice = PMI
+    if n_choice == NONE : sim_choices = [measure.L1NORM, measure.COSINE, measure.JACCARD, measure.JACCARD_SET]
+    else : sim_choices = [measure.COSINE, measure.JACCARD]
+    NORMALIZATION=n_choice
+    for sim_choice in sim_choices :
+        SIMILARITY_FUNCTION=sim_choice
+        data = align(top=1000)
+        print '==============PER=none===='
+        evaluate_against_gold(data)
+        for per in [0.95, 0.9, 0.85, 0.8, 0.75, 0.7, 0.6, 0.5, 0.4, 0.3, 0.25, 0.2, 0.1] :
+            print '==============PER='+str(per)+'===='
+            #getPercentile(data, per)
+            evaluate_against_gold(getPercentile(data, per))
+        
+
 def printEvalSheet(sim_choice=measure.COSINE, n_choice=PMI, thres=0.055, outputFile="eval.csv", directory="OUTPUT-0707-chiao-4"):
     global NORMALIZATION
     global SIMILARITY_FUNCTION
@@ -621,10 +669,10 @@ def printEvalSheetBestPairs(nbScores, sim_choice=measure.COSINE, n_choice=PMI, t
     selectedPat = set()
     scoreToPairs = {}
     for pat in data :
-        for item in data[pat][0:100]:
+        for item in data[pat][0:2]:
             score = item['score']
             scoreL = scoreToPairs.get(score, [])
-            if item['name'] in gold.get(pat, []) : scoreL.append(pat+';'+item['name']+';o;;\n')
+            if item['name'] in gold.get(pat, []) : scoreL.append(pat+';'+item['name']+';1;;\n')
             else : scoreL.append(pat+';'+item['name']+';;;\n')
             scoreToPairs[score] = scoreL
     scores = sorted(scoreToPairs.keys(), reverse=True)#isScore)
@@ -649,8 +697,56 @@ def printEvalSheetBestPairs(nbScores, sim_choice=measure.COSINE, n_choice=PMI, t
             #if len(data[pat]) > 0 :
             fOut.write(pat+';\n')
 
+def printEvalSheetPercentile(nbScores, percentile=0.25, sim_choice=measure.COSINE, n_choice=PMI, thres=0.055, outputFile="eval.csv", directory="OUTPUT-0707-chiao-4"):
+    global NORMALIZATION
+    global SIMILARITY_FUNCTION
+    global ESPILON
+    NORMALIZATION=n_choice
+    SIMILARITY_FUNCTION=sim_choice
+    ESPILON=thres
+    gold = read_json(GOLD_FILE_INPUT)
+    data = getPercentile(align(top=1000), per=percentile)
+
+    selectedPat = []
+    scoreToPairs = {}
+    for pat in data :
+        for item in data[pat]:
+            score = item['score']
+            scoreL = scoreToPairs.get(score, [])
+            if item['name'] in gold.get(pat, []) : scoreL.append(pat+';'+item['name']+';1;\n')
+            else : scoreL.append(pat+';'+item['name']+';;\n')
+            scoreToPairs[score] = scoreL
+    scores = sorted(scoreToPairs.keys(), reverse=True)#isScore)
+
+    with codecs.open(os.path.join(directory, outputFile), 'w', encoding='utf-8') as fOut:
+        fOut.write('PATIENT;MEDECIN;ALTERNATIVE;RELATED(M,G,P)\n')
+        nbPairs = 0
+        for s in scores[0:nbScores] :
+            for line in scoreToPairs[s] :
+                fOut.write(line)
+                print my_str(line)
+                print s
+                pat = line.split(';')[0]
+                if not pat in selectedPat : selectedPat.append(pat)
+                nbPairs = nbPairs + 1
+                if (nbPairs >= nbScores) : break
+            if (nbPairs >= nbScores) : break
+    print nbPairs
+    print len(scores)
+
+    with codecs.open(os.path.join(directory, 'candidates.csv'), 'w', encoding='utf-8') as fOut:
+        fOut.write('PATIENT;CHV\n')
+        for pat in selectedPat :
+            #if len(data[pat]) > 0 :
+            fOut.write(pat+';\n')
+            
 if __name__ == "__main__":
     #printEvalSheet(thres=0.1, directory="OUTPUT-0807-01")
-    printEvalSheetBestPairs(nbScores=1000, thres=0.055, directory="OUTPUT-0807-10-1000-0055")
+    #printEvalSheetBestPairs(nbScores=1000, thres=0.055, directory="OUTPUT-0807-10-1000-0055")
+    #printEvalSheetBestPairs(nbScores=100, thres=0.055, sim_choice=measure.JACCARD, directory="OUTPUT-0807-2-100-0055-Jaccard")
+    #printEvalSheetBestPairs(nbScores=100, thres=0.055, directory="OUTPUT-0807-2-100-0055-Cosine")
+    #printEvalSheetBestPairs(nbScores=1900, thres=0.055, directory="OUTPUT-0807-2-1000-0055-Cosine")
     #testGoldStandard()
+    #testGoldStandardQuartile()
+    printEvalSheetPercentile(nbScores=1000, percentile=0.25, thres=0.05, sim_choice=measure.COSINE, directory="OUTPUT-1107-per25-1000-0050-Cosine")
 

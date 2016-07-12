@@ -1,0 +1,286 @@
+PATIENT;MEDECIN;ALTERNATIVE;RELATED(M,G,P);
+prise de sang;sang;;;
+curage;curage axillaire;;G;
+ganglion sentinelle;ganglion;;P;
+cancer du sein;cancer;;P;
+ablation du sein;ablation;;P;
+généraliste;médecin généraliste;1;;
+reconstruction immédiate;annexectomie;;C;opération
+in situ;carcinome;;C;cancer
+boule;aisselle;;;
+scinti;scintigraphie;1;;
+echo;échographie;1;;
+scinti;scintigraphie osseuse;;G;
+angoisses;angoisse;1;;
+effet;effet secondaire;%1%;G%%G;
+ganglions;ganglion;1;;
+scinti;scanner;;C;examen
+médecin;médecin traitant;;G;
+mammo;mammographie;1;;
+chir;chirurgien;1;;
+gynéco;chirurgien;;C;professionnel de la santé
+contrôle;scanner;;G%G%;
+écho;échographie;1;;
+ablation du sein;mammectomie;1;;
+nodules;nodule;1;;
+echo;scanner;;C;examen
+irm;échographie;;C;examen
+mammo;radiologue;;;
+tumeurs;tumeur;1;;
+prise de sang;extension;;;
+métastases;métastase;1;;
+cicatrice;aisselle;;;
+irm;scanner;;C;examen
+tamoxifène;hormonothérapie;;C;traitements/médicaments
+poumons;poumon;1;;
+chir;oncologue;;C;professionnel de la santé
+psy;psychologue;1;;
+boule;nodule;1;;
+contrôle;extension;;;
+onco;oncologue;1;;
+echo;thorax;;;
+irm;biopsie;;C;examen
+reconstruction;ablation;;C;opération
+irm;scintigraphie osseuse;;C;examen
+colère;angoisse;;C;état émotionnel
+sein droit;nodule;;;
+ablation du sein;tumorectomie;;C;opération
+taxotère;cure;;;
+cellules cancéreuses;anticorps;;C;partie du corps, organe ou composant d'un organe (STY)
+radio;scanner;;C;opération
+nodules;thyroïde;;;
+mamo;mammographie;1;;
+écho;scanner;;C;examen
+gynéco;oncologue;;C;professionnel de la santé
+prise de sang;scanner;;C;examen
+onco;chirurgien;;C;professionnel de la santé
+rdv;chirurgien;;;
+contrôle;scintigraphie osseuse;;G%G%;
+infirmière;oncologie;;;
+sentinelle;ganglion;;P;
+doc;médecin traitant;;G;
+rayons;radiothérapie;1;;
+type;grade;;;
+séance;cure;1;;
+contrôle;radiographie;;G%G%;
+écho;radiologue;;;
+opération;mastectomie;;G;
+examen;mammographie;;G;
+anapath;ganglion;;;
+maladie;cancer;;G;
+ganglion sentinelle;tumorectomie;;;
+examens;scintigraphie;;G;
+opération;ablation;;G;
+inquiétude;angoisse;1;;
+chances;survie;;;
+poumons;foie;;C;partie du corps, organe ou composant d'un organe (STY)
+analyse;ganglion;;;
+service;sénologie;;G;
+sein droit;biopsie;;;
+séances;radiothérapie;;;
+méta;métastase;1;;
+avenir;réinsertion;;;
+cures;cure;1;;
+anapath;chirurgie;;;
+tumeurs;nodule;;P%P%;nodule : Formation anormale, généralement arrondie et de petite taille, cancéreuse ou non, dans un organe ou à sa surface.
+kyste;ponction;;;
+stress;angoisse;;C;état émotionnel
+opération;chirurgie;1;;
+nodules;biopsie;;;
+taxotère;radiothérapie;;C;traitements/médicaments
+urgence;anesthésiste;;;
+métastases;récidive;;;
+nodules;ganglion;;;
+contrôle;poumon;;;
+contrôle;biopsie;;G%G%;
+chimio;chimiothérapie;1;;
+pose;anesthésie;;;
+hopital;radiologie;;;
+herceptine;herceptin;1;;
+anapath;tumorectomie;;;
+analyse;anatomopathologie;;G;
+seins;échographie;;;
+hopital;chirurgien;;;
+visite;laser;;;
+rendez-vous;oncologue;;;
+visite;chirurgien;;;
+séances;tumorectomie;;;
+traitement;protocole;1;;
+contrôles;prélèvement;;G%G%;
+rendez-vous;sophrologue;;;
+hôpital;chirurgien;;;
+kyste;nodule;;P%P%;nodule : Formation anormale, généralement arrondie et de petite taille, cancéreuse ou non, dans un organe ou à sa surface.
+examens;mammographie;;G;
+rayons;hormonothérapie;;C;traitements/médicaments
+risque;récidive;;;
+service;chirurgien;;;
+rdv;oncologue;;;
+sein gauche;ganglion;;C;partie du corps, organe ou composant d'un organe (STY)
+inquiétudes;angoisse;1;;
+contrôles;scanner;;G%G%;
+kiné;psycho-oncologue;;C;professionnel de la santé
+métas;foie;;;
+sein droit;tumeur;;;
+résultat;chirurgien;;;
+traitements;hormonothérapie;;G;
+sentinelle;urologue;;;
+ondes;essai thérapeutique;;;
+chimio;radiothérapie;;C;traitements/médicaments
+intervention;biopsie;;G;
+kyste;biopsie;;;
+intervention;chirurgie;1;;
+médecins;oncologue;;G;
+intervention;tumorectomie;;G;
+peur;angoisse;1;;
+sein gauche;carcinome;;;
+intervention;chirurgien;;;
+annonce;biopsie;;;
+tamoxifène;herceptin;;C;traitements/médicaments
+cellules;cellule;1;;
+ondes positives;essai thérapeutique;;;
+métastases;scintigraphie;;;
+examens;biopsie;;G;
+examen;biopsie;;G;
+cerveau;sternum;;C;partie du corps, organe ou composant d'un organe (STY)
+infirmière;chirurgien;;C;professionnel de la santé
+sein gauche;biopsie;;;
+doc;chirurgien;;G;
+cures;mastectomie;;;
+analyse;exérèse;;G;
+traitements;chimiothérapie;;G;
+cas;cancer;;;
+résultat;biopsie;;;
+medecin;cirrhose;;;
+examen;scanner;;G;
+charge;dermatologue;;;
+anapath;biopsie;;C;examen
+consultation;laser;;;
+résultats;chirurgien;;;
+mesure;récidive;;;
+dossier;oncologue;;;
+chimios;radiothérapie;;C;traitements/médicaments
+hormono;hormonothérapie;1;;
+cancers;cancer;1;;
+lieu;mastectomie;;;
+résultats;biopsie;;;
+analyses;biopsie;;G;
+analyses;oncologue;;;
+cerveau;foie;;C;partie du corps, organe ou composant d'un organe (STY)
+âge;mortalité;;;
+pensées positives;essai thérapeutique;;;
+niveau;rein;;;
+soins;protocole de soins;;;
+radio;biopsie;;C;examen
+radio;radiothérapie;1;;
+analyses;bilan;;C;ensemble d'examens
+lieu;radiothérapeute;;;
+hôpital;oncologie;;;
+crabus;cancer;1;;
+femmes;cancer;;;
+analyses;carcinome;;;
+crabe;cancer;1;;
+doute;angoisse;;C;état émotionnel
+personne;angoisse;;;
+conseil;antiémétique;;;
+radio;scintigraphie osseuse;;C;examen
+fils;orbite;;;
+résultat;radiologue;;;
+mal;douleur;1;;
+niveau;aisselle;;;
+taille;ganglion;;;
+repos;perfusion;;;
+effets;fatigue;;G;catégorie symptomes
+endroit;ganglion;;;
+vacances;chirurgien;;;
+annonce;chirurgie;;;
+surement;diabète;;;
+décision;hormonothérapie;;;
+résultat;ganglion;;;
+vie;cancer;;;
+infos;médecin traitant;;;
+endroit;tumeur;;;
+façon;ablation;;;
+avis;protocole;;;
+endroit;genou;;;
+chaleur;fatigue;;;
+trouille;angoisse;1;;
+réponses;diagnostic;;;
+maux;fatigue;;;
+envie;angoisse;;;
+prise en charge;chirurgien;;;
+attente;angoisse;;;
+bonne soirée;toxicité;;;
+parcours;protocole;;;
+temps en temps;coagulation;;;
+solution;tumeur maligne;;;
+suite;biopsie;;;
+mail;médecin traitant;;;
+bout;fatigue;;;
+choix;ablation;;;
+internet;organe;;;
+forme;ganglion;;;
+seins;chirurgien;;;
+suite;chirurgien;;;
+marqueurs;sang;;;
+face;angoisse;;;
+cours;psychologie;;;
+étape;radiothérapie;;;
+marqueurs;scanner;;;
+problème;cancer;;;
+ventre;estomac;1;;
+maman;cancer;;;
+avance;angoisse;;;
+ventre;aisselle;;C;partie du corps, organe ou composant d'un organe (STY)
+choses;médecin traitant;;;
+produit;iode;;;
+histoire;ganglion;;;
+soucis;fatigue;;;
+côté;jambe;;;
+droit;mastectomie;;;
+impatiente;tumorectomie;;;
+situation;gynécologue;;;
+période;impuissance;;;
+proches;angoisse;;;
+demande;chirurgien;;;
+cause;fatigue;;;
+tête;fatigue;;;
+mots;impuissance;;;
+fille;cancer;;;
+post;diagnostic;;;
+sinon;oncologue;;;
+air;urologue;;;
+problèmes;douleur;;;
+questions;oncologue;;;
+personnes;protocole;;;
+copines;médecin traitant;;;
+entourage;angoisse;;;
+site;cancer;;;
+mère;cancer;;;
+reste;chirurgien;;;
+départ;radiothérapie;;;
+sport;prothèse;;;
+cheveux;organe;;P;
+travail;radiologue;;;
+impression;douleur;;;
+aide;fatigue;;;
+prise;oncologue;;;
+chemin;rémission;;;
+force;angoisse;;;
+sens;angoisse;;;
+peine;hormonothérapie;;;
+femme;cancer;;;
+genre;douleur;;;
+conseils;laser;;;
+perte;fatigue;;;
+partie;cancer;;;
+point;ganglion;;;
+épreuve;hormonothérapie;;;
+raison;cancer;;;
+moral;angoisse;;;
+confiance;dépistage;;;
+idée;radiothérapie;;;
+place;oncologue;;;
+corps;protocole;;;
+soeur;prédisposition génétique;;;
+coup;chirurgien;;;
+combat;guérison;;;
